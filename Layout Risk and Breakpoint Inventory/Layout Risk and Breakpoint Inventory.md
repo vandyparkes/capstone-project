@@ -110,3 +110,15 @@ Some flow-relative CSS is already in place: `margin-inline`, `margin-block`, `pa
 
 6. **Width on measure, form, and containers**  
    `max-width` and `width` can become `max-inline-size` and `inline-size` so the reading measure follows the writing mode.
+
+## 6) Preference and fallback needs
+
+**Unplayable or unsupported video.** Hosting is still undecided. The layout has to stay readable when `<video>` has no file. Home, About, and the Media player need a poster, an accessible name, and a short text summary.
+
+**`prefers-reduced-motion`.** Buttons and nav use `transform: translateY(1px)` on `:active` and `filter` on hover. Those should ease off when the user asks for less motion.
+
+**Form errors cannot be color-only.** The warning border stays, and the error text stays visible.
+
+**Services print.** Hide nav, CTAs, the form, and embeds. Keep headings, session facts, and the table readable. Stack the table so it does not clip.
+
+**`aspect-ratio` on the video frame.** Keep a min-height fallback if an older browser skips the ratio. Safari and Firefox still need a pass.
