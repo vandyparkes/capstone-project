@@ -62,3 +62,19 @@ These are the pieces most likely to break a layout if the CSS assumes short, tid
 
 9. **Gallery**  
    Four captioned tiles. The captions wrap under short image boxes.
+
+## 3) Breakpoint reasons
+
+The layout should change when the content stops fitting, not because a device name suggested a number.
+
+1. **Header and nav, about 375px**  
+   The logo and four page names have to stay on screen with no sideways scroll. The row wraps. It does not stay one forced horizontal bar. That is already how `.site-header` and `.nav-list` work.
+
+2. **Pricing table, before about 48rem (768px)**  
+   Four columns plus long Notes text. In a row, the price can pull away from its session type, and the table can clip, including in print. Below 48rem, the visual header hides and each cell stacks with `data-label` so Type, Access, Price, and Notes stay one unit.
+
+3. **3-up and 4-up cards, before about 64rem**  
+   Tutorial and session cards carry badges, titles, and a sentence. Four gallery tiles plus captions cannot stay readable as equal columns. They go one column until there is enough room. Two-up is different. Short Home value props and quotes can sit two across at 48rem.
+
+4. **About video and bio, before about 64rem**  
+   A 16:9 frame plus a bio and credentials list. Side by side too early squeezes the video or the text. The video stacks above the bio until both have enough inline space. That is the `.media-split` rule at 64rem.
