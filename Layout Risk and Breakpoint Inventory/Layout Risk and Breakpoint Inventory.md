@@ -2,23 +2,19 @@
 
 Bulletproof PT
 
-This is from the planning package and the CSS that is already in the architecture folder. Nothing in the site files was changed.
-
 ## 1) Layout patterns
 
-These are the layouts that keep showing up. They already have a home in the HTML and CSS.
-
-1. **Header and nav**  
-   Same header on every page. Logo on one side, Home, Media, Services, and About on the other. That is `.site-header` and `.nav-list`.
+1. **Header and navigation**  
+   Same header on every page. The logo sits on one side. Home, Media, Services, and About sit on the other. That is `.site-header` and `.nav-list`. Both wrap. The browser places the next link in the next space. No link is pinned to a named grid cell.
 
 2. **Home hero**  
-   The company name, a short pitch, two buttons, and the highlight video. This is the first thing someone sees on Home.
+   The company name, a short pitch, two buttons, and the highlight video. This is the first thing someone sees on Home. The content container already uses a flexible constraint: `width: min(100% - 2rem, 70rem)`.
 
 3. **Card grids**  
-   Same card, different counts. Two across for the home value props and the quotes. Three across for teasers, tutorials, and session types. Four across for the About gallery.
+   Same card, different counts. Two across for the home value props and the quotes. Three across for teasers, tutorials, and session types. Four across for the About gallery. Tracks are flexible (`1fr`). Cards stay in document order. A mixed track such as `minmax()` would fit better when a card’s own min-content width is wider than an equal share of the row. Gallery captions and stacked card rows (badge, title, duration, sentence, link) are the place subgrid would help if those inner lines need to line up across a row.
 
-4. **Video next to text**  
-   On About, the intro video sits beside the bio and credentials. That is `.media-split`. On Media, the player sits with the technique notes. That is `.media-object` inside the narrower `.container--media`.
+4. **Media and text split**  
+   On About, the intro video sits beside the bio and credentials. That is `.media-split`, a mixed track (`1.2fr 1fr`) once there is enough inline space. On Media, the player sits with the technique notes. That is `.media-object` inside the narrower `.container--media`, which uses `min(100% - 2rem, 54rem)`.
 
 5. **Pricing table**  
    Type, Access, Price, and Notes. One table, class `.price-table`.
@@ -34,19 +30,19 @@ These are the layouts that keep showing up. They already have a home in the HTML
 
 ## 2) Content risks
 
-These are the pieces most likely to break a layout if the CSS assumes short, tidy copy.
+These are the pieces most likely to break a layout if the CSS ignores the content’s natural size.
 
 1. **Long headings**  
-   “Bulletproof Personal Training,” “Advanced and locked tutorials,” and “Beginner and advanced coaching.” At about 375px they wrap and eat vertical space.
+   “Bulletproof Personal Training,” “Advanced and locked tutorials,” and “Beginner and advanced coaching.” At about 375px they wrap and eat vertical space. The heading’s min-content width is the risk.
 
 2. **Long links**  
    “YouTube technique library,” “Instagram session notes,” “Request a private session,” and “Back to tutorials.” They can overflow a narrow column if wrap or shrink is wrong.
 
 3. **Dense cards**  
-   Media tiles stack two badges, a title, a duration, a sentence, and a link. Locked cards use “Members only,” which is longer than “Free.” Three of those in a row get tight before the screen is actually small.
+   Media tiles stack two badges, a title, a duration, a sentence, and a link. Locked cards use “Members only,” which is longer than “Free.” Three of those in a row get tight before the screen is actually small. Badges already use `width: fit-content`. The card’s min-content width should decide when the row wraps.
 
 4. **Pricing table**  
-   Four columns. The Notes cells are already long: “Travel radius confirmed by email” and “Locked tutorials stay labeled until the rate is published.” In a row, prices can pull away from their session type, and the table can clip. That is the 375px and print risk the plan already names.
+   Four columns. The Notes cells are already long: “Travel radius confirmed by email” and “Locked tutorials stay labeled until the rate is published.” In a row, prices can pull away from their session type, and the table can clip. That is the 375px and print risk.
 
 5. **Form**  
    Labels include “(required).” The email error is a full sentence. Fields need to stay full width so the label, control, and error do not collide.
@@ -61,17 +57,17 @@ These are the pieces most likely to break a layout if the CSS assumes short, tid
    “Watch tutorials” next to “Request a session.” They wrap or overflow if they are treated as one unbreakable row.
 
 9. **Gallery**  
-   Four captioned tiles. The captions wrap under short image boxes.
+   Four captioned tiles. The captions wrap under short image boxes, so caption height will not match from tile to tile.
 
 ## 3) Breakpoint reasons
 
-The layout should change when the content stops fitting, not because a device name suggested a number.
+The layout should change when content becomes cramped, awkward, unreadable, or inefficient, not because a phone or laptop width was chosen in advance. Use a viewport media query when the window or print matters. Use a container query when one component should follow its own box. Spacing and containers can stay fluid with `min()` instead of jumping only at those widths.
 
 1. **Header and nav, about 375px**  
-   The logo and four page names have to stay on screen with no sideways scroll. The row wraps. It does not stay one forced horizontal bar. That is already how `.site-header` and `.nav-list` work.
+   The logo and four page names have to stay on screen with no sideways scroll. The row wraps. It does not stay one forced horizontal bar. That is already how `.site-header` and `.nav-list` work. The viewport matters here, so a media query is enough.
 
-2. **Pricing table, before about 48rem (768px)**  
-   Four columns plus long Notes text. In a row, the price can pull away from its session type, and the table can clip, including in print. Below 48rem, the visual header hides and each cell stacks with `data-label` so Type, Access, Price, and Notes stay one unit.
+2. **Pricing table, before about 48rem**  
+   Four columns plus long Notes text. In a row, the price can pull away from its session type, and the table can clip, including in print. Below 48rem, the visual header hides and each cell stacks with `data-label` so Type, Access, Price, and Notes stay one unit. Example: `@media (width >= 48rem)`.
 
 3. **3-up and 4-up cards, before about 64rem**  
    Tutorial and session cards carry badges, titles, and a sentence. Four gallery tiles plus captions cannot stay readable as equal columns. They go one column until there is enough room. Two-up is different. Short Home value props and quotes can sit two across at 48rem.
@@ -81,17 +77,19 @@ The layout should change when the content stops fitting, not because a device na
 
 ## 4) Container-query candidates
 
+A container query answers how wide the component is, not how wide the window is.
+
 1. **`.card`**  
-   Same card in 2-up, 3-up, and 4-up tracks, plus locked versus free. A viewport query cannot tell a card it is sitting in a narrow third of the page versus a full-width stack. Padding, badge wrap, and whether the link stays on one line should follow the card width.
+   Same card in 2-up, 3-up, and 4-up tracks, plus locked versus free. A viewport query cannot tell a card it is sitting in a narrow third of the page versus a full-width stack. Give the card `container-type: inline-size`. Padding, badge wrap, and whether the body stays one column should follow the card, for example `@container (width > 34rem)`.
 
 2. **`.media-object`**  
-   Full width in the Home hero, half of a split on About, and inside the narrower `.container--media` player. Gap and whether notes sit beside or under the frame should follow that box, not only the window.
+   Full width in the Home hero, half of a split on About, and inside the narrower `.container--media` player. Gap and whether notes sit beside or under the frame should follow that box, not only the window. Same setup: `container-type: inline-size`, then a container query when the object is wide enough for two columns.
 
 The site header is not a container-query candidate. It is not reused at several widths on one page. A viewport query is enough.
 
 ## 5) Logical-property opportunities
 
-Some flow-relative CSS is already in place: `margin-inline`, `margin-block`, `padding-block`, and `margin-inline-start`. These leftovers still assume left-to-right English.
+Prefer inline and block when spacing, sizing, and borders should follow writing mode. Some flow-relative CSS is already in place: `margin-inline`, `margin-block`, `padding-block`, and `margin-inline-start`. These leftovers still assume left-to-right English.
 
 1. **`.callout { border-left }`**  
    Change to `border-inline-start` so the warning bar stays on the start edge.
@@ -113,12 +111,17 @@ Some flow-relative CSS is already in place: `margin-inline`, `margin-block`, `pa
 
 ## 6) Preference and fallback needs
 
-**Unplayable or unsupported video.** Hosting is still undecided. The layout has to stay readable when `<video>` has no file. Home, About, and the Media player need a poster, an accessible name, and a short text summary.
+1. **`prefers-reduced-motion`**  
+   Buttons and nav use `transform: translateY(1px)` on `:active` and `filter` on hover. Those should ease off when the user asks for less motion: `@media (prefers-reduced-motion: reduce)`.
 
-**`prefers-reduced-motion`.** Buttons and nav use `transform: translateY(1px)` on `:active` and `filter` on hover. Those should ease off when the user asks for less motion.
+2. **Unplayable or unsupported video**  
+   Hosting is still undecided. The layout has to stay readable when `<video>` has no file. Home, About, and the Media player need a poster, an accessible name, and a short text summary.
 
-**Form errors cannot be color-only.** The warning border stays, and the error text stays visible.
+3. **Form errors cannot be color-only**  
+   The warning border stays, and the error text stays visible.
 
-**Services print.** Hide nav, CTAs, the form, and embeds. Keep headings, session facts, and the table readable. Stack the table so it does not clip.
+4. **Services print**  
+   Hide nav, CTAs, the form, and embeds. Keep headings, session facts, and the table readable. Stack the table so it does not clip. Print is an environment media query, not a container query.
 
-**`aspect-ratio` on the video frame.** Keep a min-height fallback if an older browser skips the ratio. Safari and Firefox still need a pass.
+5. **Feature support**  
+   `.media-object__frame` uses `aspect-ratio: 16 / 9`. Keep a min-height fallback if an older browser skips the ratio. If cards later use `container-type` or `subgrid`, wrap those rules in `@supports` so the stacked card stays the fallback. Safari and Firefox still need a pass.
