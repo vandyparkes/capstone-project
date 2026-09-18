@@ -78,3 +78,13 @@ The layout should change when the content stops fitting, not because a device na
 
 4. **About video and bio, before about 64rem**  
    A 16:9 frame plus a bio and credentials list. Side by side too early squeezes the video or the text. The video stacks above the bio until both have enough inline space. That is the `.media-split` rule at 64rem.
+
+## 4) Container-query candidates
+
+1. **`.card`**  
+   Same card in 2-up, 3-up, and 4-up tracks, plus locked versus free. A viewport query cannot tell a card it is sitting in a narrow third of the page versus a full-width stack. Padding, badge wrap, and whether the link stays on one line should follow the card width.
+
+2. **`.media-object`**  
+   Full width in the Home hero, half of a split on About, and inside the narrower `.container--media` player. Gap and whether notes sit beside or under the frame should follow that box, not only the window.
+
+The site header is not a container-query candidate. It is not reused at several widths on one page. A viewport query is enough.
