@@ -22,13 +22,13 @@ Bulletproof PT
 ## 2) Content risks
 
 1. **Long headings**  
-   “Bulletproof Personal Training” and “Advanced and locked tutorials” wrap at about 375px.
+   “Bulletproof Personal Training” and “Advanced and locked tutorials” wrap at about 375px because that is their natural width.
 
 2. **Long links**  
    “YouTube technique library” and “Request a private session” can overflow a narrow column.
 
 3. **Dense cards**  
-   Tutorial cards stack two badges, a title, a duration, a sentence, and a link. “Members only” is longer than “Free.”
+   Tutorial cards stack two badges, a title, a duration, a sentence, and a link. “Members only” is longer than “Free,” so the card’s natural width gets tight before the window is small.
 
 4. **Table**  
    Four columns. Notes such as “Travel radius confirmed by email” make the row clip or pull the price away from the session type.
@@ -40,6 +40,8 @@ Bulletproof PT
    16:9 video on Home, About, and the Media player can go full-bleed or overflow without a contained frame.
 
 ## 3) Breakpoint reasons
+
+Layout should change when content is cramped, awkward, or unreadable, not because a phone or laptop width was chosen first.
 
 1. **Header and nav**  
    The logo plus four page names do not fit one row at about 375px. The row needs to wrap so the page does not scroll sideways.
@@ -53,7 +55,7 @@ Bulletproof PT
 ## 4) Container-query candidates
 
 **`.card`**  
-The same card sits in 2-up, 3-up, and 4-up tracks. A viewport query cannot tell a card it is in a narrow third of the page versus a full-width stack. Padding and badge wrap should follow the card’s own width.
+The same card sits in 2-up, 3-up, and 4-up tracks. A viewport query cannot tell a card it is in a narrow third of the page versus a full-width stack. Give it `container-type: inline-size` so padding and badge wrap follow the card, for example `@container (width > 34rem)`.
 
 ## 5) Logical-property opportunities
 
