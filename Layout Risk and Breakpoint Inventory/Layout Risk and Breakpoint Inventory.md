@@ -88,3 +88,25 @@ The layout should change when the content stops fitting, not because a device na
    Full width in the Home hero, half of a split on About, and inside the narrower `.container--media` player. Gap and whether notes sit beside or under the frame should follow that box, not only the window.
 
 The site header is not a container-query candidate. It is not reused at several widths on one page. A viewport query is enough.
+
+## 5) Logical-property opportunities
+
+Some flow-relative CSS is already in place: `margin-inline`, `margin-block`, `padding-block`, and `margin-inline-start`. These leftovers still assume left-to-right English.
+
+1. **`.callout { border-left }`**  
+   Change to `border-inline-start` so the warning bar stays on the start edge.
+
+2. **`.price-table { text-align: left }`**  
+   Change to `text-align: start`.
+
+3. **Heading, paragraph, card, and list spacing**  
+   `margin-top` and `margin-bottom` become `margin-block-start` and `margin-block-end`. Same for `.site-footer`, `.resource-list li`, gallery captions, and stacked table cells.
+
+4. **`.site-footer { border-top }`**  
+   Change to `border-block-start`.
+
+5. **`.skip-link { top; left }`**  
+   Change to `inset-block-start` and `inset-inline-start`.
+
+6. **Width on measure, form, and containers**  
+   `max-width` and `width` can become `max-inline-size` and `inline-size` so the reading measure follows the writing mode.
