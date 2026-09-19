@@ -2,11 +2,13 @@
 
 .container {
   inline-size: min(100% - var(--space-32), var(--content-width));
+  max-inline-size: var(--content-width);
   margin-inline: auto;
 }
 
 .container--media {
-  inline-size: min(100% - var(--space-32), var(--media-width));
+  inline-size: min(100%, var(--media-width));
+  max-inline-size: var(--media-width);
 }
 
 .section {
@@ -31,6 +33,10 @@
 .grid {
   display: grid;
   gap: var(--space-16);
+}
+
+.grid > * {
+  min-inline-size: 0;
 }
 
 @media (min-width: 48rem) {

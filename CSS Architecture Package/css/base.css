@@ -51,6 +51,7 @@ body {
   font-family: var(--font-family);
   font-size: var(--font-size);
   line-height: var(--line-height);
+  overflow-wrap: break-word;
 }
 
 h1,

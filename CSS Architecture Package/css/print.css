@@ -35,13 +35,13 @@
   .price-table th,
   .price-table td {
     display: block;
-    width: 100%;
+    inline-size: 100%;
   }
 
   .price-table thead {
     position: static;
     clip: auto;
-    height: auto;
+    block-size: auto;
     overflow: visible;
   }
 
