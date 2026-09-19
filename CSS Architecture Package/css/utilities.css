@@ -1,0 +1,22 @@
+/* Utilities */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.text-muted {
+  color: var(--color-muted);
+}
+
+.text-caption {
+  font-size: var(--font-size-small);
+}
+
+.flow-0 > * {
+  margin-block-end: 0;
+}

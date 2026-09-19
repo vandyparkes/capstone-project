@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services | Bulletproof Personal Training</title>
+  <meta name="description" content="Session types, pricing, and a request form for Bulletproof Personal Training.">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header container">
+    <a class="site-logo" href="index.html">Bulletproof PT</a>
+    <nav aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="services.html" aria-current="page">Services</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="container">
+    <section class="section">
+      <h1>Services</h1>
+      <p>Compare session types, then request coaching. This page is set up to print as a readable options sheet.</p>
+      <p class="no-print"><a class="button" href="#request">Request a session</a></p>
+    </section>
+
+    <section class="section" aria-labelledby="types-heading">
+      <h2 id="types-heading">Session types</h2>
+      <ul class="grid grid--3 flow-0">
+        <li class="card">
+          <h3>Online technique</h3>
+          <p>Video session focused on one lift and clear cues you can reuse.</p>
+        </li>
+        <li class="card">
+          <h3>In-home training</h3>
+          <p>In-person coaching in a home gym or living-space setup.</p>
+        </li>
+        <li class="card">
+          <h3>Advanced review</h3>
+          <p>Coaching for loaded variations after beginner patterns feel solid.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="price-heading">
+      <h2 id="price-heading">Pricing</h2>
+      <table class="price-table">
+        <caption class="visually-hidden">Session type, access, price, and notes</caption>
+        <thead>
+          <tr>
+            <th scope="col">Type</th>
+            <th scope="col">Access</th>
+            <th scope="col">Price</th>
+            <th scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Type">Online technique</td>
+            <td data-label="Access">Video</td>
+            <td data-label="Price">$65</td>
+            <td data-label="Notes">45 minutes</td>
+          </tr>
+          <tr>
+            <td data-label="Type">In-home training</td>
+            <td data-label="Access">In-person</td>
+            <td data-label="Price">$90</td>
+            <td data-label="Notes">Travel radius confirmed by email</td>
+          </tr>
+          <tr>
+            <td data-label="Type">Advanced video library</td>
+            <td data-label="Access">Members</td>
+            <td class="is-tbd" data-label="Price">Rate TBD</td>
+            <td data-label="Notes">Locked tutorials stay labeled until the rate is published</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section" id="request" aria-labelledby="form-heading">
+      <h2 id="form-heading">Request a session</h2>
+      <form class="session-form" action="#" method="post">
+        <div class="field">
+          <label for="name">Name (required)</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field is-invalid">
+          <label for="email">Email (required)</label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-invalid="true" aria-describedby="email-error" value="not-an-email">
+          <p class="field-error" id="email-error">Enter an email we can reply to, not only a colored border.</p>
+        </div>
+        <div class="field">
+          <label for="interest">Area of interest (required)</label>
+          <select id="interest" name="interest" required>
+            <option value="">Choose one</option>
+            <option>Online technique</option>
+            <option>In-home training</option>
+            <option>Advanced review</option>
+          </select>
+        </div>
+        <button class="button" type="submit">Submit request</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p class="text-muted">Bulletproof Personal Training. Browse tutorials on <a href="media.html">Media</a>.</p>
+  </footer>
+</body>
+</html>

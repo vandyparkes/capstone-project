@@ -1,0 +1,62 @@
+/* Print (Services) */
+
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  .skip-link,
+  .site-header nav,
+  .button,
+  .session-form,
+  .media-object__frame,
+  .no-print {
+    display: none !important;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .card,
+  .callout,
+  .price-table {
+    break-inside: avoid;
+    border: 1px solid #000;
+    background: #fff;
+    box-shadow: none;
+  }
+
+  .price-table,
+  .price-table thead,
+  .price-table tr,
+  .price-table th,
+  .price-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .price-table thead {
+    position: static;
+    clip: auto;
+    height: auto;
+    overflow: visible;
+  }
+
+  .price-table th,
+  .price-table td {
+    border: 1px solid #000;
+  }
+
+  .price-table td::before {
+    color: #000;
+  }
+
+  .badge {
+    border: 1px solid #000;
+    background: #fff;
+    color: #000;
+  }
+}

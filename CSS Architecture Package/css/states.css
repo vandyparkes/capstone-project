@@ -1,0 +1,39 @@
+/* Hover, current page, invalid, locked. Focus ring is in base.css. */
+
+.nav-list a:hover,
+.button:hover,
+.card a:hover,
+.resource-list a:hover {
+  text-decoration: underline;
+}
+
+.button:hover {
+  filter: brightness(0.92);
+}
+
+.button:active,
+.nav-list a:active {
+  transform: translateY(1px);
+}
+
+.nav-list a[aria-current="page"] {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.field.is-invalid input,
+.field.is-invalid select {
+  border-color: var(--color-warning);
+}
+
+.field-error {
+  display: none;
+}
+
+.field.is-invalid .field-error {
+  display: block;
+}
+
+.card.is-locked {
+  opacity: 0.95;
+}

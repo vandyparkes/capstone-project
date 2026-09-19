@@ -1,0 +1,6 @@
+/* TBD price exception */
+
+.price-table .is-tbd {
+  color: var(--color-warning);
+  font-weight: 700;
+}
