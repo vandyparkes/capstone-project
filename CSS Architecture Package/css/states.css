@@ -16,6 +16,13 @@
   transform: translateY(1px);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .button:active,
+  .nav-list a:active {
+    transform: none;
+  }
+}
+
 .nav-list a[aria-current="page"] {
   color: var(--color-accent);
   text-decoration: underline;
