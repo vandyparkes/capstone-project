@@ -93,9 +93,11 @@
 }
 
 /* Fallback: the stack stays. You can still read the card without the query. */
-@container (width > 16rem) {
-  .card > .badge {
-    flex: 0 1 auto;
+@supports (container-type: inline-size) {
+  @container (width > 16rem) {
+    .card > .badge {
+      flex: 0 1 auto;
+    }
   }
 }
 
