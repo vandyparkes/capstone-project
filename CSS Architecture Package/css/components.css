@@ -244,7 +244,8 @@
   font-size: var(--font-size-small);
 }
 
-@media (max-width: 47.99rem) {
+/* Four columns plus Notes get cramped before 48rem. */
+@media (width < 48rem) {
   .price-table thead {
     position: absolute;
     inline-size: 1px;

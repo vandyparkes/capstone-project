@@ -63,6 +63,7 @@
   }
 }
 
+/* 16:9 video next to the bio gets tight before 64rem. */
 @media (min-width: 64rem) {
   .media-split {
     grid-template-columns: minmax(18rem, 1.2fr) minmax(16rem, 1fr);
