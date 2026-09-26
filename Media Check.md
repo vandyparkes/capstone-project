@@ -1,6 +1,10 @@
 # Media check
 
-Object: the Squat setup player on `CSS Architecture Package/media.html`.
+## The media I checked
+
+The Squat setup player on `CSS Architecture Package/media.html`.
+
+It is a `video` inside `.media-object__frame`. It has `controls` and the poster `images/video-placeholder.svg`. The accessible name is "Squat setup video placeholder." There is no `src`, no `source`, and no `track`. The heading is "Player: Squat setup." Under the player: "Keep the whole foot on the floor, brace before you sit, and push through the heel on the way up."
 
 ## 1. Does the media have a clear purpose on the page?
 
@@ -51,3 +55,11 @@ Print CSS hides `.media-object__frame`.
 No external media URL. The page does not load a third-party player.
 
 `testing-evidence.md` records a layout shift score of 0 for Media. `.media-object__frame` uses `aspect-ratio: 16 / 9` before the poster shows. On Media that frame was 864 by 486. The poster is `images/video-placeholder.svg`, 1600 by 900, the same ratio. The poster does not push the text under it. There is no video file.
+
+## Remediation plan
+
+1. Add a `src` or a `source` on the `video`. It has neither. The demo does not play, and the time stays at 0:00.
+
+2. Add a `track` with `kind="captions"`, and add a transcript. There is no `track` and no transcript. The card line and the sentence under the player are the only text.
+
+3. Change the accessible name from "Squat setup video placeholder" when a source is on the `video`. Add a link to that same clip next to the player. There is no link to a hosted clip.
