@@ -31,3 +31,7 @@ The `video` has no `autoplay` and no `src`. Nothing plays. The time stays at 0:0
 `css/states.css` uses `prefers-reduced-motion: reduce` on `.button:active` and `.nav-list a:active`. It sets `transform` to `none`. That rule does not name `video`.
 
 `testing-evidence.md` records that preference on. The 1px press shift on buttons and nav is off.
+
+## 5. Does an iframe or embed have a meaningful title?
+
+No. `media.html` has no `iframe` and no `embed`. The player is a `video`. There is no `title` on an embed.
