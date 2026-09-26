@@ -318,6 +318,36 @@
         <p>Performance. The same criteria says Home and About should use a YouTube embed. The pages have no <code>iframe</code>. <code>testing-evidence.md</code> recorded that nothing embedded pushes the page. The request size of that embed is not recorded.</p>
       </section>
     </section>
+
+    <section>
+      <h2>Evidence plan</h2>
+      <p>Chrome. Home, About, Media, and Services.</p>
+
+      <section>
+        <h3>File size</h3>
+        <p>I will read the byte size of <code>CSS Architecture Package/images/video-placeholder.svg</code> and <code>CSS Architecture Package/images/card-two-widths.png</code>. I will look through that images folder for a training-space photo and a video file.</p>
+      </section>
+
+      <section>
+        <h3>Dimensions</h3>
+        <p>I will read the SVG <code>width</code> and <code>height</code>, and the PNG pixel size. In DevTools I will measure <code>.media-object__frame</code> on Home, About, and Media at 375px, 768px, and 1280px, and check that each frame stays 16:9. I will measure <code>.gallery-item__image</code> on About and check the height against 8rem.</p>
+      </section>
+
+      <section>
+        <h3>Responsive behavior</h3>
+        <p>At 375px, 768px, and 1280px I will check that the poster stays inside the frame and the page does not scroll sideways. I will count the About gallery columns at each width. I will check that the About video sits above the bio until the container is over 64rem, and beside the bio after that.</p>
+      </section>
+
+      <section>
+        <h3>Loading</h3>
+        <p>On each page I will open the Network panel and reload. I will list any request for the poster SVG, a video file, a font file, or a YouTube host. I will check the page source for <code>@font-face</code>, a font stylesheet, and an <code>iframe</code>.</p>
+      </section>
+
+      <section>
+        <h3>Accessibility</h3>
+        <p>I will tab to each <code>video</code> and read its accessible name. I will look for a <code>track</code> and a transcript on Home, About, and the Media player. On About I will read the four <code>role="img"</code> names in the accessibility tree. With <code>prefers-reduced-motion: reduce</code> on, I will press a button and a nav link and check the 1px shift.</p>
+      </section>
+    </section>
   </main>
 </body>
 </html>
