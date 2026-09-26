@@ -85,3 +85,13 @@ Services email stays invalid on purpose. Warning border plus the error sentence.
 If `subgrid` is missing, gallery tiles stay in the auto-fill grid. Captions stay under each image.
 
 If the container query is missing, card badges stay stacked. The card is still readable.
+
+## Layout shift
+
+Home, About, and Media. The layout shift score stayed at 0.
+
+Media dimensions. The video frame holds 16:9 before the poster shows. Home was 1120 by 630. About was 602 by 339. Media was 864 by 486. The poster SVG is 1600 by 900, the same ratio, so the poster does not push the text under it. There is no video file, so no later video size arrives. The gallery boxes are 8rem tall from the start. There is no `img`, so no image load changes the page.
+
+Font loading. Body type is Arial, Helvetica, sans-serif. No web font loads, so `font-display` does not run and the text does not swap.
+
+Embedded content. There is no `iframe` and no `audio`. Nothing embedded pushes the page.
