@@ -23,3 +23,11 @@ Chrome. The `video` has `controls`. The bar shows play, 0:00, mute, fullscreen, 
 `tabIndex` is 0. The video can take focus. The accessible name is "Squat setup video placeholder."
 
 There is no `src`. The time stays at 0:00.
+
+## 4. Does motion pause, stop, or respect reduced-motion preferences where needed?
+
+The `video` has no `autoplay` and no `src`. Nothing plays. The time stays at 0:00.
+
+`css/states.css` uses `prefers-reduced-motion: reduce` on `.button:active` and `.nav-list a:active`. It sets `transform` to `none`. That rule does not name `video`.
+
+`testing-evidence.md` records that preference on. The 1px press shift on buttons and nav is off.
