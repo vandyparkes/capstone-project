@@ -35,3 +35,13 @@ The `video` has no `autoplay` and no `src`. Nothing plays. The time stays at 0:0
 ## 5. Does an iframe or embed have a meaningful title?
 
 No. `media.html` has no `iframe` and no `embed`. The player is a `video`. There is no `title` on an embed.
+
+## 6. Is there a fallback link or alternate path if the external embed fails?
+
+No external embed. No link to a hosted clip.
+
+The `video` poster is `images/video-placeholder.svg`. Under the player: "Keep the whole foot on the floor, brace before you sit, and push through the heel on the way up."
+
+"Back to tutorials" links to `media.html`.
+
+Print CSS hides `.media-object__frame`.
