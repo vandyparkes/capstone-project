@@ -255,6 +255,48 @@
         </dl>
       </section>
     </section>
+
+    <section>
+      <h2>Typography</h2>
+      <p><code>body</code> uses <code>--font-family</code>. There is no <code>@font-face</code> and no font file in the project. <code>testing-evidence.md</code> recorded no web font load and no font swap.</p>
+
+      <section>
+        <h3>Body</h3>
+        <dl>
+          <dt>Font</dt>
+          <dd>Arial</dd>
+          <dt>Source</dt>
+          <dd>On this Mac, Arial Regular is <code>/System/Library/Fonts/Supplemental/Arial.ttf</code>. Arial Bold is <code>Arial Bold.ttf</code> in that folder. Helvetica is <code>/System/Library/Fonts/Helvetica.ttc</code>.</dd>
+          <dt>License</dt>
+          <dd>Not recorded.</dd>
+          <dt>Fallback stack</dt>
+          <dd><code>Arial, Helvetica, sans-serif</code></dd>
+          <dt>Weights and styles</dt>
+          <dd>The stylesheet sets <code>font-weight: 700</code> on <code>.site-logo</code>, <code>.nav-list a</code>, <code>.button</code>, <code>.badge</code>, <code>.field label</code>, <code>.field-error</code>, <code>.price-table td::before</code>, and <code>.price-table .is-tbd</code>. It does not set <code>font-style</code>. It does not set a weight on <code>body</code>, <code>h1</code>, <code>h2</code>, or <code>h3</code>. On Home in Chrome, body text computed to 400 normal and the headings computed to 700 normal. The painted family matched Arial, not Helvetica.</dd>
+          <dt>Loading strategy</dt>
+          <dd>No download. The browser uses the first installed face in the stack.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h3>Futura</h3>
+        <p><code>--font-futura</code> is not used by an element.</p>
+        <dl>
+          <dt>Font</dt>
+          <dd>Futura</dd>
+          <dt>Source</dt>
+          <dd><code>/System/Library/Fonts/Supplemental/Futura.ttc</code></dd>
+          <dt>License</dt>
+          <dd>Not recorded.</dd>
+          <dt>Fallback stack</dt>
+          <dd><code>Futura, "Avenir Next", sans-serif</code>. Avenir Next is <code>/System/Library/Fonts/Avenir Next.ttc</code>.</dd>
+          <dt>Weights and styles</dt>
+          <dd>Not applied. That Futura file has Medium, Medium Italic, Bold, Condensed Medium, and Condensed ExtraBold.</dd>
+          <dt>Loading strategy</dt>
+          <dd>No <code>@font-face</code>. Nothing is downloaded.</dd>
+        </dl>
+      </section>
+    </section>
   </main>
 </body>
 </html>
