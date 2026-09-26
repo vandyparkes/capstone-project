@@ -15,3 +15,11 @@ Hinge pattern and Push-up path also link to `#player`. The heading there stays "
 No. There is no `audio`. The `video` has no `track`. There is no transcript.
 
 The Squat setup card says "Foot stance, brace, and a controlled descent." Under the player: "Keep the whole foot on the floor, brace before you sit, and push through the heel on the way up." The card shows "8:12." That line uses `text-caption`. It is the duration.
+
+## 3. Are controls visible, keyboard reachable, and understandable?
+
+Chrome. The `video` has `controls`. The bar shows play, 0:00, mute, fullscreen, and a menu.
+
+`tabIndex` is 0. The video can take focus. The accessible name is "Squat setup video placeholder."
+
+There is no `src`. The time stays at 0:00.
