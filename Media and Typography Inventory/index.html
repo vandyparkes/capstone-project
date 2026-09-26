@@ -139,6 +139,122 @@
         </ol>
       </section>
     </section>
+
+    <section>
+      <h2>Media</h2>
+      <p>Checked <code>index.html</code>, <code>about.html</code>, <code>media.html</code>, and <code>services.html</code>. No <code>audio</code>. No <code>iframe</code>. No video file.</p>
+
+      <section>
+        <h3>Home highlight video</h3>
+        <dl>
+          <dt>Caption</dt>
+          <dd>None.</dd>
+          <dt>Transcript</dt>
+          <dd>None.</dd>
+          <dt>Control</dt>
+          <dd>The <code>video</code> has <code>controls</code>. It has no <code>src</code>, no <code>source</code>, and no <code>track</code>.</dd>
+          <dt>Motion</dt>
+          <dd>Nothing plays.</dd>
+          <dt>Fallback</dt>
+          <dd>Poster is <code>images/video-placeholder.svg</code>. The <code>aria-label</code> is "Highlight video placeholder." Print CSS hides <code>.media-object__frame</code>.</dd>
+          <dt>Privacy</dt>
+          <dd>No external media URL. The page does not load a third-party player.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h3>About intro video</h3>
+        <dl>
+          <dt>Caption</dt>
+          <dd>None.</dd>
+          <dt>Transcript</dt>
+          <dd>None.</dd>
+          <dt>Control</dt>
+          <dd>The <code>video</code> has <code>controls</code>. It has no <code>src</code>, no <code>source</code>, and no <code>track</code>.</dd>
+          <dt>Motion</dt>
+          <dd>Nothing plays.</dd>
+          <dt>Fallback</dt>
+          <dd>Poster is <code>images/video-placeholder.svg</code>. The <code>aria-label</code> is "Trainer intro video placeholder." Print CSS hides <code>.media-object__frame</code>.</dd>
+          <dt>Privacy</dt>
+          <dd>No external media URL. The page does not load a third-party player.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h3>Media player</h3>
+        <p>The heading is "Player: Squat setup." The text under the player is "Keep the whole foot on the floor, brace before you sit, and stand up without rushing the knees forward."</p>
+        <dl>
+          <dt>Caption</dt>
+          <dd>None.</dd>
+          <dt>Transcript</dt>
+          <dd>None.</dd>
+          <dt>Control</dt>
+          <dd>The <code>video</code> has <code>controls</code>. It has no <code>src</code>, no <code>source</code>, and no <code>track</code>.</dd>
+          <dt>Motion</dt>
+          <dd>Nothing plays.</dd>
+          <dt>Fallback</dt>
+          <dd>Poster is <code>images/video-placeholder.svg</code>. The <code>aria-label</code> is "Squat setup video placeholder." Print CSS hides <code>.media-object__frame</code>.</dd>
+          <dt>Privacy</dt>
+          <dd>No external media URL. The page does not load a third-party player.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h3>Tutorial cards</h3>
+        <p><code>planning-brief-starter/content-inventory-template.md</code> lists C6, Video Files and Explanations. That row says the source/owner is Trainer, the status is Risky, and the note is "Copyright and hosting; some tutorials stay locked."</p>
+        <dl>
+          <dt>Caption</dt>
+          <dd>None. Squat setup shows the text 8:12. Hinge pattern shows 6:40. Push-up path shows 5:05. Each of those is a <code>text-caption</code> paragraph. There is no subtitle file.</dd>
+          <dt>Transcript</dt>
+          <dd>None.</dd>
+          <dt>Control</dt>
+          <dd>Squat setup, Hinge pattern, and Push-up path each have an "Open video" link to <code>#player</code>. That player is the Squat setup video above. Paused squat loading, Single-leg hinge, and Press variations have no link and no <code>video</code>.</dd>
+          <dt>Motion</dt>
+          <dd>Nothing plays.</dd>
+          <dt>Fallback</dt>
+          <dd>No video file for these titles.</dd>
+          <dt>Privacy</dt>
+          <dd>The links stay on <code>media.html</code>.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h3>YouTube</h3>
+        <p><code>planning-brief-starter/acceptance-criteria-template.md</code> says Home and About should use a YouTube embed instead of a local video file. The pages have no <code>iframe</code>. About has a link named "YouTube technique library" with <code>href="#"</code>.</p>
+        <dl>
+          <dt>Caption</dt>
+          <dd>None.</dd>
+          <dt>Transcript</dt>
+          <dd>None.</dd>
+          <dt>Control</dt>
+          <dd>None. There is no embed.</dd>
+          <dt>Motion</dt>
+          <dd>None.</dd>
+          <dt>Fallback</dt>
+          <dd>Home and About use the poster on the <code>video</code> elements above.</dd>
+          <dt>Privacy</dt>
+          <dd>No YouTube address is in the page, so the page does not contact YouTube.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h3>Press motion</h3>
+        <dl>
+          <dt>Caption</dt>
+          <dd>None.</dd>
+          <dt>Transcript</dt>
+          <dd>None.</dd>
+          <dt>Control</dt>
+          <dd>The shift runs on press of a button or a nav link.</dd>
+          <dt>Motion</dt>
+          <dd><code>states.css</code> sets <code>transform: translateY(1px)</code> on <code>.button:active</code> and <code>.nav-list a:active</code>. Inside <code>@media (prefers-reduced-motion: reduce)</code> that transform is <code>none</code>. <code>testing-evidence.md</code> recorded the shift off with that preference on, and 1px with it off. There is no <code>@keyframes</code> rule.</dd>
+          <dt>Fallback</dt>
+          <dd>With reduced motion, the control stays in place.</dd>
+          <dt>Privacy</dt>
+          <dd>None. This is CSS on the page.</dd>
+        </dl>
+      </section>
+    </section>
   </main>
 </body>
 </html>
