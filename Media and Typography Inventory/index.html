@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="vandyparkes">
+  <title>Media and Typography Inventory</title>
+  <style>
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p>Bulletproof Personal Training</p>
+    <h1>Media and Typography Inventory</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Images</h2>
+      <p>Checked <code>index.html</code>, <code>about.html</code>, <code>media.html</code>, and <code>services.html</code>, and the files in <code>CSS Architecture Package/images/</code>.</p>
+
+      <section>
+        <h3>Video poster</h3>
+        <figure>
+          <img src="../CSS%20Architecture%20Package/images/video-placeholder.svg" width="1600" height="900" alt="Solid gray rectangle, 1600 by 900">
+          <figcaption><code>CSS Architecture Package/images/video-placeholder.svg</code></figcaption>
+        </figure>
+        <dl>
+          <dt>Purpose</dt>
+          <dd>Poster for the highlight video on Home, the intro video on About, and the player on Media. All three use this file.</dd>
+          <dt>Source</dt>
+          <dd>This file. The SVG does not name another source.</dd>
+          <dt>License / permission</dt>
+          <dd>Not recorded.</dd>
+          <dt>Original format</dt>
+          <dd>SVG</dd>
+          <dt>Current format</dt>
+          <dd>SVG</dd>
+          <dt>Current dimensions</dt>
+          <dd>1600 by 900. The <code>viewBox</code> is <code>0 0 1600 900</code>. The file is 148 bytes. It is one rectangle, fill <code>#d4d0c8</code>.</dd>
+          <dt>Expected display size</dt>
+          <dd>The poster fills <code>.media-object__frame</code>. The frame is 16:9. The video is <code>inline-size: 100%</code>, <code>block-size: 100%</code>, and <code>object-fit: cover</code>. Home is capped by <code>.container</code> at <code>70rem</code>, which is 1120 by 630 at a 16px root. About uses the wider column of <code>.media-split</code> once the container is over <code>64rem</code>, recorded at 602 by 339. Media is capped by <code>.container--media</code> at <code>54rem</code>, recorded at 864 by 486. Narrower windows keep the same ratio at the container width.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h3>Card width screenshot</h3>
+        <figure>
+          <img src="../CSS%20Architecture%20Package/images/card-two-widths.png" width="812" height="393" alt="Screenshot of two Squat setup cards, a narrow card with stacked badges and a wide card with badges on one row">
+          <figcaption><code>CSS Architecture Package/images/card-two-widths.png</code></figcaption>
+        </figure>
+        <dl>
+          <dt>Purpose</dt>
+          <dd>Picture for <code>card-width-test.md</code>. It is not used on Home, About, Media, or Services.</dd>
+          <dt>Source</dt>
+          <dd>The file metadata <code>UserComment</code> is Screenshot. No URL is stored in the file.</dd>
+          <dt>License / permission</dt>
+          <dd>Not recorded.</dd>
+          <dt>Original format</dt>
+          <dd>PNG</dd>
+          <dt>Current format</dt>
+          <dd>PNG</dd>
+          <dt>Current dimensions</dt>
+          <dd>812 by 393, 8-bit RGBA, 72 dpi, not interlaced. The file is 35,175 bytes.</dd>
+          <dt>Expected display size</dt>
+          <dd>Not placed in the page layout. <code>card-width-test.md</code> describes the same card in a 12rem box and a 28rem box. The file itself is 812 by 393.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h3>Training space pictures</h3>
+        <p>About lists four slots under Training spaces. Each slot is a <code>div</code> with <code>role="img"</code>. There is no <code>img</code> and no image file, so there is nothing to embed.</p>
+        <p><code>planning-brief-starter/content-inventory-template.md</code> lists these as C7, Training Images. That row says the purpose is to support the brand and show training in action, the source/owner is Trainer, the status is Risky, and the note is "Confirm ownership, licensing, and alt text."</p>
+        <dl>
+          <dt>License / permission</dt>
+          <dd>Not recorded.</dd>
+          <dt>Original format</dt>
+          <dd>No file.</dd>
+          <dt>Current format</dt>
+          <dd>No file. The slot is a box with <code>background: var(--color-border)</code>, which is <code>#d4d0c8</code>.</dd>
+          <dt>Current dimensions</dt>
+          <dd>No file, so no pixel size.</dd>
+          <dt>Expected display size</dt>
+          <dd>Each slot is at least <code>8rem</code> tall. The row is <code>.grid--4</code>, <code>repeat(auto-fill, minmax(14rem, 1fr))</code>, inside a container no wider than <code>70rem</code>. On a wide window that container is <code>70rem</code>, four tracks fit, and each slot is 16.75rem wide by 8rem tall (268 by 128 at a 16px root).</dd>
+        </dl>
+        <ol>
+          <li>Home gym squat rack with a barbell. Figcaption on the page: Home gym coaching.</li>
+          <li>Laptop set up for an online training session. Figcaption on the page: Online sessions.</li>
+          <li>Dumbbells and a bench in a small training space. Figcaption on the page: Small-space setup.</li>
+          <li>Notebook with lift cues next to a water bottle. Figcaption on the page: Session notes.</li>
+        </ol>
+      </section>
+
+      <p>Services has no image. The logo is the text "Bulletproof PT", not an image file.</p>
+    </section>
+  </main>
+</body>
+</html>
