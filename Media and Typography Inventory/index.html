@@ -297,6 +297,27 @@
         </dl>
       </section>
     </section>
+
+    <section>
+      <h2>Optimization risks</h2>
+
+      <section>
+        <h3>Training space pictures</h3>
+        <p>Accessibility. About has four <code>div</code> elements with <code>role="img"</code>. The labels are a squat rack with a barbell, a laptop, dumbbells and a bench, and a notebook with lift cues. Each box is the flat fill <code>#d4d0c8</code>. There is no image file.</p>
+        <p>Layout. <code>testing-evidence.md</code> recorded the boxes at 8rem from the start and a layout shift score of 0. A later photo has no recorded pixel size.</p>
+      </section>
+
+      <section>
+        <h3>Video elements</h3>
+        <p>Accessibility. Home, About, and the Media player each expose <code>controls</code>. Each one has no <code>src</code>, no <code>track</code>, and no transcript.</p>
+        <p>Performance. <code>planning-brief-starter/acceptance-criteria-template.md</code> says a local video file would make the company name and navigation wait on that download. There is no video file in the project. The poster is <code>images/video-placeholder.svg</code>, 148 bytes, 1600 by 900. <code>testing-evidence.md</code> recorded the 16:9 frame before the poster and a layout shift score of 0. Home was 1120 by 630, About was 602 by 339, and Media was 864 by 486.</p>
+      </section>
+
+      <section>
+        <h3>YouTube embed</h3>
+        <p>Performance. The same criteria says Home and About should use a YouTube embed. The pages have no <code>iframe</code>. <code>testing-evidence.md</code> recorded that nothing embedded pushes the page. The request size of that embed is not recorded.</p>
+      </section>
+    </section>
   </main>
 </body>
 </html>
