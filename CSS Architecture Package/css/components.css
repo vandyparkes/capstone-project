@@ -247,7 +247,7 @@
 }
 
 /* Four columns plus Notes get cramped before 48rem. */
-@media (width < 48rem) {
+@container (width < 48rem) {
   .price-table thead {
     position: absolute;
     inline-size: 1px;

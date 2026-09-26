@@ -1,6 +1,7 @@
 /* Layout */
 
 .container {
+  container-type: inline-size;
   inline-size: min(100% - var(--space-32), var(--content-width));
   max-inline-size: var(--content-width);
   margin-inline: auto;
@@ -65,7 +66,7 @@
 }
 
 /* 16:9 video next to the bio gets tight before 64rem. */
-@media (min-width: 64rem) {
+@container (width > 64rem) {
   .media-split {
     grid-template-columns: minmax(18rem, 1.2fr) minmax(16rem, 1fr);
     align-items: start;
