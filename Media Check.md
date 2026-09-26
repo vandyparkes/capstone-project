@@ -45,3 +45,9 @@ The `video` poster is `images/video-placeholder.svg`. Under the player: "Keep th
 "Back to tutorials" links to `media.html`.
 
 Print CSS hides `.media-object__frame`.
+
+## 7. Does the media create a performance, privacy, or layout-shift risk?
+
+No external media URL. The page does not load a third-party player.
+
+`testing-evidence.md` records a layout shift score of 0 for Media. `.media-object__frame` uses `aspect-ratio: 16 / 9` before the poster shows. On Media that frame was 864 by 486. The poster is `images/video-placeholder.svg`, 1600 by 900, the same ratio. The poster does not push the text under it. There is no video file.
