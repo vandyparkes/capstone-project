@@ -15,6 +15,7 @@
 
   /* Type */
   /* Body stack is Arial, Helvetica, sans-serif. On this Mac: /System/Library/Fonts/Supplemental/Arial.ttf, Arial Bold.ttf, and /System/Library/Fonts/Helvetica.ttc. Futura, "Avenir Next", sans-serif is not used. Futura.ttc is in /System/Library/Fonts/Supplemental/. Avenir Next.ttc is in /System/Library/Fonts/. No @font-face. No font file in the project. License is not recorded. */
+  /* No preload. No font download. The first installed face paints. The text does not swap. */
   --font-futura: Futura, "Avenir Next", sans-serif;
   --font-family: Arial, Helvetica, sans-serif;
   --font-size: 1rem;
