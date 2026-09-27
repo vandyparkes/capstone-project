@@ -34,6 +34,7 @@
 .grid {
   display: grid;
   gap: var(--space-16);
+  padding-inline-start: 0;
 }
 
 .grid > * {

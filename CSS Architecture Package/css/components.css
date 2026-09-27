@@ -244,6 +244,7 @@
   margin-block-start: var(--space-8);
   color: var(--color-muted);
   font-size: var(--font-size-small);
+  line-height: var(--line-height);
 }
 
 /* Four columns plus Notes get cramped before 48rem. */

@@ -59,6 +59,8 @@ body {
 h1,
 h2,
 h3 {
+  font-family: var(--font-family);
+  font-weight: 700;
   line-height: var(--line-height-heading);
   margin-block-start: 0;
   margin-block-end: var(--space-16);
@@ -89,6 +91,14 @@ a {
 ul,
 ol {
   margin-block-start: 0;
+  margin-block-end: var(--space-16);
+  line-height: var(--line-height);
+}
+
+ul:not([class]),
+ol:not([class]) {
+  max-inline-size: var(--measure);
+  padding-inline-start: var(--space-32);
 }
 
 :focus-visible {
