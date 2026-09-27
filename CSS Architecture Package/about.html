@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About | Bulletproof Personal Training</title>
   <meta name="description" content="Trainer background, credentials, and platform links for Bulletproof Personal Training.">
+  <link rel="preload" href="fonts/atkinson-hyperlegible-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/atkinson-hyperlegible-latin-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -30,7 +32,7 @@
     <section class="section grid media-split" aria-labelledby="bio-heading">
       <div class="media-object">
         <div class="media-object__frame">
-          <!-- Poster: images/video-placeholder.svg. 148 bytes, 1600 by 900. This file. The SVG does not name another source. License is not recorded. No video src. No audio. No embed. -->
+          <!-- Poster: images/video-placeholder.svg. 167 bytes, 1600 by 900. This file. The SVG does not name another source. License is not recorded. No video src. No audio. No embed. -->
           <!-- No srcset and no sizes. The poster attribute takes one URL. The SVG scales in the 16:9 frame. The frame fills its column. -->
           <!-- No picture. The file is one rectangle, the same 16:9 as the frame. object-fit is cover. The crop stays the whole rectangle at every width. -->
           <!-- No alt on the poster. The file is one gray rectangle. It does not show the trainer. The video name is the aria-label. -->
@@ -77,32 +79,33 @@
 
     <section class="section" aria-labelledby="gallery-heading">
       <h2 id="gallery-heading">Training spaces</h2>
-      <!-- No image file in these four slots. C7 in planning-brief-starter/content-inventory-template.md lists the source/owner as Trainer. License is not recorded. -->
-      <!-- No srcset and no sizes. These four slots are not img elements and have no file. -->
-      <!-- No picture. Each slot is the same fill, #d4d0c8, at every column count. There is no file to crop. -->
-      <!-- No alt. Each slot is a #d4d0c8 fill. It does not show a squat rack, a laptop, dumbbells, or a notebook. The figcaption is the text. -->
+      <!-- Same 3:2 crop at 480 and 800. No second crop. The tile stays 3:2. -->
       <ul class="grid grid--4 flow-0">
         <li>
           <figure class="gallery-item">
-            <div class="gallery-item__image" aria-hidden="true"></div>
+            <!-- Home gym slot. Man in a squat with a loaded barbell. Source: https://commons.wikimedia.org/wiki/File:Man_lifting_a_heavy_barbell.jpg. Author: Binyamin Mellish. License: CC0. JPEG. 800 by 533, 56,601 bytes. 480 by 320, 22,345 bytes. -->
+            <img src="images/home-gym-800.jpg" srcset="images/home-gym-480.jpg 480w, images/home-gym-800.jpg 800w" sizes="(min-width: 70rem) 17rem, (min-width: 48rem) 30vw, (min-width: 32rem) 45vw, calc(100vw - 2rem)" width="800" height="533" alt="Man holding a loaded barbell across his shoulders in a squat." loading="lazy">
             <figcaption>Home gym coaching</figcaption>
           </figure>
         </li>
         <li>
           <figure class="gallery-item">
-            <div class="gallery-item__image" aria-hidden="true"></div>
+            <!-- Online sessions slot. Laptop on a table. Source: https://commons.wikimedia.org/wiki/File:Home-office-336377.jpg. Author: Free-Photos, Pixabay. License: CC0. JPEG. 800 by 533, 64,850 bytes. 480 by 320, 30,153 bytes. -->
+            <img src="images/online-800.jpg" srcset="images/online-480.jpg 480w, images/online-800.jpg 800w" sizes="(min-width: 70rem) 17rem, (min-width: 48rem) 30vw, (min-width: 32rem) 45vw, calc(100vw - 2rem)" width="800" height="533" alt="Open laptop on a wooden table beside a notebook, a pen, and a phone." loading="lazy">
             <figcaption>Online sessions</figcaption>
           </figure>
         </li>
         <li>
           <figure class="gallery-item">
-            <div class="gallery-item__image" aria-hidden="true"></div>
+            <!-- Small-space slot. Dumbbells and plates. Source: https://commons.wikimedia.org/wiki/File:Kurzhanteln_2_x_15_kg_2v2.jpg. Author: Singlespeedfahrer. License: CC0. JPEG. 800 by 533, 66,853 bytes. 480 by 320, 22,995 bytes. -->
+            <img src="images/small-space-800.jpg" srcset="images/small-space-480.jpg 480w, images/small-space-800.jpg 800w" sizes="(min-width: 70rem) 17rem, (min-width: 48rem) 30vw, (min-width: 32rem) 45vw, calc(100vw - 2rem)" width="800" height="533" alt="Two adjustable dumbbells and loose plates on a gray floor." loading="lazy">
             <figcaption>Small-space setup</figcaption>
           </figure>
         </li>
         <li>
           <figure class="gallery-item">
-            <div class="gallery-item__image" aria-hidden="true"></div>
+            <!-- Session notes slot. Blue notepad. Source: https://commons.wikimedia.org/wiki/File:Small_blue_notepad_-_8_x_11_cm_-_D.jpg. Author: Fructibus. License: CC0. JPEG. 800 by 533, 36,568 bytes. 480 by 320, 15,392 bytes. -->
+            <img src="images/notes-800.jpg" srcset="images/notes-480.jpg 480w, images/notes-800.jpg 800w" sizes="(min-width: 70rem) 17rem, (min-width: 48rem) 30vw, (min-width: 32rem) 45vw, calc(100vw - 2rem)" width="800" height="533" alt="Small blue spiral notepad next to a one-euro coin." loading="lazy">
             <figcaption>Session notes</figcaption>
           </figure>
         </li>

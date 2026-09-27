@@ -234,8 +234,11 @@
   margin: 0;
 }
 
-.gallery-item__image {
-  min-block-size: 8rem;
+.gallery-item img {
+  display: block;
+  inline-size: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
   border-radius: var(--radius);
   background: var(--color-border);
 }

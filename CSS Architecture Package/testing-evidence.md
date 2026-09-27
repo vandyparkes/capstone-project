@@ -16,7 +16,7 @@ The header wraps. Logo on one line. Home, Media, Services, and About on the next
 
 Cards stay one column. Badges share a row. “Members only” sits beside “Advanced.”
 
-Home, About, and Media frames stay 16:9. Each frame was 343 by 193. The gallery is one across and 8rem tall.
+Home, About, and Media frames stay 16:9. Each frame was 343 by 193. The gallery is one across. Each photo was 343 by 229.
 
 Form fields fill the form. The required labels stay on one line. The email error wraps to two lines.
 
@@ -34,7 +34,7 @@ Home value cards go two across. The three teasers wrap to two, then one.
 
 The content box is 721px, under 48rem, so the pricing rows stay stacked. “Travel radius confirmed by email” fits on one line in that stack.
 
-The About video is still stacked. The frame was 721 by 406. The gallery is three across and 8rem tall.
+The About video is still stacked. The frame was 721 by 406. The gallery is three across, and the fourth photo wraps. Each photo was 230 by 153.
 
 ## Wide (1280px)
 
@@ -44,7 +44,7 @@ The header fits one row.
 
 “Advanced and locked tutorials” fits on one line. Media badges sit on one row. “Members only” sits beside “Advanced.”
 
-Two-up and three-up cards sit in a row. The About gallery is four across.
+Two-up and three-up cards sit in a row. The About gallery is four across. Each photo was 268 by 179.
 
 The pricing table is a table again. “Travel radius confirmed by email” and “Locked tutorials stay labeled until the rate is published” each fit on one line.
 
@@ -58,7 +58,7 @@ I set the window to 640px, which is a 1280px window at 200%.
 
 On Home, “Bulletproof Personal Training” fits on one line. “Watch tutorials” and “Request a session” sit on one row. The header fits one row. No sideways scroll.
 
-The Home frame was 593 by 334. The About frame was 593 by 334 and still stacked. Both stay 16:9. The gallery is two across and 8rem tall.
+The Home frame was 593 by 334. The About frame was 593 by 334 and still stacked. Both stay 16:9. The gallery is two across. Each photo was 289 by 192.
 
 ## Long headings, long links, dense cards, forms, tables, and navigation
 
@@ -94,19 +94,19 @@ If the container query is missing, card badges stay stacked. The card is still r
 
 Home, About, and Media. The layout shift score stayed at 0.
 
-Media dimensions. The video frame holds 16:9 before the poster shows. Home was 1120 by 630. About was 602 by 339. Media was 864 by 486. The poster SVG is 1600 by 900, the same ratio, so the poster does not push the text under it. There is no video file, so no later video size arrives. The gallery boxes are 8rem tall from the start. There is no `img`, so no image load changes the page.
+Media dimensions. The video frame holds 16:9 before the poster shows. Home was 1120 by 630. About was 602 by 339. Media was 864 by 486. The poster SVG is 1600 by 900, the same ratio, so the poster does not push the text under it. There is no video file, so no later video size arrives. Each gallery `img` has `width="800"` and `height="533"`, and the CSS frame is 3:2 before the JPEG paints.
 
-Font loading. Body type is Arial, Helvetica, sans-serif. No web font loads, so `font-display` does not run and the text does not swap.
+Font loading. Body type is Atkinson Hyperlegible, then Arial, Helvetica, sans-serif. The 400 file is 11,208 bytes. The 700 file is 11,364 bytes. `font-display` is `swap`. On these reloads the layout shift score stayed at 0.
 
 Embedded content. There is no `iframe` and no `audio`. Nothing embedded pushes the page.
 
 ## Slow network
 
-I reloaded Home, About, Media, and Services on a slow connection.
+I reloaded Home, About, Media, and Services.
 
-Home, About, and Media request the stylesheets and `images/video-placeholder.svg`. Services requests the stylesheets only.
+Home, Media, and Services request the stylesheets and both Atkinson woff2 files. Home and Media also request `images/video-placeholder.svg`. About also requests the four gallery JPEGs.
 
-No font file. No video file. No YouTube host. The layout shift score stayed at 0.
+No video file. No YouTube host. The layout shift score stayed at 0.
 
 ## Image dimensions and file size
 
@@ -114,7 +114,15 @@ No font file. No video file. No YouTube host. The layout shift score stayed at 0
 
 `images/card-two-widths.png` is 35,175 bytes, 812 by 393. It is not placed on Home, About, Media, or Services.
 
-The Training spaces slots have no image file. Each box stays 8rem tall. At 375px, 768px, and 1280px that height was 128px.
+Training spaces photos are JPEG, 3:2. At 1x, a slot under 480px wide requests the 480 file. At 2x on a wide window, the same slot requests the 800 file.
+
+`images/home-gym-800.jpg` is 56,601 bytes, 800 by 533. `images/home-gym-480.jpg` is 22,345 bytes, 480 by 320.
+
+`images/online-800.jpg` is 64,850 bytes, 800 by 533. `images/online-480.jpg` is 30,153 bytes, 480 by 320.
+
+`images/small-space-800.jpg` is 66,853 bytes, 800 by 533. `images/small-space-480.jpg` is 22,995 bytes, 480 by 320.
+
+`images/notes-800.jpg` is 36,568 bytes, 800 by 533. `images/notes-480.jpg` is 15,392 bytes, 480 by 320.
 
 Services has no `img` and no `video`.
 
@@ -124,7 +132,9 @@ The poster is not an `img`, so it has no `alt`.
 
 Home name: “Highlight video placeholder.” About name: “Trainer intro video placeholder.” Media name: “Squat setup video placeholder.”
 
-Each gallery slot has `aria-hidden="true"`. The figcaptions read Home gym coaching, Online sessions, Small-space setup, and Session notes.
+Gallery alts: "Man holding a loaded barbell across his shoulders in a squat." "Open laptop on a wooden table beside a notebook, a pen, and a phone." "Two adjustable dumbbells and loose plates on a gray floor." "Small blue spiral notepad next to a one-euro coin."
+
+The figcaptions read Home gym coaching, Online sessions, Small-space setup, and Session notes.
 
 ## Captions and transcripts
 
