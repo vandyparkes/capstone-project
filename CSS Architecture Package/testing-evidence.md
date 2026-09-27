@@ -14,7 +14,9 @@ The header wraps. Logo on one line. Home, Media, Services, and About on the next
 
 “Watch tutorials” and “Request a session” stack.
 
-Cards stay one column. Badges stack inside the card. “Members only” stays on its own row.
+Cards stay one column. Badges share a row. “Members only” sits beside “Advanced.”
+
+Home, About, and Media frames stay 16:9. Each frame was 343 by 193. The gallery is one across and 8rem tall.
 
 Form fields fill the form. The required labels stay on one line. The email error wraps to two lines.
 
@@ -32,7 +34,7 @@ Home value cards go two across. The three teasers wrap to two, then one.
 
 The content box is 721px, under 48rem, so the pricing rows stay stacked. “Travel radius confirmed by email” fits on one line in that stack.
 
-The About video is still stacked. The gallery is two across.
+The About video is still stacked. The frame was 721 by 406. The gallery is three across and 8rem tall.
 
 ## Wide (1280px)
 
@@ -56,13 +58,15 @@ I set the window to 640px, which is a 1280px window at 200%.
 
 On Home, “Bulletproof Personal Training” fits on one line. “Watch tutorials” and “Request a session” sit on one row. The header fits one row. No sideways scroll.
 
+The Home frame was 593 by 334. The About frame was 593 by 334 and still stacked. Both stay 16:9. The gallery is two across and 8rem tall.
+
 ## Long headings, long links, dense cards, forms, tables, and navigation
 
 Long headings wrap when the line is full. At 375px the three long headings above wrap to two lines. At 640px and 1280px they fit on one line.
 
 Long links stay inside the column. The About links stay on one line at 375px and 1280px. The Home buttons stack at 375px and share a row at 640px.
 
-Dense cards keep the badges, title, time, sentence, and link inside the card. Badges stack at 375px and share a row at 1280px.
+Dense cards keep the badges, title, time, sentence, and link inside the card. Badges share a row at 375px and at 1280px.
 
 The form stays full width at 375px. Required labels stay on one line. The error sentence wraps to two lines.
 
@@ -95,3 +99,37 @@ Media dimensions. The video frame holds 16:9 before the poster shows. Home was 1
 Font loading. Body type is Arial, Helvetica, sans-serif. No web font loads, so `font-display` does not run and the text does not swap.
 
 Embedded content. There is no `iframe` and no `audio`. Nothing embedded pushes the page.
+
+## Slow network
+
+I reloaded Home, About, Media, and Services on a slow connection.
+
+Home, About, and Media request the stylesheets and `images/video-placeholder.svg`. Services requests the stylesheets only.
+
+No font file. No video file. No YouTube host. The layout shift score stayed at 0.
+
+## Image dimensions and file size
+
+`images/video-placeholder.svg` is 167 bytes, 1600 by 900. It is the poster on Home, About, and Media.
+
+`images/card-two-widths.png` is 35,175 bytes, 812 by 393. It is not placed on Home, About, Media, or Services.
+
+The Training spaces slots have no image file. Each box stays 8rem tall. At 375px, 768px, and 1280px that height was 128px.
+
+Services has no `img` and no `video`.
+
+## Alt text
+
+The poster is not an `img`, so it has no `alt`.
+
+Home name: “Highlight video placeholder.” About name: “Trainer intro video placeholder.” Media name: “Squat setup video placeholder.”
+
+Each gallery slot has `aria-hidden="true"`. The figcaptions read Home gym coaching, Online sessions, Small-space setup, and Session notes.
+
+## Captions and transcripts
+
+No `track` on Home, About, or the Media player. No transcript.
+
+The Media cards show 8:12, 6:40, and 5:05. Those are the duration lines.
+
+Under the player: “Keep the whole foot on the floor, brace before you sit, and push through the heel on the way up.”
