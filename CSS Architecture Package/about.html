@@ -33,6 +33,7 @@
           <!-- Poster: images/video-placeholder.svg. 148 bytes, 1600 by 900. This file. The SVG does not name another source. License is not recorded. No video src. No audio. No embed. -->
           <!-- No srcset and no sizes. The poster attribute takes one URL. The SVG scales in the 16:9 frame. The frame fills its column. -->
           <!-- No picture. The file is one rectangle, the same 16:9 as the frame. object-fit is cover. The crop stays the whole rectangle at every width. -->
+          <!-- No alt on the poster. The file is one gray rectangle. It does not show the trainer. The video name is the aria-label. -->
           <video controls poster="images/video-placeholder.svg" aria-label="Trainer intro video placeholder"></video>
         </div>
       </div>
@@ -77,28 +78,29 @@
       <!-- No image file in these four slots. C7 in planning-brief-starter/content-inventory-template.md lists the source/owner as Trainer. License is not recorded. -->
       <!-- No srcset and no sizes. These four slots are not img elements and have no file. -->
       <!-- No picture. Each slot is the same fill, #d4d0c8, at every column count. There is no file to crop. -->
+      <!-- No alt. Each slot is a #d4d0c8 fill. It does not show a squat rack, a laptop, dumbbells, or a notebook. The figcaption is the text. -->
       <ul class="grid grid--4 flow-0">
         <li>
           <figure class="gallery-item">
-            <div class="gallery-item__image" role="img" aria-label="Home gym squat rack with a barbell"></div>
+            <div class="gallery-item__image" aria-hidden="true"></div>
             <figcaption>Home gym coaching</figcaption>
           </figure>
         </li>
         <li>
           <figure class="gallery-item">
-            <div class="gallery-item__image" role="img" aria-label="Laptop set up for an online training session"></div>
+            <div class="gallery-item__image" aria-hidden="true"></div>
             <figcaption>Online sessions</figcaption>
           </figure>
         </li>
         <li>
           <figure class="gallery-item">
-            <div class="gallery-item__image" role="img" aria-label="Dumbbells and a bench in a small training space"></div>
+            <div class="gallery-item__image" aria-hidden="true"></div>
             <figcaption>Small-space setup</figcaption>
           </figure>
         </li>
         <li>
           <figure class="gallery-item">
-            <div class="gallery-item__image" role="img" aria-label="Notebook with lift cues next to a water bottle"></div>
+            <div class="gallery-item__image" aria-hidden="true"></div>
             <figcaption>Session notes</figcaption>
           </figure>
         </li>
