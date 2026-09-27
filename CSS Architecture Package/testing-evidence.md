@@ -116,7 +116,7 @@ No video file. No YouTube host. The layout shift score stayed at 0.
 
 Training spaces photos are JPEG, 3:2. At 1x, a slot under 480px wide requests the 480 file. At 2x on a wide window, the same slot requests the 800 file.
 
-`images/home-gym-800.jpg` is 56,601 bytes, 800 by 533. `images/home-gym-480.jpg` is 22,345 bytes, 480 by 320.
+`images/home-gym-800.jpg` is 45,877 bytes, 800 by 533. `images/home-gym-480.jpg` is 23,231 bytes, 480 by 320.
 
 `images/online-800.jpg` is 64,850 bytes, 800 by 533. `images/online-480.jpg` is 30,153 bytes, 480 by 320.
 

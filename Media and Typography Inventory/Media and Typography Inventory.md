@@ -64,7 +64,7 @@ Not placed on Home, About, Media, or Services. The file is 812 by 393.
 
 About lists four `img` elements under Training spaces. Each one is a JPEG cropped to 3:2, with `srcset` at 480 and 800. The figcaption stays on the figure.
 
-1. Home gym coaching. `images/home-gym-800.jpg` and `images/home-gym-480.jpg`. Source: https://commons.wikimedia.org/wiki/File:Man_lifting_a_heavy_barbell.jpg. Author: Binyamin Mellish. License: CC0. 800 by 533, 56,601 bytes. 480 by 320, 22,345 bytes.
+1. Home gym coaching. `images/home-gym-800.jpg` and `images/home-gym-480.jpg`. Original photograph. 800 by 533, 45,877 bytes. 480 by 320, 23,231 bytes.
 2. Online sessions. `images/online-800.jpg` and `images/online-480.jpg`. Source: https://commons.wikimedia.org/wiki/File:Home-office-336377.jpg. Author: Free-Photos, Pixabay. License: CC0. 800 by 533, 64,850 bytes. 480 by 320, 30,153 bytes.
 3. Small-space setup. `images/small-space-800.jpg` and `images/small-space-480.jpg`. Source: https://commons.wikimedia.org/wiki/File:Kurzhanteln_2_x_15_kg_2v2.jpg. Author: Singlespeedfahrer. License: CC0. 800 by 533, 66,853 bytes. 480 by 320, 22,995 bytes.
 4. Session notes. `images/notes-800.jpg` and `images/notes-480.jpg`. Source: https://commons.wikimedia.org/wiki/File:Small_blue_notepad_-_8_x_11_cm_-_D.jpg. Author: Fructibus. License: CC0. 800 by 533, 36,568 bytes. 480 by 320, 15,392 bytes.
