@@ -254,3 +254,36 @@ Chrome. axe DevTools. Open `index.html`, `services.html`, and `media.html`. On e
 
 3. Services form and table. In the accessibility tree, record the caption "Session type, access, price, and notes," the column headers, and `#email-error` on the email field. Press "Submit request" with the fields as loaded. Record the browser message and the focused field.
 
+## Evidence plan
+
+Write results in `CSS Architecture Package/accessibility-evidence.md`. This plan stays the checklist. The evidence file holds what the checks showed.
+
+### Findings
+
+One entry per finding. Number them F1, F2, F3.
+
+Each entry records:
+
+- Date, browser, and page (`index.html`, `services.html`, or `media.html`)
+- The check name from this plan
+- The steps run, including viewport width, zoom, or axe when those were used
+- What showed up, quoted from the page or the axe rule id
+- The element: tag, accessible name, and `id` or class when it has one
+
+A check that matches the plan still gets a line: page, check name, and "matches the plan." axe output is pasted per page. No conformance line.
+
+### Fixes
+
+Under the finding number, record the file changed and the line that changed. Quote the text before and after. Leave the finding entry in place.
+
+### Retests
+
+Repeat the same steps on the same page, in the same browser, at the same width or zoom. Add R1 under that finding: date, steps, and what showed up after the change. If it still fails, add the next fix under the same number and retest again.
+
+### Remaining limitations
+
+End the evidence file with a limitations list. Each item names the page, what was not changed, and which check still shows it.
+
+Include an item when a check cannot be finished from the files as they are: a `video` with no `src`, no `track`, and no transcript; About is not one of the three pages in this plan; an axe scan does not replace the manual checks. Do not mark those items fixed.
+
+
