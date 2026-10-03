@@ -73,3 +73,44 @@ Nav items and cards are `ul` and `li`. Prices are a `table` with `caption`, `the
 The request form uses `form`, `label for`, `input`, `select`, and `button`. Name is `input type="text"`. Email is `input type="email"`. Area of interest is a `select` whose first `option` is "Choose one."
 
 Players are `video` elements with `controls`. They are not a scripted control set. Home's accessible name is "Highlight video placeholder." Media's is "Squat setup video placeholder," described by `player-text`.
+
+## Keyboard checks
+
+Use the keyboard only. Load the page, click the address bar once, then Tab forward and Shift+Tab back. There is no `tabindex` and no script. Record each stop in order. Compare it to the source order below.
+
+### Focus order
+
+Shared start on every page: "Skip to main content," then "Bulletproof PT," then Home, Media, Services, About.
+
+Home continues: "Watch tutorials," "Request a session," the `video` ("Highlight video placeholder"), "Open Media," "Open Services," "Open About," footer "Services." The `video` contains another "Watch tutorials" link. Record whether that inner link takes a stop. Cards without links do not get a stop.
+
+Services continues: "Request a session" (`#request`), Name, Email, Area of interest, "Submit request," footer "Media."
+
+Media continues: "Open video" under Squat setup, "Open video" under Hinge pattern, "Open video" under Push-up path, "Back to tutorials," the `video` ("Squat setup video placeholder"), footer "Services." The `video` contains another "Back to tutorials" link. Record whether that inner link takes a stop. Locked cards have no link and no button. Record that Tab moves from "Push-up path" to "Back to tutorials" without stopping on Paused squat loading, Single-leg hinge, or Press variations.
+
+### Visible focus
+
+`base.css` sets `:focus-visible` to a 3px solid outline, color `#9b1c1c`, offset 3px. On each stop, record whether that outline is visible on the control, including the skip link, nav links, button-styled links, the `video`, text links, and the Services fields and "Submit request."
+
+The skip link is clipped to 1px until `:focus` (`.skip-link` in `components.css`). On the first Tab, record whether "Skip to main content" is on screen. Tab again and record whether it clips away.
+
+### Skip link
+
+The skip link is on Home, Services, and Media. From the first Tab, press Enter. Record where focus is after Enter, then Tab once more and record the next stop.
+
+On Home the next controls in source after `#main` are "Watch tutorials," then "Request a session." On Services they are "Request a session" (`#request`), then Name. On Media they are the first "Open video," then the next "Open video."
+
+On Services, press Enter on "Request a session" (`#request`). Record whether focus stays on that link or moves, and whether the next Tab reaches Name.
+
+### Current page
+
+`aria-current="page"` is on Home in the Home nav, Services in the Services nav, and Media in the Media nav. Tab to that link. Record the accessible state and the visible style from `states.css`: accent color `#9b1c1c` and an underline. Tab to the other three nav links and record that they do not expose current page.
+
+### Traps
+
+No page has a script. From the last stop (the footer link), Shift+Tab should walk back through the same stops. From the first stop, Shift+Tab should leave the page.
+
+On each `video`, focus it, press Space, then Tab and Shift+Tab. Record whether focus can leave the `video`. There is no `src`.
+
+On Services, focus Area of interest. Open it with the keyboard, change the option with the arrow keys, press Escape, then Tab. Record whether focus reaches "Submit request" and does not stay inside the `select`.
+
