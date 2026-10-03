@@ -152,19 +152,18 @@ Record clipped text, overlap, and sideways scroll on the header, the three lines
 
 Record the computed foreground and background:
 
-- `#1b1b1b` on `#f5f3ef`
-- `#1b1b1b` on `#ffffff` (cards, form, table)
-- `#5a5a5a` on `#f5f3ef` (footer, Media durations)
-- `#5a5a5a` on `#ffffff` (stacked price labels)
+- `#1b1b1b` on `#f5f3ef` (page text, price table header cells)
+- `#1b1b1b` on `#ffffff` (cards, form, price table body cells)
+- `#5a5a5a` on `#f5f3ef` (footer)
+- `#5a5a5a` on `#ffffff` (Media durations, stacked price labels)
 - `#9b1c1c` on `#f5f3ef` (links, current nav item)
-- `#9b1c1c` on `#ffffff` (links on cards, secondary button)
+- `#9b1c1c` on `#ffffff` (links on cards, secondary button, focused skip link)
 - `#ffffff` on `#9b1c1c` (primary button, Free badge)
 - `#ffffff` on `#0d5c46` (Beginner)
 - `#ffffff` on `#163a5f` (Advanced)
 - `#ffffff` on `#5a5a5a` (Members only)
 - `#7a4500` on `#ffffff` (email error, "Rate TBD")
 - Focus outline `#9b1c1c` on `#f5f3ef` and on `#ffffff`
-- Focused skip link `#1b1b1b` on `#ffffff`
 
 ### Line length
 
@@ -196,7 +195,13 @@ Record the text of `#email-error`: "Enter an email we can reply to, not only a c
 
 "Submit request" is `button type="submit"`.
 
-Leave the fields as loaded and press "Submit request." Record the browser message and which field is focused. Then fill Name, leave Email as `not-an-email`, leave Area of interest on "Choose one," and submit again. Record the message and the focused field. Then set Area of interest to "Online technique" and submit again. Record whether the page stays on Services.
+Leave the fields as loaded and press "Submit request." Record the browser message and which field is focused.
+
+Fill Name. Leave Email as `not-an-email`. Leave Area of interest on "Choose one." Submit. Record the message and the focused field.
+
+Set Email to `name@example.com`. Leave Area of interest on "Choose one." Submit. Record the message and the focused field.
+
+Set Area of interest to "Online technique." Submit. Record whether the page stays on Services.
 
 ### Table
 
@@ -252,7 +257,7 @@ Chrome. axe DevTools. Open `index.html`, `services.html`, and `media.html`. On e
 
 2. Reflow at 320px CSS width on all three pages. Record sideways scroll, header wrap, card columns, and the Services price rows (Type, Access, Price, Notes from `data-label`). Repeat at 1280px and record the pricing header cells.
 
-3. Services form and table. In the accessibility tree, record the caption "Session type, access, price, and notes," the column headers, and `#email-error` on the email field. Press "Submit request" with the fields as loaded. Record the browser message and the focused field.
+3. Services form and table. In the accessibility tree, record the caption "Session type, access, price, and notes," the column headers, and `#email-error` on the email field. Press "Submit request" with the fields as loaded. Record the browser message and the focused field. Then run the later submits in the Form section and record each message and focused field.
 
 ## Evidence plan
 
@@ -260,7 +265,7 @@ Write results in `CSS Architecture Package/accessibility-evidence.md`. This plan
 
 ### Findings
 
-One entry per finding. Number them F1, F2, F3.
+One entry per finding. Number them in order, starting at F1.
 
 Each entry records:
 
