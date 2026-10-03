@@ -177,3 +177,65 @@ Record whether these wrap inside the content box: "Bulletproof Personal Training
 Services print preview. Record the skip link, nav, buttons, form, pricing rows, session-type cards, and prices. `print.css` hides `.skip-link`, `nav`, `.button`, `.session-form`, and `.no-print`, and stacks the price rows.
 
 Home and Media print preview. Record the video frame. `print.css` hides `.media-object__frame`.
+
+## Complex content checks
+
+Home, Services, and Media. Record what is in the source and what the page does.
+
+### Form
+
+Services only. `form.session-form`, `action="#"`, `method="post"`.
+
+Record each `label for` against the field `id`:
+
+- `name`: "Name (required)," `input type="text"`, `autocomplete="name"`, `required`
+- `email`: "Email (required)," `input type="email"`, `autocomplete="email"`, `required`, `aria-invalid="true"`, `aria-describedby="email-error"`, `value="not-an-email"`
+- `interest`: "Area of interest (required)," `select` `required`, first option "Choose one," then Online technique, In-home training, Advanced review
+
+Record the text of `#email-error`: "Enter an email we can reply to, not only a colored border." The email field is inside `.field.is-invalid`. Record whether that sentence is on screen when the page loads.
+
+"Submit request" is `button type="submit"`.
+
+Leave the fields as loaded and press "Submit request." Record the browser message and which field is focused. Then fill Name, leave Email as `not-an-email`, leave Area of interest on "Choose one," and submit again. Record the message and the focused field. Then set Area of interest to "Online technique" and submit again. Record whether the page stays on Services.
+
+### Table
+
+Services only. `table.price-table`.
+
+Record the caption text "Session type, access, price, and notes" and that the caption has class `visually-hidden`. In the accessibility tree, record the caption and the column headers Type, Access, Price, Notes. Each `th` has `scope="col"`.
+
+Record the three rows:
+
+- Online technique, Video, $65, 45 minutes
+- In-home training, In-person, $90, Travel radius confirmed by email
+- Advanced video library, Members, Rate TBD, Locked tutorials stay labeled until the rate is published
+
+"Rate TBD" is `td.is-tbd`. Each `td` has a `data-label` that matches its column name.
+
+### Images
+
+Home, Services, and Media have no `img`. Record that.
+
+### SVGs
+
+No inline `svg` on these pages. Home and Media use `images/video-placeholder.svg` as the `video` `poster`. The file is 1600 by 900, one `rect` with `fill="#d4d0c8"`, and `aria-hidden="true"` on the `svg`. Services does not use that file.
+
+### Audio, video, and embeds
+
+No `audio`. No `iframe`. No `track`. No `source`.
+
+Home `video`: `controls`, `poster="images/video-placeholder.svg"`, no `src`, `aria-label="Highlight video placeholder"`. Inside the `video`: "Watch tutorials" (`media.html`). Record the controls on screen and the time shown.
+
+Media `video`: `controls`, same poster, no `src`, `aria-label="Squat setup video placeholder"`, `aria-describedby="player-text"`. Inside the `video`: "Back to tutorials" (`media.html`). Under the player, `#player-text`: "Keep the whole foot on the floor, brace before you sit, and push through the heel on the way up." Record the controls on screen and the time shown.
+
+Media cards show 8:12, 6:40, and 5:05 in `p.text-caption`. Those lines are not a `track`. The three "Open video" links use `href="#player"`. The player heading stays "Player: Squat setup."
+
+Locked cards Paused squat loading, Single-leg hinge, and Press variations have no `video` and no control.
+
+### Motion
+
+Neither `video` has `autoplay`. Record whether anything plays on load.
+
+`states.css`: `.button:active` and `.nav-list a:active` use `transform: translateY(1px)`. Inside `@media (prefers-reduced-motion: reduce)` that `transform` is `none`.
+
+Turn on `prefers-reduced-motion: reduce`. Press a button-styled link and a nav link. Record the shift. Turn the preference off. Press the same controls. Record the shift.
