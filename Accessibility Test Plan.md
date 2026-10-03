@@ -239,3 +239,18 @@ Neither `video` has `autoplay`. Record whether anything plays on load.
 `states.css`: `.button:active` and `.nav-list a:active` use `transform: translateY(1px)`. Inside `@media (prefers-reduced-motion: reduce)` that `transform` is `none`.
 
 Turn on `prefers-reduced-motion: reduce`. Press a button-styled link and a nav link. Record the shift. Turn the preference off. Press the same controls. Record the shift.
+
+## Tool plan
+
+### Automated
+
+Chrome. axe DevTools. Open `index.html`, `services.html`, and `media.html`. On each page run a full-page scan. Record the page, each rule id, the description, and the element. Record the scan output only.
+
+### Manual
+
+1. Keyboard on all three pages. Click the address bar, then Tab through every stop in the Keyboard checks section. Record the order, the 3px `#9b1c1c` outline, Enter on "Skip to main content," and the nav link with `aria-current="page"`. On each `video`, press Space, then Tab away.
+
+2. Reflow at 320px CSS width on all three pages. Record sideways scroll, header wrap, card columns, and the Services price rows (Type, Access, Price, Notes from `data-label`). Repeat at 1280px and record the pricing header cells.
+
+3. Services form and table. In the accessibility tree, record the caption "Session type, access, price, and notes," the column headers, and `#email-error` on the email field. Press "Submit request" with the fields as loaded. Record the browser message and the focused field.
+
