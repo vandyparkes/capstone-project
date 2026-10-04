@@ -518,3 +518,55 @@ Priority. Medium.
 Fix. `about.html` adds `<p><a href="media.html">Watch tutorials</a></p>` after the figcaption. The link inside the `video` stays.
 
 Retest. The new link is in the tree, `href="media.html"`, width 105. The link inside the `video` is still width 0. The figcaption is unchanged.
+
+## Conformance summary
+
+Chrome. Home, Services, Media, and About.
+
+### What appears to conform
+
+Each page has one title, one `h1`, one `header`, one `nav` named "Main", one `main`, and one `footer`. Heading levels are not skipped. `aria-current="page"` is on the matching nav link. The page snapshot lists that link as current.
+
+The skip link moves focus to `main`. The next stop is the first control in `main`. No `tabindex` is above 0. The focus ring is 3px solid `#9b1c1c`, offset 3px.
+
+No sideways scroll at 320, 640, or 1280. Text spacing at 320 and 1280 did not clip text. The recorded text pairs are 6.22 or higher. The field border on white is 3.59.
+
+Services labels match Name, Email, and Area of interest. Email loads invalid with its error text. The table name is "Session type, access, price, and notes." Column headers have `scope="col"`. Each body row starts with `scope="row"`.
+
+About’s four image names match the alts. The figcaptions are separate. The poster SVG is `aria-hidden="true"`. Nothing autoplays. With reduced motion on, the press shift is `none`.
+
+axe-core 4.10.3 reported no violations after F5. Home 32 passes, Services 43, Media 33, About 35.
+
+### What was fixed
+
+F1. `tabindex="-1"` on `main`.
+
+F2. `--color-border` is `#8a877e`.
+
+F3. Name and Area of interest have error text in the page. Area of interest is not invalid on load.
+
+F4. Print puts the column label on each stacked price cell.
+
+F5. The link inside each `video` has `tabindex="-1"`.
+
+F6. About has a visible "Watch tutorials" link under the figcaption.
+
+Earlier edits: the empty "Client notes" section is gone. The `video` elements have no `controls`. "YouTube technique library" is text. Media has one "Open video" link.
+
+### What remains limited
+
+Home, About, and the Media player have no video file, no `track`, and no transcript. The poster is one gray rectangle. "YouTube technique library" is not a link.
+
+A filled submit leaves the form. The file server returns "Error code: 501" and "Unsupported method ('POST')." The form has no confirmation text.
+
+The Services tree sample is one page at 1280. It is not speech. "Enter your name." and "Choose a session type." are absent until those fields are invalid. The combobox property list does not set `required`. The full tree dump has no `current` property. `banner`, `main`, and `contentinfo` have no names.
+
+### Check again before release
+
+Run a screen reader on Home, Media, and About, and on Services at 320. Read the current nav state, the combobox required state, and the stacked price cells.
+
+Submit the form where POST is supported. Record the confirmation.
+
+Add a video file only with the caption and transcript that belong to that file. Add a YouTube address only if one is available.
+
+Run axe-core 4.10.3 again after those changes.
