@@ -273,3 +273,125 @@ Print at 1280 stacked the rows and showed Type, Access, Price, and Notes as thei
 Print at 1280. The form is `display: none`. The header row is clipped, height 1px. Rows stack. "Type" is on the first cell and "Access" is on the next, both `rgb(0, 0, 0)`.
 
 A filled submit still ends on the file server 501 page. Nothing in the form is sent.
+
+## Media, motion, and alternatives
+
+Chrome. Home, Media, and About. Services has no `img`, `video`, `audio`, `iframe`, `svg`, or `track`.
+
+### Images
+
+About only. Four `img` elements. The alt is not the figcaption.
+
+- "Man in a gray shirt squatting with a loaded barbell in a garage." Figcaption: Home gym coaching.
+- "Open laptop on a wooden table beside a notebook, a pen, and a phone." Figcaption: Online sessions.
+- "Two adjustable dumbbells and loose plates on a gray floor." Figcaption: Small-space setup.
+- "Small blue spiral notepad next to a one-euro coin." Figcaption: Session notes.
+
+Those alts are the image names in the tree. The figcaptions are separate text. Home and Media have no `img`.
+
+### SVG
+
+No inline `svg`. Home, About, and Media use `images/video-placeholder.svg` as the `video` poster. The file is one `rect`, fill `#d4d0c8`, 1600 by 900. The `svg` has `aria-hidden="true"`. No `title`. No `desc`.
+
+### Video, captions, transcripts, embeds
+
+No `audio`. No `iframe`. No `track`. No `src`. `autoplay` is false. `paused` is true. `controls` is false.
+
+Each `video` has `aria-hidden="true"` and `tabindex="-1"`. None of them is in the tree.
+
+Home. Figcaption: "Highlight video placeholder." The link inside the `video`, "Watch tutorials" (`media.html`), has width 0. The same link above the frame is in the tree.
+
+Media. Heading: "Player: Squat setup." `#player-text`: "Keep the whole foot on the floor, brace before you sit, and push through the heel on the way up." "Open video" is one link, `href="#player"`, width 313. "Back to tutorials" (`media.html`) sits above the player, width 114. The copy inside the `video` has width 0. The times 8:12, 6:40, and 5:05 are paragraphs. Paused squat loading, Single-leg hinge, and Press variations have no link and no button.
+
+About. Figcaption: "Trainer intro video placeholder." "YouTube technique library" is text. No YouTube URL is in the page.
+
+Print on Media. `.media-object__frame` is `display: none`. "Back to tutorials" stays `inline`. `#player-text` stays on screen, width 674.
+
+### Fix
+
+About. The only "Watch tutorials" link was inside the `video`. Width 0. It was not in the tree.
+
+`about.html` adds `<p><a href="media.html">Watch tutorials</a></p>` after the figcaption. The link inside the `video` stays.
+
+### Retest
+
+The new link is in the tree, `href="media.html"`, width 105. The link inside the `video` is still width 0. The figcaption is still "Trainer intro video placeholder."
+
+### Motion
+
+No `@keyframes`. The shift is `.button:active` and `.nav-list a:active`, `translateY(1px)`.
+
+With `prefers-reduced-motion: reduce` on, both computed transforms were `none`. With it off, both were `matrix(1, 0, 0, 1, 0, 1)`.
+
+Home, About, and the Media player have no video file, no `track`, and no transcript. The poster does not show the lift. "YouTube technique library" is not a link.
+
+## Automated and manual checks
+
+Chrome. axe-core 4.10.3. Home, Services, Media, and About. Full-page scan. Incomplete was empty on each page.
+
+### Automated
+
+Home. 31 passes. One violation: `aria-hidden-focus`, serious. Help: "ARIA hidden element must not be focusable or contain focusable elements." Target: `video`. The link inside it is "Watch tutorials" (`media.html`).
+
+Services. 43 passes. No violations.
+
+Media. 32 passes. One violation: `aria-hidden-focus`, serious. Same help. Target: `video`. The link inside it is "Back to tutorials" (`media.html`).
+
+About. 34 passes. One violation: `aria-hidden-focus`, serious. Same help. Target: `video`. The link inside it is "Watch tutorials" (`media.html`).
+
+### Keyboard
+
+Focusable controls in source order. No `tabindex` above 0.
+
+Home: Skip to main content, Bulletproof PT, Home, Media, Services, About, Watch tutorials, Request a session, Watch tutorials inside the `video`, Open Media, Open Services, Open About, footer Services.
+
+Media: Skip to main content, Bulletproof PT, Home, Media, Services, About, Open video, Back to tutorials, footer Services. The link inside the `video` was also a stop. Locked cards were not stops.
+
+About: Skip to main content, Bulletproof PT, Home, Media, Services, About, Watch tutorials inside the `video`, Watch tutorials, Request a private session, footer Media.
+
+Services: Skip to main content, Bulletproof PT, Home, Media, Services, About, Request a session, Name, Email, Area of interest, Submit request, footer Media.
+
+`:focus-visible` uses `--focus-width` 3px, `--focus-color` `#9b1c1c`, `--focus-offset` 3px. `.skip-link:focus` removes the clip and sets the background to the surface color.
+
+### Zoom and reflow
+
+No sideways scroll at 320, 640, or 1280. 640 is a 1280 window at 200%.
+
+Home at 320: the `h1` is 77px tall. The two button links are 88px tall. Home at 640: those links are 44px tall. The `h1` is 593px wide and does not overflow.
+
+Media at 320: "Advanced and locked tutorials" is 58px tall. At 1280 it is 29px tall.
+
+Services at 320: price rows are `display: block`. The header row is 1px tall. The next cell's label is "Access". At 1280 the rows are `table-row` and the header row is 57px tall.
+
+About at 320: the first photo is 273px wide. The window content is 305px wide.
+
+### Visual and semantic
+
+Each page has one `header`, one `nav`, one `main`, and one `footer`. Media has one `aside`.
+
+Home headings: h1 Bulletproof Personal Training. h2 What you can do here. h3 Watch technique. h3 Request coaching. h2 Start with these pages. h3 Media. h3 Services. h3 About.
+
+About headings: h1 About the trainer. h2 Coaching approach. h3 Credentials. h2 Beginner and advanced coaching. h3 Foundations. h3 Loaded variations. h2 Other platforms. h2 Training spaces.
+
+`aria-current="page"` is on the matching nav link. On Services that link is `rgb(155, 28, 28)`.
+
+Computed pairs:
+
+- `rgb(27, 27, 27)` on `rgb(245, 243, 239)`: 15.54.
+- `rgb(155, 28, 28)` on `rgb(245, 243, 239)`: 7.35. The current nav link.
+- `rgb(122, 69, 0)` on `rgb(255, 255, 255)`: 7.84. The email error on the form.
+
+### Fix
+
+The link inside each `video` was still in the tab order. The `video` is `aria-hidden="true"`.
+
+`index.html`, `media.html`, and `about.html`: `tabindex="-1"` on that inner link. The visible links stay in the tab order.
+
+### Retest
+
+axe-core 4.10.3. No violations.
+
+- Home: 32 passes. Stops no longer include the link inside the `video`.
+- Services: 43 passes. Stops unchanged.
+- Media: 33 passes. Stops: Open video, Back to tutorials, footer Services. The inner link `tabIndex` is -1.
+- About: 35 passes. Stops: Watch tutorials, Request a private session, footer Media. The inner link `tabIndex` is -1.
