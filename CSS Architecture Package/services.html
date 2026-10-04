@@ -67,19 +67,19 @@
         </thead>
         <tbody>
           <tr>
-            <td data-label="Type">Online technique</td>
+            <th scope="row" data-label="Type">Online technique</th>
             <td data-label="Access">Video</td>
             <td data-label="Price">$65</td>
             <td data-label="Notes">45 minutes</td>
           </tr>
           <tr>
-            <td data-label="Type">In-home training</td>
+            <th scope="row" data-label="Type">In-home training</th>
             <td data-label="Access">In-person</td>
             <td data-label="Price">$90</td>
             <td data-label="Notes">Travel radius confirmed by email</td>
           </tr>
           <tr>
-            <td data-label="Type">Advanced video library</td>
+            <th scope="row" data-label="Type">Advanced video library</th>
             <td data-label="Access">Members</td>
             <td class="is-tbd" data-label="Price">Rate TBD</td>
             <td data-label="Notes">Locked tutorials stay labeled until the rate is published</td>
@@ -93,7 +93,8 @@
       <form class="session-form" action="#" method="post">
         <div class="field">
           <label for="name">Name (required)</label>
-          <input id="name" name="name" type="text" autocomplete="name" required>
+          <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+          <p class="field-error" id="name-error">Enter your name.</p>
         </div>
         <div class="field is-invalid">
           <label for="email">Email (required)</label>
@@ -102,12 +103,13 @@
         </div>
         <div class="field">
           <label for="interest">Area of interest (required)</label>
-          <select id="interest" name="interest" required>
+          <select id="interest" name="interest" required aria-invalid="false" aria-describedby="interest-error">
             <option value="">Choose one</option>
             <option>Online technique</option>
             <option>In-home training</option>
             <option>Advanced review</option>
           </select>
+          <p class="field-error" id="interest-error">Choose a session type.</p>
         </div>
         <button class="button" type="submit">Submit request</button>
       </form>
@@ -117,5 +119,37 @@
   <footer class="site-footer container">
     <p class="text-muted">Bulletproof Personal Training. Browse tutorials on <a href="media.html">Media</a>.</p>
   </footer>
+  <script>
+    const form = document.querySelector('.session-form');
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const interest = document.getElementById('interest');
+
+    function setInvalid(input, bad) {
+      input.setAttribute('aria-invalid', bad ? 'true' : 'false');
+      input.parentElement.classList.toggle('is-invalid', bad);
+    }
+
+    email.addEventListener('input', () => {
+      if (email.value === '') return;
+      setInvalid(email, !email.checkValidity());
+    });
+
+    name.addEventListener('input', () => {
+      if (name.value.trim() !== '') setInvalid(name, false);
+    });
+
+    interest.addEventListener('change', () => {
+      if (interest.value !== '') setInvalid(interest, false);
+    });
+
+    form.querySelectorAll('input, select').forEach((input) => {
+      input.addEventListener('invalid', (event) => {
+        event.preventDefault();
+        setInvalid(input, true);
+        if (input === form.querySelector(':invalid')) input.focus();
+      });
+    });
+  </script>
 </body>
 </html>

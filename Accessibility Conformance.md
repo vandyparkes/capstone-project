@@ -4,17 +4,15 @@ Site files: `CSS Architecture Package/`. Open each page in a browser from that f
 
 ## Test scope
 
-Four pages. Each one holds a check the others do not.
+Four pages in `CSS Architecture Package/`. The media and typography inventory already listed the poster, the four photographs, the missing video files, and the missing captions and transcripts. Each page below is in the set because it holds a check the others do not.
 
-**Home** (`index.html`). Shared header, skip link, nav, `aria-current="page"`, footer, and heading outline. Two links use class `button`. One `video`, poster `images/video-placeholder.svg`, no `src`, and a `figcaption`.
+**Home** (`index.html`). Shared skip link, header, nav, `aria-current="page"`, footer, and heading outline. Two links use class `button`. One `video`, poster `images/video-placeholder.svg`, no `src`, and a `figcaption`. The inventory recorded that poster as one gray rectangle, 1600 by 900.
 
-**Services** (`services.html`). The only form: Name, Email (`aria-invalid="true"`, `aria-describedby="email-error"`), Area of interest, and "Submit request." The only table: caption, `th scope="col"`, and `data-label` on each cell. `print.css` targets this page.
+**Services** (`services.html`). The only form and the only table. Name, Email (`aria-invalid="true"`, `aria-describedby="email-error"`), Area of interest, and "Submit request." Caption, `th scope="col"`, and `data-label` on each cell. `print.css` targets this page. No image and no video.
 
-**Media** (`media.html`). Squat setup links to `#player` with "Open video." One `video`, the same poster, no `src`, `aria-label`, and `aria-describedby="player-text"`. Locked cards have no link and no button. One `aside`.
+**Media** (`media.html`). The player and the locked cards. Squat setup links to `#player` with "Open video." One `video`, the same poster, no `src`, `aria-label`, and `aria-describedby="player-text"`. The inventory recorded no `track` and no transcript. Locked cards have no link and no button. One `aside`.
 
-**About** (`about.html`). The only `img` elements. Four figures, each with `alt`, `srcset`, and a `figcaption`. One `video`, the same poster, no `src`, and a `figcaption`. "YouTube technique library" is text. No YouTube URL is in the page.
-
-Home, Services, and Media have no `img`. The photographs, alt text, and captions are on About.
+**About** (`about.html`). The only `img` elements. Four figures, each with `alt`, `srcset`, and a `figcaption`, matching the inventory. One `video`, the same poster, no `src`, and a `figcaption`. "YouTube technique library" is text. No YouTube URL is in the page.
 
 ## Semantic structure
 
@@ -214,3 +212,64 @@ The field border was `#d4d0c8` on white. That pair is 1.54. The same border on t
 The Name field border is `rgb(138, 135, 126)`. The card border is the same. The invalid email border stays `rgb(122, 69, 0)`.
 
 Services at 320 still has no sideways scroll. The email error stays inside the form.
+
+## Forms and tables
+
+Chrome. Services (`services.html`). Home, Media, and About have no form and no table.
+
+### Form
+
+`form.session-form`, `action="#"`, `method="post"`.
+
+`label for` matches `name`, `email`, and `interest`. Label text: "Name (required)", "Email (required)", "Area of interest (required)".
+
+On load, at 1280:
+
+- Name: required, not invalid. `#name-error` is `display: none`. Text: "Enter your name."
+- Email: required, invalid. Value `not-an-email`. `aria-invalid="true"`, `aria-describedby="email-error"`. The error is on screen: "Enter an email we can reply to, not only a colored border."
+- Area of interest: required, not invalid. Value "Choose one." `#interest-error` is `display: none`. Text: "Choose a session type."
+- "Submit request" is `button type="submit"`.
+
+Before the fix, the tree marked Area of interest invalid on load. The source had no `aria-invalid` on that select and no error text. Name and Area of interest errors were only the browser message.
+
+### Fix
+
+`services.html`. Name has `aria-describedby="name-error"` and the paragraph "Enter your name." Area of interest has `aria-invalid="false"`, `aria-describedby="interest-error"`, and the paragraph "Choose a session type." Both paragraphs use `field-error`, so they stay hidden until `.is-invalid`.
+
+On `invalid`, the browser message is cancelled, the field gets `aria-invalid="true"` and `.is-invalid`, and focus moves to the first invalid field. A valid email, a filled name, or a chosen session type clears that state.
+
+### Retest
+
+Email set to `name@example.com`. Invalid cleared. The email error left the tree.
+
+Submit with Name empty, that email, and Area of interest on "Choose one." Focus moved to Name. On screen: "Enter your name." and "Choose a session type." The email error stayed off. Name and Area of interest were invalid.
+
+Name filled. "Enter your name." left the tree. Submit again. Focus moved to Area of interest. "Choose a session type." stayed on screen.
+
+Area of interest set to "Online technique." That error left. The field was not invalid.
+
+Submit with all three filled. The page left the form. URL `services.html#`. Title "Error response". Text: "Error code: 501" and "Unsupported method ('POST')." The form has no confirmation text.
+
+### Table
+
+`table.price-table`. Caption "Session type, access, price, and notes", class `visually-hidden`. The table name in the tree is that caption.
+
+Column headers: Type, Access, Price, Notes. Each `th` has `scope="col"`.
+
+Each body row starts with `th scope="row"`: Online technique, In-home training, Advanced video library. Each cell has a `data-label` that matches its column.
+
+At 1280 the header row is on screen, height 57px. Rows are table rows. `::before` content is `none`. No sideways scroll.
+
+At 320 the header row is clipped to 1px. Rows stack. The first cell shows "Type". The next shows "Access". No sideways scroll. `scrollWidth` and `clientWidth` were both 305. The tree still has the table name, the column headers, and the row headers. Cell names include the `data-label` text.
+
+### Fix
+
+Print at 1280 stacked the rows and showed Type, Access, Price, and Notes as their own block. The cells had no `data-label` text. `::before` content was `none`.
+
+`print.css` now clips `thead` and sets `content: attr(data-label)` on `td::before` and `tbody th::before`.
+
+### Retest
+
+Print at 1280. The form is `display: none`. The header row is clipped, height 1px. Rows stack. "Type" is on the first cell and "Access" is on the next, both `rgb(0, 0, 0)`.
+
+A filled submit still ends on the file server 501 page. Nothing in the form is sent.

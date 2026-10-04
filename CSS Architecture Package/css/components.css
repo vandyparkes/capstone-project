@@ -262,11 +262,13 @@
   }
 
   .price-table tr,
-  .price-table td {
+  .price-table td,
+  .price-table tbody th {
     display: block;
   }
 
-  .price-table td {
+  .price-table td,
+  .price-table tbody th {
     border-block-end: 0;
   }
 
@@ -275,7 +277,8 @@
     margin-block-end: var(--space-16);
   }
 
-  .price-table td::before {
+  .price-table td::before,
+  .price-table tbody th::before {
     display: block;
     margin-block-end: var(--space-8);
     color: var(--color-muted);
