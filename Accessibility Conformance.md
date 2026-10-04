@@ -432,3 +432,89 @@ The combobox property list does not set `required`. The word is in the label.
 The full tree dump has no `current` property. The page snapshot does list current on Services.
 
 `banner`, `main`, and `contentinfo` have no names.
+
+## Remediation log
+
+### F1
+
+Issue. Enter on "Skip to main content" left focus on the body.
+
+Evidence. Chrome. Home, Services, Media, and About. The hash became `#main`. Focus stayed on the body.
+
+Impact. The next Tab did not start at the first control in `main`.
+
+Priority. High.
+
+Fix. `tabindex="-1"` on `main` in `index.html`, `services.html`, `media.html`, and `about.html`.
+
+Retest. On all four pages, Enter moves focus to `main`. The next stop is Watch tutorials on Home, Request a session on Services, Open video on Media, and Request a private session on About.
+
+### F2
+
+Issue. The field border was `#d4d0c8` on white. That pair is 1.54. The same border on the page background is 1.39.
+
+Evidence. Chrome. Services. Computed border color on the Name field.
+
+Impact. The field edge is under 3:1.
+
+Priority. High.
+
+Fix. `--color-border` in `css/base.css` is `#8a877e`. On white that is 3.59. On `rgb(245, 243, 239)` that is 3.24.
+
+Retest. The Name field border is `rgb(138, 135, 126)`. The card border is the same. The invalid email border stays `rgb(122, 69, 0)`.
+
+### F3
+
+Issue. Area of interest was invalid on load and had no error text. Name and Area of interest errors were only the browser message.
+
+Evidence. Chrome accessibility tree on Services. The combobox was `invalid` true, with no `describedby` and no error text. Name was `invalid` false and had no error element.
+
+Impact. The select was marked invalid before submit. A failed submit did not put a Name or Area of interest message in the page.
+
+Priority. Medium.
+
+Fix. `services.html`. Name has `#name-error`, "Enter your name." Area of interest has `aria-invalid="false"` and `#interest-error`, "Choose a session type." On `invalid`, the browser message is cancelled, the field is marked invalid, and focus moves to the first invalid field.
+
+Retest. On load, Area of interest is required and not invalid. Email set to `name@example.com` cleared the email error. Submit with Name empty focused Name and showed "Enter your name." and "Choose a session type." After Name was filled, submit focused Area of interest. Choosing "Online technique" cleared that error.
+
+### F4
+
+Issue. Print at 1280 stacked the price rows. The cells had no column label.
+
+Evidence. Chrome print emulation at 1280. `::before` content was `none`. The header row was a separate block: Type, Access, Price, Notes.
+
+Impact. The printed values were not paired with those column names.
+
+Priority. Medium.
+
+Fix. `print.css` clips `thead` and sets `content: attr(data-label)` on `td::before` and `tbody th::before`.
+
+Retest. Print at 1280. The header row is 1px tall. Rows stack. "Type" is on the first cell and "Access" is on the next, both `rgb(0, 0, 0)`. The form is `display: none`.
+
+### F5
+
+Issue. Each `video` is `aria-hidden="true"` and contained a link that was still a tab stop.
+
+Evidence. axe-core 4.10.3. Rule `aria-hidden-focus`, serious, on Home, Media, and About. Target: `video`. Home's stop list included "Watch tutorials" inside the `video`.
+
+Impact. Tab reached a link that was not in the accessibility tree.
+
+Priority. High.
+
+Fix. `tabindex="-1"` on the link inside the `video` in `index.html`, `media.html`, and `about.html`. The visible links stay in the tab order.
+
+Retest. axe-core 4.10.3. No violations. Home 32 passes, Services 43, Media 33, About 35. Those inner links are not in the stop lists. Each inner `tabIndex` is -1.
+
+### F6
+
+Issue. About’s only "Watch tutorials" link was inside the `video`.
+
+Evidence. Chrome. The link’s width was 0. It was not in the accessibility tree. The figcaption was "Trainer intro video placeholder."
+
+Impact. That link was not on screen and not in the tree.
+
+Priority. Medium.
+
+Fix. `about.html` adds `<p><a href="media.html">Watch tutorials</a></p>` after the figcaption. The link inside the `video` stays.
+
+Retest. The new link is in the tree, `href="media.html"`, width 105. The link inside the `video` is still width 0. The figcaption is unchanged.
