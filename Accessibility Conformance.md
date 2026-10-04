@@ -395,3 +395,40 @@ axe-core 4.10.3. No violations.
 - Services: 43 passes. Stops unchanged.
 - Media: 33 passes. Stops: Open video, Back to tutorials, footer Services. The inner link `tabIndex` is -1.
 - About: 35 passes. Stops: Watch tutorials, Request a private session, footer Media. The inner link `tabIndex` is -1.
+
+## Accessibility tree sample
+
+Chrome accessibility tree. Services (`services.html`) at 1280. 196 nodes.
+
+### What was checked
+
+Document name: `Services | Bulletproof Personal Training`.
+
+Landmarks: `banner` with no name, `navigation` "Main", `main` with no name and focusable, `contentinfo` with no name. Regions: Session types, Pricing, Request a session.
+
+Headings: h1 Services. h2 Session types. h3 Online technique. h3 In-home training. h3 Advanced review. h2 Pricing. h2 Request a session.
+
+Links: Skip to main content, Bulletproof PT, Home, Media, Services, About, Request a session, footer Media. The page snapshot marks Services current. In the full tree, that link's properties are focusable and the URL `services.html`.
+
+Form:
+
+- Textbox "Name (required)". `required` true. `invalid` false. `describedby` `name-error`. "Enter your name." is not in the tree.
+- Textbox "Email (required)". `required` true. `invalid` true. `describedby` `email-error`. The tree includes "Enter an email we can reply to, not only a colored border."
+- Combobox "Area of interest (required)". `invalid` false. `hasPopup` menu. `expanded` false. `describedby` `interest-error`. Options: Choose one, Online technique, In-home training, Advanced review. The property list has no `required`. The page snapshot lists required.
+- Button "Submit request".
+
+Table name: "Session type, access, price, and notes." The caption node itself has no name. Column headers: Type, Access, Price, Notes. Row headers: Online technique, In-home training, Advanced video library. Cells: Video, $65, 45 minutes. In-person, $90, Travel radius confirmed by email. Members, Rate TBD, Locked tutorials stay labeled until the rate is published.
+
+### Limits
+
+This is the Chrome tree for one page at 1280. It is not speech, and it does not include Home, Media, or About.
+
+At this width the cell names do not include the stacked `data-label` text.
+
+"Enter your name." and "Choose a session type." are not in the tree. Those paragraphs stay `display: none` until the field is invalid.
+
+The combobox property list does not set `required`. The word is in the label.
+
+The full tree dump has no `current` property. The page snapshot does list current on Services.
+
+`banner`, `main`, and `contentinfo` have no names.
