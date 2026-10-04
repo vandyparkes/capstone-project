@@ -261,7 +261,7 @@ Chrome. axe DevTools. Open `index.html`, `services.html`, and `media.html`. On e
 
 ## Evidence plan
 
-Write results in `CSS Architecture Package/accessibility-evidence.md`. This plan stays the checklist. The evidence file holds what the checks showed.
+Write results in `Accessibility Conformance.md`. This plan stays the checklist. That file holds what the checks showed.
 
 ### Findings
 

@@ -108,7 +108,7 @@ Services then: Request a session, Name, Email, Area of interest, Submit request,
 
 Media then: Open video, Back to tutorials, footer Services. Hinge pattern, Push-up path, and the locked cards are not stops. The `video` `tabindex` is `-1`.
 
-About then: Request a private session, footer Media. YouTube technique library is not a stop. The photos are not stops.
+About then: Watch tutorials, Request a private session, footer Media. YouTube technique library is not a stop. The photos are not stops. The link inside the `video` is not a stop.
 
 No `tabindex` above 0. No key script.
 
@@ -116,7 +116,7 @@ No `tabindex` above 0. No key script.
 
 Enter on "Skip to main content" set the hash to `#main` and left focus on the body.
 
-`main` now has `tabindex="-1"` on all four pages. After Enter, focus is on `main`. The next stop is the first control inside `main`: Watch tutorials on Home, Request a session on Services, Open video on Media, Request a private session on About.
+`main` now has `tabindex="-1"` on all four pages. After Enter, focus is on `main`. The next stop is the first control inside `main`: Watch tutorials on Home, Request a session on Services, Open video on Media, Watch tutorials on About.
 
 ### Focus visible
 
@@ -396,6 +396,8 @@ axe-core 4.10.3. No violations.
 - Media: 33 passes. Stops: Open video, Back to tutorials, footer Services. The inner link `tabIndex` is -1.
 - About: 35 passes. Stops: Watch tutorials, Request a private session, footer Media. The inner link `tabIndex` is -1.
 
+axe-core 4.10.3 did not judge alt quality, reading order, reflow, text spacing, or whether a transcript exists. Those checks stayed manual.
+
 ## Accessibility tree sample
 
 Chrome accessibility tree. Services (`services.html`) at 1280. 196 nodes.
@@ -447,7 +449,7 @@ Priority. High.
 
 Fix. `tabindex="-1"` on `main` in `index.html`, `services.html`, `media.html`, and `about.html`.
 
-Retest. On all four pages, Enter moves focus to `main`. The next stop is Watch tutorials on Home, Request a session on Services, Open video on Media, and Request a private session on About.
+Retest. On all four pages, Enter moves focus to `main`. The next stop is Watch tutorials on Home, Request a session on Services, Open video on Media, and Watch tutorials on About.
 
 ### F2
 
@@ -570,3 +572,7 @@ Submit the form where POST is supported. Record the confirmation.
 Add a video file only with the caption and transcript that belong to that file. Add a YouTube address only if one is available.
 
 Run axe-core 4.10.3 again after those changes.
+
+## AI assistance
+
+Grok in Cursor reviewed this document against the assignment parts and edited the About keyboard order, the axe limits note, and this sentence. The checks, measurements, and the rest of the wording are mine.
