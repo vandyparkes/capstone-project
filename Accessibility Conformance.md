@@ -572,7 +572,3 @@ Submit the form where POST is supported. Record the confirmation.
 Add a video file only with the caption and transcript that belong to that file. Add a YouTube address only if one is available.
 
 Run axe-core 4.10.3 again after those changes.
-
-## AI assistance
-
-Grok in Cursor reviewed this document against the assignment parts and edited the About keyboard order, the axe limits note, and this sentence. The checks, measurements, and the rest of the wording are mine.
