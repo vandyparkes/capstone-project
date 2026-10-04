@@ -143,3 +143,74 @@ Nothing keeps focus. The `video` is not a stop. Area of interest is a `select`. 
 ### Retest
 
 On all four pages, the skip link moves focus to `main`. The outline on the skip link, the current nav link, and `main` is 3px solid `rgb(155, 28, 28)`, offset 3px.
+
+## Zoom, reflow, text spacing, and contrast
+
+Chrome. Home, Services, Media, and About.
+
+Widths: 320, 375, 640, 768, and 1280 CSS pixels. 640 is a 1280 window at 200%. 320 is that window at 400%.
+
+### Reflow
+
+No sideways scroll at those widths.
+
+Home at 320 and 375: the logo sits above Home, Media, Services, and About. "Bulletproof Personal Training" wraps. "Watch tutorials" and "Request a session" stack. The frame stays 16:9.
+
+Home at 640, 768, and 1280: the nav is one row. The two button links are one row. At 1280 the intro is 674px wide.
+
+Services at 320: price rows stack. The header row is clipped. The first cell shows the label "Type". The email error wraps and stays in the form. Fields stay inside the form.
+
+Services at 1280: headers Type, Access, Price, and Notes show. The four values sit in columns. The intro is 674px wide.
+
+Media at 320: "Advanced and locked tutorials" wraps to two lines. "Advanced" and "Members only" stack. The player frame stays 16:9. The callout stays inside the page.
+
+Media at 1280: that heading is one line. "Advanced" and "Members only" share a row. The intro, the callout, and the sentence under the player are 674px wide. "Player: Squat setup" is one line.
+
+About at 320: the video sits above the bio. The four photos stack. "YouTube technique library" stays inside the page.
+
+About at 1280: the video sits beside the bio. The four photos sit in one row.
+
+### Text spacing
+
+At 320 and at 1280, on each page:
+
+```css
+* {
+  line-height: 1.5 !important;
+  letter-spacing: 0.12em !important;
+  word-spacing: 0.16em !important;
+}
+p {
+  margin-bottom: 2em !important;
+}
+```
+
+No sideways scroll. No clipped heading, link, paragraph, badge, table cell, or email error. The style was removed after the check.
+
+### Contrast
+
+Computed colors:
+
+- `rgb(27, 27, 27)` on `rgb(245, 243, 239)`: 15.54. Page text and price header cells.
+- `rgb(27, 27, 27)` on `rgb(255, 255, 255)`: 17.22. Cards, fields, and price body cells.
+- `rgb(90, 90, 90)` on `rgb(245, 243, 239)`: 6.22. Footer text and figcaptions.
+- `rgb(90, 90, 90)` on `rgb(255, 255, 255)`: 6.90. Durations and stacked price labels.
+- `rgb(155, 28, 28)` on `rgb(245, 243, 239)`: 7.35. Links, the current nav item, and the focus outline.
+- `rgb(155, 28, 28)` on `rgb(255, 255, 255)`: 8.15. Links on cards, the secondary button, and the focus outline on white.
+- `rgb(255, 255, 255)` on `rgb(155, 28, 28)`: 8.15. Primary button and the Free badge.
+- `rgb(255, 255, 255)` on `rgb(13, 92, 70)`: 7.97. Beginner.
+- `rgb(255, 255, 255)` on `rgb(22, 58, 95)`: 11.64. Advanced.
+- `rgb(255, 255, 255)` on `rgb(90, 90, 90)`: 6.90. Members only.
+- `rgb(122, 69, 0)` on `rgb(255, 255, 255)`: 7.84. The email error and "Rate TBD".
+
+### Fix
+
+The field border was `#d4d0c8` on white. That pair is 1.54. The same border on the page background is 1.39.
+
+`--color-border` in `css/base.css` is now `#8a877e`. On white that is 3.59. On `rgb(245, 243, 239)` that is 3.24.
+
+### Retest
+
+The Name field border is `rgb(138, 135, 126)`. The card border is the same. The invalid email border stays `rgb(122, 69, 0)`.
+
+Services at 320 still has no sideways scroll. The email error stays inside the form.
