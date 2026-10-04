@@ -95,3 +95,51 @@ Media has one "Open video" link, on Squat setup, `href="#player"`. Hinge pattern
 About: "YouTube technique library" is not a link. The caption "Trainer intro video placeholder" is under the frame. The `video` has `aria-hidden="true"` and no `controls`.
 
 Services was not edited. The title, landmarks, headings, form names, table name, and "Submit request" match the check above.
+
+## Keyboard and focus
+
+Chrome. Home, Services, Media, and About.
+
+### Focus order
+
+Each page starts: Skip to main content, Bulletproof PT, Home, Media, Services, About.
+
+Home then: Watch tutorials, Request a session, Open Media, Open Services, Open About, footer Services.
+
+Services then: Request a session, Name, Email, Area of interest, Submit request, footer Media.
+
+Media then: Open video, Back to tutorials, footer Services. Hinge pattern, Push-up path, and the locked cards are not stops. The `video` `tabindex` is `-1`.
+
+About then: Request a private session, footer Media. YouTube technique library is not a stop. The photos are not stops.
+
+No `tabindex` above 0. No key script.
+
+### Skip link
+
+Enter on "Skip to main content" set the hash to `#main` and left focus on the body.
+
+`main` now has `tabindex="-1"` on all four pages. After Enter, focus is on `main`. The next stop is the first control inside `main`: Watch tutorials on Home, Request a session on Services, Open video on Media, Request a private session on About.
+
+### Focus visible
+
+`:focus-visible` is 3px solid `#9b1c1c`, offset 3px.
+
+The skip link on focus has a white background. "Skip to main content" was on screen with that outline.
+
+The current nav link uses the same outline. On About the link text was underline, color `rgb(155, 28, 28)`. Home, Media, and Services used that color and underline. The other nav links were `rgb(27, 27, 27)` with no underline. The tree state was current.
+
+After the skip link, `main` had the same 3px solid outline.
+
+### Traps
+
+Nothing keeps focus. The `video` is not a stop. Area of interest is a `select`. The stops run forward from the skip link and back from the footer link.
+
+### Fix
+
+`index.html`, `services.html`, `media.html`, and `about.html`: `tabindex="-1"` on `main`.
+
+`.skip-link:focus` in `css/components.css` sets `overflow: visible`.
+
+### Retest
+
+On all four pages, the skip link moves focus to `main`. The outline on the skip link, the current nav link, and `main` is 3px solid `rgb(155, 28, 28)`, offset 3px.
