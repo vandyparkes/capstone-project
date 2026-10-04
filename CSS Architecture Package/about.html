@@ -30,17 +30,18 @@
     </section>
 
     <section class="section grid media-split" aria-labelledby="bio-heading">
-      <div class="media-object">
+      <figure class="media-object">
         <div class="media-object__frame">
           <!-- Poster: images/video-placeholder.svg. 167 bytes, 1600 by 900. This file. The SVG does not name another source. License is not recorded. No video src. No audio. No embed. -->
           <!-- No srcset and no sizes. The poster attribute takes one URL. The SVG scales in the 16:9 frame. The frame fills its column. -->
           <!-- No picture. The file is one rectangle, the same 16:9 as the frame. object-fit is cover. The crop stays the whole rectangle at every width. -->
           <!-- No alt on the poster. The file is one gray rectangle. It does not show the trainer. The video name is the aria-label. -->
-          <video controls poster="images/video-placeholder.svg" aria-label="Trainer intro video placeholder">
+          <video poster="images/video-placeholder.svg" aria-label="Trainer intro video placeholder" aria-hidden="true" tabindex="-1">
             <a href="media.html">Watch tutorials</a>
           </video>
         </div>
-      </div>
+        <figcaption class="text-caption text-muted">Trainer intro video placeholder</figcaption>
+      </figure>
       <div>
         <h2 id="bio-heading">Coaching approach</h2>
         <p>Bulletproof PT teaches simple cues first, then adds load. Beginner sessions stay on squat, hinge, and press patterns. Advanced work is only offered after those patterns feel repeatable.</p>
@@ -72,7 +73,7 @@
     <section class="section" aria-labelledby="platforms-heading">
       <h2 id="platforms-heading">Other platforms</h2>
       <ul class="resource-list">
-        <li><a href="#">YouTube technique library</a></li>
+        <li>YouTube technique library</li>
         <li><a href="services.html">Request a private session</a></li>
       </ul>
     </section>
