@@ -507,9 +507,9 @@ Retest. axe-core 4.10.3. No violations. Home 32 passes, Services 43, Media 33, A
 
 ### F6
 
-Issue. About’s only "Watch tutorials" link was inside the `video`.
+Issue. About's only "Watch tutorials" link was inside the `video`.
 
-Evidence. Chrome. The link’s width was 0. It was not in the accessibility tree. The figcaption was "Trainer intro video placeholder."
+Evidence. Chrome. The link's width was 0. It was not in the accessibility tree. The figcaption was "Trainer intro video placeholder."
 
 Impact. That link was not on screen and not in the tree.
 
@@ -533,7 +533,7 @@ No sideways scroll at 320, 640, or 1280. Text spacing at 320 and 1280 did not cl
 
 Services labels match Name, Email, and Area of interest. Email loads invalid with its error text. The table name is "Session type, access, price, and notes." Column headers have `scope="col"`. Each body row starts with `scope="row"`.
 
-About’s four image names match the alts. The figcaptions are separate. The poster SVG is `aria-hidden="true"`. Nothing autoplays. With reduced motion on, the press shift is `none`.
+About's four image names match the alts. The figcaptions are separate. The poster SVG is `aria-hidden="true"`. Nothing autoplays. With reduced motion on, the press shift is `none`.
 
 axe-core 4.10.3 reported no violations after F5. Home 32 passes, Services 43, Media 33, About 35.
 
