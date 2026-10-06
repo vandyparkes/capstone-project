@@ -41,3 +41,20 @@ Site files: `CSS Architecture Package/`.
 **Services** (`services.html`). Heading: `Services`. Links: `Request a session` (`#request`), `Media` (`media.html`).
 
 **About** (`about.html`). Heading: `About the trainer`. Links: `Watch tutorials` (`media.html`), `Request a private session` (`services.html`).
+
+## 5. Image context
+
+**Home** (`index.html`). `images/video-placeholder.svg`. Poster on the highlight video. No `alt`. `aria-label` is `Highlight video placeholder`. The video is `aria-hidden="true"`. Caption: `Highlight video placeholder`. Nearby heading: `Bulletproof Personal Training`. Nearby text: `Learn beginner and advanced lifting technique from training videos, then request a private online or in-home session.`
+
+**Media** (`media.html`). `images/video-placeholder.svg`. Poster on the squat setup player. No `alt`. `aria-label` is `Squat setup video placeholder`. The video is `aria-hidden="true"`. Nearby heading: `Player: Squat setup`. Nearby text: `Keep the whole foot on the floor, brace before you sit, and push through the heel on the way up.`
+
+**About** (`about.html`). `images/video-placeholder.svg`. Poster on the trainer intro video. No `alt`. `aria-label` is `Trainer intro video placeholder`. The video is `aria-hidden="true"`. Caption: `Trainer intro video placeholder`. Nearby link: `Watch tutorials`. Nearby heading: `Coaching approach`.
+
+**About** (`about.html`), under `Training spaces`.
+
+- `images/home-gym-800.jpg`, with `images/home-gym-480.jpg` in `srcset`. `alt`: `Man in a gray shirt squatting with a loaded barbell in a garage.` Caption: `Home gym coaching`.
+- `images/online-800.jpg`, with `images/online-480.jpg` in `srcset`. `alt`: `Open laptop on a wooden table beside a notebook, a pen, and a phone.` Caption: `Online sessions`.
+- `images/small-space-800.jpg`, with `images/small-space-480.jpg` in `srcset`. `alt`: `Two adjustable dumbbells and loose plates on a gray floor.` Caption: `Small-space setup`.
+- `images/notes-800.jpg`, with `images/notes-480.jpg` in `srcset`. `alt`: `Small blue spiral notepad next to a one-euro coin.` Caption: `Session notes`.
+
+**Services** (`services.html`). No `img`. No poster.
