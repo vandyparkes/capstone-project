@@ -16,7 +16,7 @@ Page: About (`CSS Architecture Package/about.html`).
 
 ```html
 <meta property="og:title" content="About | Bulletproof Personal Training">
-<meta property="og:description" content="Trainer background, credentials, and platform links for Bulletproof Personal Training.">
+<meta property="og:description" content="Trainer background, credentials, and platform list for Bulletproof Personal Training.">
 <meta property="og:url" content="https://github.com/vandyparkes/capstone-project/blob/main/CSS%20Architecture%20Package/about.html">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://raw.githubusercontent.com/vandyparkes/capstone-project/main/CSS%20Architecture%20Package/images/home-gym-800.jpg">
@@ -42,7 +42,7 @@ The heading on the page is `About the trainer`. The title is `About | Bulletproo
     "@context": "https://schema.org",
     "@type": "AboutPage",
     "name": "About the trainer",
-    "description": "Trainer background, credentials, and platform links for Bulletproof Personal Training.",
+    "description": "Trainer background, credentials, and platform list for Bulletproof Personal Training.",
     "url": "https://github.com/vandyparkes/capstone-project/blob/main/CSS%20Architecture%20Package/about.html"
   }
 </script>

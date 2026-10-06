@@ -52,10 +52,22 @@ Site files: `CSS Architecture Package/`. Headings and links below match `Accessi
 
 **Title.** `About | Bulletproof Personal Training`
 
-**Meta description.** `Trainer background, credentials, and platform links for Bulletproof Personal Training.`
+**Meta description.** `Trainer background, credentials, and platform list for Bulletproof Personal Training.`
 
 **Canonical decision.** No `link rel="canonical"` in the file. The page is `about.html`. `og:url` is on this page. That tag is not a canonical link. A canonical link applies after this file is published at one address. It does not apply now.
 
 **Primary heading.** `About the trainer`
 
 **User task.** Read the trainer background, credentials, and platform list.
+
+## 2. Titles and descriptions
+
+Each page has one `title` and one `meta name="description"`. The four titles do not match.
+
+**Home** (`index.html`). `Home | Bulletproof Personal Training`. The description names beginner and advanced technique videos and private session requests. The intro says the same thing.
+
+**Media** (`media.html`). `Media | Bulletproof Personal Training`. The description names free beginner tutorials and locked advanced training videos. The intro says advanced videos stay labeled for members.
+
+**Services** (`services.html`). `Services | Bulletproof Personal Training`. The description names session types, pricing, and a request form. Those three are on the page.
+
+**About** (`about.html`). `About | Bulletproof Personal Training`. The description says `Trainer background, credentials, and platform list for Bulletproof Personal Training.` The page has the coaching paragraph, the credentials list, and the heading `Other platforms`. `YouTube technique library` is text.

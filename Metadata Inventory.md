@@ -30,7 +30,7 @@ Site files: `CSS Architecture Package/`.
 
 **Services** (`services.html`). `Session types, pricing, and a request form for Bulletproof Personal Training.`
 
-**About** (`about.html`). `Trainer background, credentials, and platform links for Bulletproof Personal Training.`
+**About** (`about.html`). `Trainer background, credentials, and platform list for Bulletproof Personal Training.`
 
 ## 4. Heading and link check
 
@@ -61,7 +61,7 @@ Site files: `CSS Architecture Package/`.
 
 ## 6. Social preview plan
 
-**About** (`about.html`). Title: `About | Bulletproof Personal Training`. Description: `Trainer background, credentials, and platform links for Bulletproof Personal Training.` URL: `https://github.com/vandyparkes/capstone-project/blob/main/CSS Architecture Package/about.html`. Image: `images/home-gym-800.jpg`.
+**About** (`about.html`). Title: `About | Bulletproof Personal Training`. Description: `Trainer background, credentials, and platform list for Bulletproof Personal Training.` URL: `https://github.com/vandyparkes/capstone-project/blob/main/CSS Architecture Package/about.html`. Image: `images/home-gym-800.jpg`.
 
 ## 7. Validation plan
 
