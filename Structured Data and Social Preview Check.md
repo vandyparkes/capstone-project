@@ -57,3 +57,15 @@ First check, one error. Line 58. `p` was not allowed inside `figure` after `figc
 `figcaption` is the last child of `figure`. The caption and the `Watch tutorials` link are inside it.
 
 Second check, no messages.
+
+## 5. What the metadata supports
+
+The Open Graph tags supply a preview title, description, page URL, type `website`, and the Home gym coaching image.
+
+The JSON-LD states the page is an `AboutPage`. `name` is `About the trainer`. `description` and `url` match the tags above.
+
+A platform can skip that title, description, or image. The metadata does not set a search rank. The credentials list stays text on the page.
+
+Claim: these tags do not guarantee that About ranks for personal training.
+
+
