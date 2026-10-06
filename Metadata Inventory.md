@@ -31,3 +31,13 @@ Site files: `CSS Architecture Package/`.
 **Services** (`services.html`). `Session types, pricing, and a request form for Bulletproof Personal Training.`
 
 **About** (`about.html`). `Trainer background, credentials, and platform links for Bulletproof Personal Training.`
+
+## 4. Heading and link check
+
+**Home** (`index.html`). Heading: `Bulletproof Personal Training`. Links: `Watch tutorials` (`media.html`), `Request a session` (`services.html`).
+
+**Media** (`media.html`). Heading: `Beginner tutorials`. Links: `Open video` (`#player`), `Back to tutorials` (`media.html`).
+
+**Services** (`services.html`). Heading: `Services`. Links: `Request a session` (`#request`), `Media` (`media.html`).
+
+**About** (`about.html`). Heading: `About the trainer`. Links: `Watch tutorials` (`media.html`), `Request a private session` (`services.html`).
