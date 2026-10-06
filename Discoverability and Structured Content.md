@@ -87,3 +87,13 @@ The same nav is on each page: `Bulletproof PT` (`index.html`), `Home` (`index.ht
 **About** (`about.html`). `h1` About the trainer. `h2` Coaching approach. `h3` Credentials. `h2` Beginner and advanced coaching. `h3` Foundations. `h3` Loaded variations. `h2` Other platforms. `h2` Training spaces. `Watch tutorials` under the figcaption goes to `media.html`. `Request a private session` goes to `services.html`. `YouTube technique library` is text. No URL for it is in the page. The footer `Media` link goes to `media.html`.
 
 Home and About also have `Watch tutorials` (`media.html`) inside the `video`, with `tabindex="-1"`. Media has `Back to tutorials` (`media.html`) inside the `video`, with `tabindex="-1"`.
+
+## 4. Canonical, robots, and sitemap notes
+
+Checked `index.html`, `media.html`, `services.html`, and `about.html`. No `robots.txt`. No `sitemap.xml`.
+
+**Canonical.** After publication. Not now. No `link rel="canonical"` is in the four files. Each page is one file in `CSS Architecture Package/`. The source has no second address for the same page. About has `og:url`. That tag is not a canonical link. A canonical link names one address after the same page is published at more than one address.
+
+**Robots.** Not now. After publication, only if the host needs a fetch rule. No `meta name="robots"` is in the four files. No `robots.txt` is in the project. These pages are files in a folder. Nothing in the files hides Home, Media, Services, or About.
+
+**Sitemap.** After publication. Not now. No `sitemap.xml` is in the project. A sitemap lists published addresses. The four pages are `index.html`, `media.html`, `services.html`, and `about.html`. No published address for that set is in the source.
