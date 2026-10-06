@@ -179,13 +179,13 @@ No external media URL. The page does not load a third-party player.
 `planning-brief-starter/content-inventory-template.md` lists C6, Video Files and Explanations. That row says the source/owner is Trainer, the status is Risky, and the note is "Copyright and hosting; some tutorials stay locked."
 
 **Caption**  
-None. Squat setup shows the text 8:12. Hinge pattern shows 6:40. Push-up path shows 5:05. Each of those is a `text-caption` paragraph. There is no subtitle file.
+None. Squat setup shows the text 8:12. Hinge shows 6:40. Push-up path shows 5:05. Each of those is a `text-caption` paragraph. There is no subtitle file.
 
 **Transcript**  
 None.
 
 **Control**  
-Squat setup, Hinge pattern, and Push-up path each have an "Open video" link to `#player`. That player is the Squat setup video above. Paused squat loading, Single-leg hinge, and Press variations have no link and no `video`.
+Squat setup, Hinge, and Push-up path each have an "Open video" link to `#player`. That player is the Squat setup video above. Paused squat loading, Single-leg hinge, and Press variations have no link and no `video`.
 
 **Motion**  
 Nothing plays.

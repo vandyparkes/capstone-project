@@ -71,3 +71,19 @@ Each page has one `title` and one `meta name="description"`. The four titles do 
 **Services** (`services.html`). `Services | Bulletproof Personal Training`. The description names session types, pricing, and a request form. Those three are on the page.
 
 **About** (`about.html`). `About | Bulletproof Personal Training`. The description says `Trainer background, credentials, and platform list for Bulletproof Personal Training.` The page has the coaching paragraph, the credentials list, and the heading `Other platforms`. `YouTube technique library` is text.
+
+## 3. Semantic headings and crawlable links
+
+Each page has one `h1`. The next headings are `h2`, then `h3`. No level is skipped. The outline matches `Accessibility Conformance.md`. Task links are `a` elements with an `href`.
+
+The same nav is on each page: `Bulletproof PT` (`index.html`), `Home` (`index.html`), `Media` (`media.html`), `Services` (`services.html`), `About` (`about.html`). `Skip to main content` points at `#main`.
+
+**Home** (`index.html`). `h1` Bulletproof Personal Training. `h2` What you can do here. `h3` Watch technique. `h3` Request coaching. `h2` Start with these pages. `h3` Media. `h3` Services. `h3` About. `Watch tutorials` goes to `media.html`, under the intro and under Watch technique. `Request a session` goes to `services.html`, under the intro and under Request coaching. `Open Media`, `Open Services`, and `Open About` go to those pages. The footer `Services` link goes to `services.html`.
+
+**Media** (`media.html`). `h1` Media. `h2` Beginner tutorials. `h3` Squat setup. `h3` Hinge. `h3` Push-up path. `h2` Advanced and locked tutorials. `h3` Paused squat loading. `h3` Single-leg hinge. `h3` Press variations. `h2` Training note. `h2` Player: Squat setup. `Open video` is under Squat setup and goes to `#player`. Hinge and Push-up path have no `a`. Single-leg hinge and Press variations have no `a`. Paused squat loading links `Request a session` to `services.html`. `Back to tutorials` goes to `media.html`. The footer `Services` link goes to `services.html`.
+
+**Services** (`services.html`). `h1` Services. `h2` Session types. `h3` Online technique. `h3` In-home training. `h3` Advanced review. `h2` Pricing. `h2` Request a session. `Request a session` goes to `#request`. The footer `Media` link goes to `media.html`.
+
+**About** (`about.html`). `h1` About the trainer. `h2` Coaching approach. `h3` Credentials. `h2` Beginner and advanced coaching. `h3` Foundations. `h3` Loaded variations. `h2` Other platforms. `h2` Training spaces. `Watch tutorials` under the figcaption goes to `media.html`. `Request a private session` goes to `services.html`. `YouTube technique library` is text. No URL for it is in the page. The footer `Media` link goes to `media.html`.
+
+Home and About also have `Watch tutorials` (`media.html`) inside the `video`, with `tabindex="-1"`. Media has `Back to tutorials` (`media.html`) inside the `video`, with `tabindex="-1"`.

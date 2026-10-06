@@ -46,7 +46,7 @@ Home: h1 Bulletproof Personal Training. h2 What you can do here. h3 Watch techni
 
 Services: h1 Services. h2 Session types. h3 Online technique. h3 In-home training. h3 Advanced review. h2 Pricing. h2 Request a session.
 
-Media: h1 Media. h2 Beginner tutorials. h3 Squat setup. h3 Hinge pattern. h3 Push-up path. h2 Advanced and locked tutorials. h3 Paused squat loading. h3 Single-leg hinge. h3 Press variations. h2 Training note. h2 Player: Squat setup.
+Media: h1 Media. h2 Beginner tutorials. h3 Squat setup. h3 Hinge. h3 Push-up path. h2 Advanced and locked tutorials. h3 Paused squat loading. h3 Single-leg hinge. h3 Press variations. h2 Training note. h2 Player: Squat setup.
 
 About: h1 About the trainer. h2 Coaching approach. h3 Credentials. h2 Beginner and advanced coaching. h3 Foundations. h3 Loaded variations. h2 Other platforms. h2 Training spaces.
 
@@ -80,7 +80,7 @@ Home `figcaption`: "Highlight video placeholder." About `figcaption`: "Trainer i
 
 About had a link "YouTube technique library" with `href="#"`. No YouTube URL is in the page. The list item is text. "Request a private session" still links to `services.html`.
 
-Media had three links named "Open video," each `href="#player"`. The player heading is "Player: Squat setup." The Hinge pattern and Push-up path links are gone. Squat setup still links to `#player`.
+Media had three links named "Open video," each `href="#player"`. The player heading is "Player: Squat setup." The Hinge and Push-up path links are gone. Squat setup still links to `#player`.
 
 `css/reset.css` sets `figure { margin: 0; }`.
 
@@ -88,7 +88,7 @@ Media had three links named "Open video," each `href="#player"`. The player head
 
 Home has no "Client notes" heading. The caption "Highlight video placeholder" is under the frame. The `video` is ignored in the accessibility tree. The control bar is gone.
 
-Media has one "Open video" link, on Squat setup, `href="#player"`. Hinge pattern and Push-up path have no link. The player heading is still "Player: Squat setup."
+Media has one "Open video" link, on Squat setup, `href="#player"`. Hinge and Push-up path have no link. The player heading is still "Player: Squat setup."
 
 About: "YouTube technique library" is not a link. The caption "Trainer intro video placeholder" is under the frame. The `video` has `aria-hidden="true"` and no `controls`.
 
@@ -106,7 +106,7 @@ Home then: Watch tutorials, Request a session, Open Media, Open Services, Open A
 
 Services then: Request a session, Name, Email, Area of interest, Submit request, footer Media.
 
-Media then: Open video, Back to tutorials, footer Services. Hinge pattern, Push-up path, and the locked cards are not stops. The `video` `tabindex` is `-1`.
+Media then: Open video, Back to tutorials, footer Services. Hinge, Push-up path, and the locked cards are not stops. The `video` `tabindex` is `-1`.
 
 About then: Watch tutorials, Request a private session, footer Media. YouTube technique library is not a stop. The photos are not stops. The link inside the `video` is not a stop.
 

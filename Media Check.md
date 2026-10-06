@@ -12,7 +12,7 @@ Yes. The page heading is Media. The intro says "Watch free beginner tutorials." 
 
 The `video` has no `src`. The demo does not play.
 
-Hinge pattern and Push-up path also link to `#player`. The heading there stays "Player: Squat setup."
+Hinge and Push-up path also link to `#player`. The heading there stays "Player: Squat setup."
 
 ## 2. Does audio or video have captions, transcripts, or another appropriate equivalent?
 

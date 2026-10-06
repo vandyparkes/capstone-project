@@ -30,7 +30,7 @@ Home: `h1` Bulletproof Personal Training. `h2` What you can do here. `h3` Watch 
 
 Services: `h1` Services. `h2` Session types. `h3` Online technique. `h3` In-home training. `h3` Advanced review. `h2` Pricing. `h2` Request a session.
 
-Media: `h1` Media. `h2` Beginner tutorials. `h3` Squat setup. `h3` Hinge pattern. `h3` Push-up path. `h2` Advanced and locked tutorials. `h3` Paused squat loading. `h3` Single-leg hinge. `h3` Press variations. `h2` Training note. `h2` Player: Squat setup.
+Media: `h1` Media. `h2` Beginner tutorials. `h3` Squat setup. `h3` Hinge. `h3` Push-up path. `h2` Advanced and locked tutorials. `h3` Paused squat loading. `h3` Single-leg hinge. `h3` Press variations. `h2` Training note. `h2` Player: Squat setup.
 
 ### Page titles
 
@@ -52,7 +52,7 @@ Home: "Watch tutorials" (`media.html`, class `button`), "Request a session" (`se
 
 Services: "Request a session" (`#request`, class `button`), footer "Media."
 
-Media: "Open video" (`#player`) under Squat setup, Hinge pattern, and Push-up path. "Back to tutorials" (`media.html`) above the player. "Back to tutorials" inside the `video`. Footer "Services."
+Media: "Open video" (`#player`) under Squat setup, Hinge, and Push-up path. "Back to tutorials" (`media.html`) above the player. "Back to tutorials" inside the `video`. Footer "Services."
 
 Record the text and `href` of the three "Open video" links and the player heading "Player: Squat setup."
 
@@ -84,7 +84,7 @@ Home: "Watch tutorials," "Request a session," the `video` ("Highlight video plac
 
 Services: "Request a session" (`#request`), Name, Email, Area of interest, "Submit request," footer "Media."
 
-Media: "Open video" (Squat setup), "Open video" (Hinge pattern), "Open video" (Push-up path), "Back to tutorials," the `video` ("Squat setup video placeholder"), footer "Services." Record whether the "Back to tutorials" link inside the `video` takes a stop. Record any stop on Paused squat loading, Single-leg hinge, or Press variations.
+Media: "Open video" (Squat setup), "Open video" (Hinge), "Open video" (Push-up path), "Back to tutorials," the `video` ("Squat setup video placeholder"), footer "Services." Record whether the "Back to tutorials" link inside the `video` takes a stop. Record any stop on Paused squat loading, Single-leg hinge, or Press variations.
 
 ### Visible focus
 
