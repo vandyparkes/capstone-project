@@ -98,6 +98,24 @@ Checked `index.html`, `media.html`, `services.html`, and `about.html`. No `robot
 
 **Sitemap.** After publication. Not now. No `sitemap.xml` is in the project. A sitemap lists published addresses. The four pages are `index.html`, `media.html`, `services.html`, and `about.html`. No published address for that set is in the source.
 
+## 6. Structured data
+
+About (`about.html`) has one `script type="application/ld+json"`. The type is `AboutPage`. `name` is the heading `About the trainer`. `description` matches `meta name="description"`. `url` matches `og:url`.
+
+The current nav item is About. The page shows the coaching paragraph, the credentials list, the heading `Other platforms`, and the Training spaces photos.
+
+Checked `about.html` in the [Schema Markup Validator](https://validator.schema.org/). One `AboutPage` node. 0 errors. 0 warnings.
+
+Home, Media, and Services have no `script type="application/ld+json"`.
+
+**Home.** `index.html` has no address and no site URL. The logo is the text `Bulletproof PT`.
+
+**Media.** The `video` has no `src`, no `track`, and no transcript. The poster is one gray rectangle.
+
+**Services.** Each price cell says `TBD after consultation`. A filled submit leaves the form. The file server returns `Error code: 501` and `Unsupported method ('POST')`. The form has no confirmation text.
+
+The credentials list stays text. The page does not name a certifying body. `YouTube technique library` stays text. No URL for it is in the page.
+
 ## 5. Social metadata
 
 Shareable page: About (`about.html`). Home, Media, and Services have no `og:` tags.

@@ -114,7 +114,7 @@ Required / Invalid form: Name, email, area of interest with visible labels; Mark
 
 Disabled: only if a control is truly usable. Do not style locked tutorials as disabled buttons that look unlockable. Locked versus free is copy + badge for premium members
 
-Empty / fallback: Unplayable video gets a poster, alt, and text summary on Home, About, and the media player. Missing images do not ship without alt and licensing. Empty Media list gets a short “tutorials coming soon” note if content is still missing. “Rate TBD” is an empty price state on Services. Not a new component.
+Empty / fallback: Unplayable video gets a poster, alt, and text summary on Home, About, and the media player. Missing images do not ship without alt and licensing. Empty Media list gets a short “tutorials coming soon” note if content is still missing. “TBD after consultation” is an empty price state on Services. Not a new component.
 
 Locked vs. Free: Figma shows play vs. lock, beginner vs advanced, “Members Only.” In production, keep distinction in labeling and copy.
 

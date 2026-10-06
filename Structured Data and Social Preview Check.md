@@ -61,6 +61,8 @@ First check, one error. Line 58. `p` was not allowed inside `figure` after `figc
 
 Second check, no messages.
 
+Schema Markup Validator, `about.html`. One `AboutPage` node. 0 errors. 0 warnings.
+
 ## 5. What the metadata supports
 
 The Open Graph tags supply a preview title, description, page URL, type `website`, and the Home gym coaching image.

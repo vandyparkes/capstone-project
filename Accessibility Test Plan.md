@@ -162,7 +162,7 @@ Record the computed foreground and background:
 - `#ffffff` on `#0d5c46` (Beginner)
 - `#ffffff` on `#163a5f` (Advanced)
 - `#ffffff` on `#5a5a5a` (Members only)
-- `#7a4500` on `#ffffff` (email error, "Rate TBD")
+- `#7a4500` on `#ffffff` (email error, "TBD after consultation")
 - Focus outline `#9b1c1c` on `#f5f3ef` and on `#ffffff`
 
 ### Line length
@@ -211,11 +211,11 @@ Record the caption text "Session type, access, price, and notes" and that the ca
 
 Record the three rows:
 
-- Online technique, Video, $65, 45 minutes
-- In-home training, In-person, $90, Travel radius confirmed by email
-- Advanced video library, Members, Rate TBD, Locked tutorials stay labeled until the rate is published
+- Online technique, Video, TBD after consultation, 45 minutes
+- In-home training, In-person, TBD after consultation, Travel radius confirmed by email
+- Advanced video library, Members, TBD after consultation, Locked tutorials stay labeled until the rate is published
 
-"Rate TBD" is `td.is-tbd`. Each `td` has a `data-label` that matches its column name.
+Each price cell says `TBD after consultation` and has `td.is-tbd`. Each `td` has a `data-label` that matches its column name.
 
 ### Images
 

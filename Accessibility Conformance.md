@@ -199,7 +199,7 @@ Computed colors:
 - `rgb(255, 255, 255)` on `rgb(13, 92, 70)`: 7.97. Beginner.
 - `rgb(255, 255, 255)` on `rgb(22, 58, 95)`: 11.64. Advanced.
 - `rgb(255, 255, 255)` on `rgb(90, 90, 90)`: 6.90. Members only.
-- `rgb(122, 69, 0)` on `rgb(255, 255, 255)`: 7.84. The email error and "Rate TBD".
+- `rgb(122, 69, 0)` on `rgb(255, 255, 255)`: 7.84. The email error and "TBD after consultation".
 
 ### Fix
 
@@ -419,7 +419,7 @@ Form:
 - Combobox "Area of interest (required)". `invalid` false. `hasPopup` menu. `expanded` false. `describedby` `interest-error`. Options: Choose one, Online technique, In-home training, Advanced review. The property list has no `required`. The page snapshot lists required.
 - Button "Submit request".
 
-Table name: "Session type, access, price, and notes." The caption node itself has no name. Column headers: Type, Access, Price, Notes. Row headers: Online technique, In-home training, Advanced video library. Cells: Video, $65, 45 minutes. In-person, $90, Travel radius confirmed by email. Members, Rate TBD, Locked tutorials stay labeled until the rate is published.
+Table name: "Session type, access, price, and notes." The caption node itself has no name. Column headers: Type, Access, Price, Notes. Row headers: Online technique, In-home training, Advanced video library. Cells: Video, TBD after consultation, 45 minutes. In-person, TBD after consultation, Travel radius confirmed by email. Members, TBD after consultation, Locked tutorials stay labeled until the rate is published.
 
 ### Limits
 
