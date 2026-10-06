@@ -52,7 +52,7 @@ Site files: `CSS Architecture Package/`.
 
 **About** (`about.html`), under `Training spaces`.
 
-- `images/home-gym-800.jpg`, with `images/home-gym-480.jpg` in `srcset`. `alt`: `Man in a gray shirt squatting with a loaded barbell in a garage.` Caption: `Home gym coaching`.
+- `images/home-gym-800.jpg`, with `images/home-gym-480.jpg` in `srcset`. `alt`: `Trainer in a grey shirt squatting with a loaded barbell in a garage.` Caption: `Home gym coaching`.
 - `images/online-800.jpg`, with `images/online-480.jpg` in `srcset`. `alt`: `Open laptop on a wooden table beside a notebook, a pen, and a phone.` Caption: `Online sessions`.
 - `images/small-space-800.jpg`, with `images/small-space-480.jpg` in `srcset`. `alt`: `Two adjustable dumbbells and loose plates on a gray floor.` Caption: `Small-space setup`.
 - `images/notes-800.jpg`, with `images/notes-480.jpg` in `srcset`. `alt`: `Small blue spiral notepad next to a one-euro coin.` Caption: `Session notes`.

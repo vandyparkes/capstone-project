@@ -66,7 +66,7 @@ Services form: `label for` on Name, Email, and Area of interest. Fields are `inp
 
 Services table name: "Session type, access, price, and notes." Headers: Type, Access, Price, Notes. Each `th` has `scope="col"`.
 
-About: each photo is an `img` in a `figure` with a `figcaption`. The first image name is "Man in a gray shirt squatting with a loaded barbell in a garage." Its caption is "Home gym coaching." The other three use the same pattern.
+About: each photo is an `img` in a `figure` with a `figcaption`. The first image name is "Trainer in a grey shirt squatting with a loaded barbell in a garage." Its caption is "Home gym coaching." The other three use the same pattern.
 
 Nav and the card groups are `ul`.
 
@@ -282,7 +282,7 @@ Chrome. Home, Media, and About. Services has no `img`, `video`, `audio`, `iframe
 
 About only. Four `img` elements. The alt is not the figcaption.
 
-- "Man in a gray shirt squatting with a loaded barbell in a garage." Figcaption: Home gym coaching.
+- "Trainer in a grey shirt squatting with a loaded barbell in a garage." Figcaption: Home gym coaching.
 - "Open laptop on a wooden table beside a notebook, a pen, and a phone." Figcaption: Online sessions.
 - "Two adjustable dumbbells and loose plates on a gray floor." Figcaption: Small-space setup.
 - "Small blue spiral notepad next to a one-euro coin." Figcaption: Session notes.

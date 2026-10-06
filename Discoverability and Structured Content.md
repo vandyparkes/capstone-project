@@ -97,3 +97,17 @@ Checked `index.html`, `media.html`, `services.html`, and `about.html`. No `robot
 **Robots.** Not now. After publication, only if the host needs a fetch rule. No `meta name="robots"` is in the four files. No `robots.txt` is in the project. These pages are files in a folder. Nothing in the files hides Home, Media, Services, or About.
 
 **Sitemap.** After publication. Not now. No `sitemap.xml` is in the project. A sitemap lists published addresses. The four pages are `index.html`, `media.html`, `services.html`, and `about.html`. No published address for that set is in the source.
+
+## 5. Social metadata
+
+Shareable page: About (`about.html`). Home, Media, and Services have no `og:` tags.
+
+**Title.** `og:title` is `About | Bulletproof Personal Training`. It matches the `title`.
+
+**Description.** `og:description` is `Trainer background, credentials, and platform list for Bulletproof Personal Training.` It matches `meta name="description"`. The page shows the coaching paragraph, the credentials list, and the heading `Other platforms`.
+
+**URL.** `og:url` is `https://github.com/vandyparkes/capstone-project/blob/main/CSS%20Architecture%20Package/about.html`.
+
+**Type.** `og:type` is `website`.
+
+**Image.** `og:image` is `images/home-gym-800.jpg` on the Training spaces row. The figcaption is `Home gym coaching`. `og:image:alt` matches the `img` alt: `Trainer in a grey shirt squatting with a loaded barbell in a garage.` `og:image:width` is `800`. `og:image:height` is `533`. The file is 800 by 533.

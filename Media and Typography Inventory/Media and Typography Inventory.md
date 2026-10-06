@@ -64,7 +64,7 @@ Not placed on Home, About, Media, or Services. The file is 812 by 393.
 
 About lists four `img` elements under Training spaces. Each one is a JPEG cropped to 3:2, with `srcset` at 480 and 800. The figcaption stays on the figure.
 
-1. Home gym coaching. `images/home-gym-800.jpg` and `images/home-gym-480.jpg`. Original photograph of a man in a gray shirt squatting with a loaded barbell in a garage. Cropped from a 434 by 545 PNG to a 3:2 JPEG. 800 by 533, 45,877 bytes. 480 by 320, 23,231 bytes.
+1. Home gym coaching. `images/home-gym-800.jpg` and `images/home-gym-480.jpg`. Original photograph of the trainer in a grey shirt squatting with a loaded barbell in a garage. Cropped from a 434 by 545 PNG to a 3:2 JPEG. 800 by 533, 45,877 bytes. 480 by 320, 23,231 bytes.
 2. Online sessions. `images/online-800.jpg` and `images/online-480.jpg`. Source: https://commons.wikimedia.org/wiki/File:Home-office-336377.jpg. Author: Free-Photos, Pixabay. License: CC0. 800 by 533, 64,850 bytes. 480 by 320, 30,153 bytes.
 3. Small-space setup. `images/small-space-800.jpg` and `images/small-space-480.jpg`. Source: https://commons.wikimedia.org/wiki/File:Kurzhanteln_2_x_15_kg_2v2.jpg. Author: Singlespeedfahrer. License: CC0. 800 by 533, 66,853 bytes. 480 by 320, 22,995 bytes.
 4. Session notes. `images/notes-800.jpg` and `images/notes-480.jpg`. Source: https://commons.wikimedia.org/wiki/File:Small_blue_notepad_-_8_x_11_cm_-_D.jpg. Author: Fructibus. License: CC0. 800 by 533, 36,568 bytes. 480 by 320, 15,392 bytes.
@@ -103,7 +103,7 @@ Informative
 **Alt text**  
 The figcaption stays on the figure and is not repeated in the alt.
 
-1. Alt: "Man in a gray shirt squatting with a loaded barbell in a garage." Figcaption: Home gym coaching.
+1. Alt: "Trainer in a grey shirt squatting with a loaded barbell in a garage." Figcaption: Home gym coaching.
 2. Alt: "Open laptop on a wooden table beside a notebook, a pen, and a phone." Figcaption: Online sessions.
 3. Alt: "Two adjustable dumbbells and loose plates on a gray floor." Figcaption: Small-space setup.
 4. Alt: "Small blue spiral notepad next to a one-euro coin." Figcaption: Session notes.

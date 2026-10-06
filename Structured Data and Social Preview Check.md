@@ -12,7 +12,7 @@ Page: About (`CSS Architecture Package/about.html`).
 
 `og:type` is `website`.
 
-`og:image` is the Training spaces photo captioned `Home gym coaching` (`images/home-gym-800.jpg`). Visible alt: `Man in a gray shirt squatting with a loaded barbell in a garage.` That URL returned `200` and `image/jpeg`.
+`og:image` is the Training spaces photo captioned `Home gym coaching` (`images/home-gym-800.jpg`). Visible alt: `Trainer in a grey shirt squatting with a loaded barbell in a garage.` That URL returned `200` and `image/jpeg`.
 
 ```html
 <meta property="og:title" content="About | Bulletproof Personal Training">
@@ -20,6 +20,9 @@ Page: About (`CSS Architecture Package/about.html`).
 <meta property="og:url" content="https://github.com/vandyparkes/capstone-project/blob/main/CSS%20Architecture%20Package/about.html">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://raw.githubusercontent.com/vandyparkes/capstone-project/main/CSS%20Architecture%20Package/images/home-gym-800.jpg">
+<meta property="og:image:alt" content="Trainer in a grey shirt squatting with a loaded barbell in a garage.">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="533">
 ```
 
 ## 2. Structured-data type

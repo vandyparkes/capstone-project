@@ -132,7 +132,7 @@ The poster is not an `img`, so it has no `alt`.
 
 Home name: “Highlight video placeholder.” About name: “Trainer intro video placeholder.” Media name: “Squat setup video placeholder.”
 
-Gallery alts: "Man in a gray shirt squatting with a loaded barbell in a garage." "Open laptop on a wooden table beside a notebook, a pen, and a phone." "Two adjustable dumbbells and loose plates on a gray floor." "Small blue spiral notepad next to a one-euro coin."
+Gallery alts: "Trainer in a grey shirt squatting with a loaded barbell in a garage." "Open laptop on a wooden table beside a notebook, a pen, and a phone." "Two adjustable dumbbells and loose plates on a gray floor." "Small blue spiral notepad next to a one-euro coin."
 
 The figcaptions read Home gym coaching, Online sessions, Small-space setup, and Session notes.
 
