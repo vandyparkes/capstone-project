@@ -8,11 +8,11 @@ Page: About (`CSS Architecture Package/about.html`).
 
 `og:description` matches `meta name="description"`. The page shows the trainer background, the credentials list, and the platform list.
 
-`og:url` is the About file on `main`. Checked 6 Oct 2026. That URL returned `200` and `text/html`.
+`og:url` is the About file on `main`. That URL returned `200` and `text/html`.
 
 `og:type` is `website`.
 
-`og:image` is the Training spaces photo captioned `Home gym coaching` (`images/home-gym-800.jpg`). Visible alt: `Man in a gray shirt squatting with a loaded barbell in a garage.` Checked 6 Oct 2026. That URL returned `200` and `image/jpeg`.
+`og:image` is the Training spaces photo captioned `Home gym coaching` (`images/home-gym-800.jpg`). Visible alt: `Man in a gray shirt squatting with a loaded barbell in a garage.` That URL returned `200` and `image/jpeg`.
 
 ```html
 <meta property="og:title" content="About | Bulletproof Personal Training">
@@ -47,3 +47,13 @@ The heading on the page is `About the trainer`. The title is `About | Bulletproo
   }
 </script>
 ```
+
+## 4. Validation
+
+Tool: [W3C Nu Html Checker](https://validator.w3.org/nu/?showoutline=yes#textarea). Document upload.
+
+First check, one error. Line 58. `p` was not allowed inside `figure` after `figcaption`.
+
+`figcaption` is the last child of `figure`. The caption and the `Watch tutorials` link are inside it.
+
+Second check, no messages.
