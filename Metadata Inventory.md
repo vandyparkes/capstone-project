@@ -58,3 +58,7 @@ Site files: `CSS Architecture Package/`.
 - `images/notes-800.jpg`, with `images/notes-480.jpg` in `srcset`. `alt`: `Small blue spiral notepad next to a one-euro coin.` Caption: `Session notes`.
 
 **Services** (`services.html`). No `img`. No poster.
+
+## 6. Social preview plan
+
+**About** (`about.html`). Title: `About | Bulletproof Personal Training`. Description: `Trainer background, credentials, and platform links for Bulletproof Personal Training.` URL: `https://github.com/vandyparkes/capstone-project/blob/main/CSS Architecture Package/about.html`. Image: `images/home-gym-800.jpg`.
