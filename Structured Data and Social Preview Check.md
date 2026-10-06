@@ -27,3 +27,23 @@ Page: About (`CSS Architecture Package/about.html`).
 Type: `AboutPage`.
 
 The heading on the page is `About the trainer`. The title is `About | Bulletproof Personal Training`. The current nav item is About. The page shows the coaching approach, the credentials list, beginner and advanced coaching, the platform list, and the Training spaces photos.
+
+## 3. JSON-LD
+
+`name` is the heading `About the trainer`.
+
+`description` matches `meta name="description"`. The page shows the trainer background, the credentials list, and the platform list.
+
+`url` is the same About file on `main` as `og:url`.
+
+```html
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About the trainer",
+    "description": "Trainer background, credentials, and platform links for Bulletproof Personal Training.",
+    "url": "https://github.com/vandyparkes/capstone-project/blob/main/CSS%20Architecture%20Package/about.html"
+  }
+</script>
+```
