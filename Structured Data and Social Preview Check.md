@@ -68,4 +68,8 @@ A platform can skip that title, description, or image. The metadata does not set
 
 Claim: these tags do not guarantee that About ranks for personal training.
 
+## Reflection
+
+I would not claim that these tags make About rank for personal training. They do not guarantee a search rank.
+
 
