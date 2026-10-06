@@ -21,3 +21,13 @@ Site files: `CSS Architecture Package/`.
 **Services** (`services.html`). `<title>Services | Bulletproof Personal Training</title>`
 
 **About** (`about.html`). `<title>About | Bulletproof Personal Training</title>`
+
+## 3. Description plan
+
+**Home** (`index.html`). `Bulletproof Personal Training: beginner and advanced technique videos plus private session requests.`
+
+**Media** (`media.html`). `Free beginner tutorials and locked advanced training videos from Bulletproof Personal Training.`
+
+**Services** (`services.html`). `Session types, pricing, and a request form for Bulletproof Personal Training.`
+
+**About** (`about.html`). `Trainer background, credentials, and platform links for Bulletproof Personal Training.`
