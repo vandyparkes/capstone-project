@@ -62,3 +62,14 @@ Site files: `CSS Architecture Package/`.
 ## 6. Social preview plan
 
 **About** (`about.html`). Title: `About | Bulletproof Personal Training`. Description: `Trainer background, credentials, and platform links for Bulletproof Personal Training.` URL: `https://github.com/vandyparkes/capstone-project/blob/main/CSS Architecture Package/about.html`. Image: `images/home-gym-800.jpg`.
+
+## 7. Validation plan
+
+Check each page in `CSS Architecture Package/`.
+
+- One `<title>` per page, and it matches section 2.
+- One `meta name="description"` per page, and it matches section 3.
+- The heading named in section 4 is on that page. The two links named there use those `href` values.
+- The four About `img` elements use the `alt` text in section 5. Each poster named there has no `alt`. Each video `aria-label` matches section 5.
+- The About title, description, and `images/home-gym-800.jpg` match section 6.
+- None of the four pages has `script type="application/ld+json"` or `schema.org` markup. Record that.
