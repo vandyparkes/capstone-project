@@ -59,3 +59,36 @@ Bulletproof Personal Training
 
 7. **Links**  
    Text links have a default style and a hover style. Nav adds a current-page style. Buttons stay separate from text links. About platform links and footer links stay text links.
+
+## 3. Layout and composition
+
+1. **Page shell**  
+   Header, main, and footer repeat on Home, Media, Services, and About. Each page has one h1. The Media player stays on Media: back link, frame, and notes. It is not its own page.
+
+2. **Containers**  
+   One centered content width on the header, main, and footer. The Media player uses the narrower width.
+
+3. **Section spacing**  
+   The same vertical space between the intro, card groups, table, media, training note, gallery, and form.
+
+4. **Grids**  
+   Two columns: Home “What you can do here,” and About beginner and advanced coaching.  
+   Three columns: Home “Start with these pages,” Media beginner tutorials, Media advanced tutorials, and Services session types.  
+   Four columns: About “Training spaces.”  
+   About video and bio sit side by side when the row is wide enough, and stack when it is not.  
+   Card grids go to one column on a narrow screen.
+
+5. **Clusters**  
+   Home: name, short pitch, two buttons, highlight video, two-column cards, three-column cards.  
+   Media: beginner tutorials, advanced and locked tutorials, training note, player.  
+   Services: session-type cards, pricing table, request form.  
+   About: intro video and bio, coaching cards, platform list, gallery.
+
+6. **Narrow, about 375px**  
+   The nav wraps and stays on the screen. Sections are one column. Form fields are full width. Each pricing row keeps Type, Access, Price, and Notes together.
+
+7. **Medium, about 768px**  
+   Session cards and the pricing table stay stacked and do not overlap. Video and the text next to it stay stacked.
+
+8. **Wide**  
+   Nav sits in one row. The About video can sit beside the bio. Session cards and tutorial cards can sit in a row. The pricing table sits full width under the session cards. The request form stays under the table.
