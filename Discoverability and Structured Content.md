@@ -167,3 +167,13 @@ About `og:title` matches the `title`. About `og:description` matches the meta de
 - Media: 0 objects.
 - Services: 0 objects.
 - About: 1 `AboutPage`. 0 errors. 0 warnings.
+
+## 9. Ranking-claim limits
+
+**Search rank.** No claim that the titles, descriptions, Open Graph tags, or the About `AboutPage` JSON-LD set a search rank. The checks were the page source, the W3C Nu Html Checker, and the Schema Markup Validator. No search index was checked.
+
+**Index status.** No claim that Home, Media, Services, or About are in a search index. No `link rel="canonical"`. No `robots.txt`. No `sitemap.xml`. No published address for the four pages is in the source.
+
+**Video results.** No claim that the Media player appears in video search. The `video` has no `src`, no `track`, and no transcript. `YouTube technique library` is text. No URL for it is in the page.
+
+**Prices in search.** No claim that the session rates appear as prices in search. Each price cell says `TBD after consultation`. Services has no JSON-LD.
