@@ -129,3 +129,19 @@ Shareable page: About (`about.html`). Home, Media, and Services have no `og:` ta
 **Type.** `og:type` is `website`.
 
 **Image.** `og:image` is `images/home-gym-800.jpg` on the Training spaces row. The figcaption is `Home gym coaching`. `og:image:alt` matches the `img` alt: `Trainer in a grey shirt squatting with a loaded barbell in a garage.` `og:image:width` is `800`. `og:image:height` is `533`. The file is 800 by 533.
+
+## 7. Image discoverability
+
+Important images are the four photos under `Training spaces` on About, and `images/video-placeholder.svg` on Home, About, and Media. Services has no `img` and no poster. `images/card-two-widths.png` is not used on those pages. The logo is the text `Bulletproof PT`.
+
+Each About photo is an `img` in a `figure`, under the heading `Training spaces`. The `alt` describes the photo. The `figcaption` is the role of that photo on the page. `width` and `height` are `800` and `533`. The `srcset` file is the same photo at 480 by 320.
+
+**Home gym.** Files: `images/home-gym-800.jpg`, `images/home-gym-480.jpg`. Alt: `Trainer in a grey shirt squatting with a loaded barbell in a garage.` Caption: `Home gym coaching`. 800 by 533, and 480 by 320. On About, this is the in-home training photo. It is also `og:image`.
+
+**Online sessions.** Files: `images/online-800.jpg`, `images/online-480.jpg`. Alt: `Open laptop on a wooden table beside a notebook, a pen, and a phone.` Caption: `Online sessions`. 800 by 533, and 480 by 320. On About, this sits with the online coaching text.
+
+**Small-space setup.** Files: `images/small-space-800.jpg`, `images/small-space-480.jpg`. Alt: `Two adjustable dumbbells and loose plates on a gray floor.` Caption: `Small-space setup`. 800 by 533, and 480 by 320. On About, this sits with the in-home coaching text.
+
+**Session notes.** Files: `images/notes-800.jpg`, `images/notes-480.jpg`. Alt: `Small blue spiral notepad next to a one-euro coin.` Caption: `Session notes`. 800 by 533, and 480 by 320. On About, this sits with the session text under `Training spaces`.
+
+**Video poster.** File: `images/video-placeholder.svg`. 1600 by 900. One rectangle, fill `#d4d0c8`. The `svg` is `aria-hidden="true"`. No `alt`. The poster attribute takes one URL. Home caption: `Highlight video placeholder`, under the heading `Bulletproof Personal Training`. About caption: `Trainer intro video placeholder`, beside the heading `Coaching approach`. Media has no caption on that file. The nearby heading is `Player: Squat setup`. The nearby text is `Keep the whole foot on the floor, brace before you sit, and push through the heel on the way up.` The file does not show the highlight, the trainer, or the squat.
