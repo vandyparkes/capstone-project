@@ -63,7 +63,7 @@ These checks still match the files in `site/`.
 
 `Media and Typography Inventory/Media and Typography Inventory.md`. The four Training spaces photos, their `alt` text, figcaptions, sources, and licenses. Atkinson Hyperlegible 400 and 700, the fallback stack, and `fonts/OFL.txt`.
 
-The squat player poster on `site/media.html` is still `images/video-placeholder.svg`, 167 bytes. `services.html` still has no `img`.
+`site/media.html` uses `images/video-placeholder.svg` as an `img` on the six tutorial cards and inside `#player`. Each `img` has an `alt`. The file is 167 bytes, 1600 by 900. `services.html` still has no `img`.
 
 ### Module 5. Accessibility
 
