@@ -118,3 +118,29 @@ This project has no technical defense note for the current Home, Media, Services
 ### Current media
 
 `Media Check.md` describes a `video` with `controls` and no `src`. `#player` is now an `img`. No check is recorded for that `img` `alt`, the Home iframe `title`, the About iframe `title`, or the `Watch on YouTube` links. No `track` and no transcript is in the current files, so no caption check is recorded.
+
+## 5. Scope decisions
+
+This release stays on the four pages in `site/`. The items below stay out.
+
+1. **Pages.** No fifth content page. `#player` stays a section on `media.html`. The root `index.html` only sends the browser to `site/`.
+
+2. **Booking.** The request form on `services.html` is the booking path. No Calendly link, no Google Meet link, and no calendar page. `planning-brief-starter/site-map-template.md` lists those as an open risk. `planning-brief-starter/css-planning.md` says there is no live-calendar state.
+
+3. **Accounts and payment.** No login and no payment. `planning-brief-starter/content-inventory-template.md` row C9 says no live payment or account login. The form fields stay name, email, and area of interest.
+
+4. **Waiver.** C11 stays off the site until that legal text is reviewed. `css-planning.md` says no waiver until legal review.
+
+5. **Testimonials.** C12 stays off Home. That row says testimonials are optional and need permission. Home has no testimonial block.
+
+6. **Prices.** Each price cell stays `TBD after consultation`. C4 says to publish rates only after they are decided. No checkout.
+
+7. **Other tutorials.** Hinge, Push-up path, Paused squat loading, Single-leg hinge, and Press variations stay cards on `media.html`. The three advanced cards stay labeled `Members only`. No member unlock and no extra tutorial page.
+
+8. **Platform link.** `YouTube technique library` on About stays text. No URL for it is in `about.html`.
+
+9. **Crawl files.** No `link rel="canonical"`, no `meta name="robots"`, no `robots.txt`, and no `sitemap.xml` on the four pages. `Discoverability and Structured Content.md` says those come after publication.
+
+10. **Share tags.** Open Graph tags and the AboutPage JSON-LD stay on About. Home, Media, and Services have none.
+
+11. **Print.** Services keeps the print sheet. Home, Media, and About do not get a print layout. `css-planning.md` says those pages do not need rich print.
