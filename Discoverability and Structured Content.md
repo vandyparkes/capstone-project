@@ -145,3 +145,25 @@ Each About photo is an `img` in a `figure`, under the heading `Training spaces`.
 **Session notes.** Files: `images/notes-800.jpg`, `images/notes-480.jpg`. Alt: `Small blue spiral notepad next to a one-euro coin.` Caption: `Session notes`. 800 by 533, and 480 by 320. On About, this sits with the session text under `Training spaces`.
 
 **Video poster.** File: `images/video-placeholder.svg`. 1600 by 900. One rectangle, fill `#d4d0c8`. The `svg` is `aria-hidden="true"`. No `alt`. The poster attribute takes one URL. Home caption: `Highlight video placeholder`, under the heading `Bulletproof Personal Training`. About caption: `Trainer intro video placeholder`, beside the heading `Coaching approach`. Media has no caption on that file. The nearby heading is `Player: Squat setup`. The nearby text is `Keep the whole foot on the floor, brace before you sit, and push through the heel on the way up.` The file does not show the highlight, the trainer, or the squat.
+
+## 8. Validation evidence
+
+Source check of `index.html`, `media.html`, `services.html`, and `about.html`.
+
+Each file has one `title` and one `meta name="description"`. The four titles do not match. No `link rel="canonical"`. No `meta name="robots"`.
+
+About `og:title` matches the `title`. About `og:description` matches the meta description. About has one JSON-LD script. `name` is `About the trainer`. `description` matches the meta description. `url` matches `og:url`. Home, Media, and Services have no `og:` tags and no JSON-LD script.
+
+[W3C Nu Html Checker](https://validator.w3.org/nu/). Document upload.
+
+- Home: 0 messages.
+- Services: 0 messages.
+- About: 0 messages.
+- Media: 1 info. Line 96. `The document is not mappable to XML 1.0 due to two consecutive hyphens in a comment.` The comment contains `.container--media`.
+
+[Schema Markup Validator](https://validator.schema.org/). Document upload.
+
+- Home: 0 objects.
+- Media: 0 objects.
+- Services: 0 objects.
+- About: 1 `AboutPage`. 0 errors. 0 warnings.
