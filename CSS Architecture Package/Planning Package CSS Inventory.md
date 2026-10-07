@@ -126,3 +126,9 @@ Bulletproof Personal Training
 
 3. **Other pages**  
    Home, About, and the Media player are watched in the browser. They do not get a separate print layout.
+
+## 6. Risk note
+
+Media tutorial cards and the Services session cards, pricing table, and request form.
+
+One card pattern covers the three-column grids, the Beginner, Free, Advanced, and Members only badges, and the free and locked copy. Services adds the four-column pricing table and the request form under those cards. At about 375px and about 768px the cards and the table stack. On a wide screen the cards sit in a row and the table sits under them.
