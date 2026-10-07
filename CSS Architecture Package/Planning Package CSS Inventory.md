@@ -40,25 +40,25 @@ Bulletproof Personal Training
 ## 2. Foundational decisions
 
 1. **Color**  
-   One background. One card surface. One body text color. One muted text color. One accent for primary buttons and the current nav link. One warning color for “TBD after consultation” and the Media training note. Beginner and Advanced use two separate colors. Every page uses this set.
+   The page background is a warm off-white, `#f5f3ef`. Cards and the form are white, `#ffffff`. Body text is near-black, `#1b1b1b`. Extra notes are gray, `#5a5a5a`. The main accent is dark red, `#9b1c1c`, with white text on red buttons. Warning text is brown, `#7a4500`. That brown is for “TBD after consultation” and form errors. Borders are gray, `#8a877e`. The Beginner badge is dark green, `#0d5c46`. The Advanced badge is dark blue, `#163a5f`. Free uses the dark red. Members only uses the gray. Every page uses this same set.
 
 2. **Typography**  
-   One size each for h1, h2, and h3. One body style. The site name and section titles stay readable at about 375px. Bios, technique notes, and session copy use one line-height and a max line length. Duration, prices, and badges use a smaller caption size.
+   The font is Futura. Regular text is Futura Medium. Headings, the logo, the nav, and buttons are Futura Bold. If Futura is missing, the page uses Atkinson Hyperlegible, then Arial. The page title is the largest text. Section headings are next. Card titles are a little bigger than body text. Long paragraphs stop before they run across the whole screen. Captions, video times, and badges are slightly smaller than body text.
 
 3. **Spacing**  
-   One scale: 8, 16, 24, 32, 48. Card padding, grid gaps, and section space come from that scale. Home and Services use the same vertical rhythm.
+   Spacing uses five steps: 8, 16, 24, 32, and 48 pixels. Small space goes inside a card. Medium space goes between cards. The largest step goes between sections. Home and Services use the same section spacing.
 
 4. **Max-widths**  
-   One content width for the header, main, and footer. The name, video, and pricing table stay inside it. The Media player and the About video-and-bio pair use a narrower width than body copy.
+   The header, main content, and footer sit in one centered column. Paragraphs stay narrow enough to read. The Media player is a little narrower than that column. The request form is narrower than the player. On a wide About page, the video sits beside the bio. On a narrow page, they stack.
 
 5. **Borders**  
-   One radius. One solid border for cards, the pricing table, and form fields. Locked tutorial cards use that same border. The badge and the copy mark them as locked.
+   Cards, the pricing table, and form fields share one gray border and the same rounded corners. Buttons use a dark red border. The training note adds a brown bar on the left. Locked tutorial cards keep the same border as the other cards.
 
 6. **Focus**  
-   One visible outline on nav links, buttons, text fields, the select, and the submit button. Focus order follows the page: header, main, form, footer.
+   Keyboard focus shows a dark red outline on nav links, buttons, and form fields. The outline is easy to see. Tab order follows the page: header, main content, form, then footer.
 
 7. **Links**  
-   Text links have a default style and a hover style. Nav adds a current-page style. Buttons stay separate from text links. About platform links and footer links stay text links.
+   Text links are dark red. Nav links are near-black. On hover, nav links, buttons, card links, and the About platform link get an underline. The current page in the nav is dark red and underlined. The main button is dark red with white text. The second button is white with dark red text. Footer links stay text links.
 
 ## 3. Layout and composition
 

@@ -16,6 +16,22 @@
   src: url("../fonts/atkinson-hyperlegible-latin-700.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "Site Futura";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Futura Medium"), local("Futura-Medium");
+}
+
+@font-face {
+  font-family: "Site Futura";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Futura Bold"), local("Futura-Bold");
+}
+
 :root {
   /* Color: one role each, reused site-wide. */
   --color-bg: #f5f3ef;
@@ -31,7 +47,7 @@
 
   /* Type */
   /* Atkinson Hyperlegible, latin, 400 and 700. Source: https://fonts.google.com/specimen/Atkinson+Hyperlegible. License: SIL Open Font License 1.1, fonts/OFL.txt. 400 is 11,208 bytes. 700 is 11,364 bytes. font-display: swap. Fallback: Arial, Helvetica, sans-serif. */
-  --font-family: "Atkinson Hyperlegible", Arial, Helvetica, sans-serif;
+  --font-family: "Site Futura", Futura, "Atkinson Hyperlegible", Arial, Helvetica, sans-serif;
   --font-size: 1rem;
   --font-size-small: 0.875rem;
   --line-height: 1.5;
