@@ -4,61 +4,63 @@ Site files: `CSS Architecture Package/`. Headings and links below match `Accessi
 
 ## 1. Metadata inventory
 
+Checked `index.html`, `media.html`, `services.html`, and `about.html` in `CSS Architecture Package/`. Each head has one `title` and one `meta name="description"`. None has `link rel="canonical"`.
+
 ### Home (`index.html`)
 
 **Page purpose.** Name the company and send the reader to tutorials or a session request.
+
+**User task.** Read the company name, then open tutorials or request a private online or in-home session.
 
 **Title.** `Home | Bulletproof Personal Training`
 
 **Meta description.** `Bulletproof Personal Training: beginner and advanced technique videos plus private session requests.`
 
-**Canonical decision.** No `link rel="canonical"` in the file. The page is `index.html`. The source has no second address for it. A canonical link applies after this file is published at one address. It does not apply now.
+**Visible content.** The `h1` is `Bulletproof Personal Training`. The intro says `Learn beginner and advanced lifting technique from training videos, then request a private online or in-home session.` The links under it are `Watch tutorials` and `Request a session`. Later headings are `What you can do here` and `Start with these pages`. The description uses the same two tasks as that intro.
 
-**Primary heading.** `Bulletproof Personal Training`
-
-**User task.** Read the company name, then open tutorials or request a private online or in-home session.
+**Canonical decision.** No `link rel="canonical"`. The page is one file, `index.html`. No second address is in the source. No `og:url` is on this page. A canonical link names one address when the same page is published at more than one address. This file does not have that.
 
 ### Media (`media.html`)
 
 **Page purpose.** List the free beginner tutorials and keep the advanced clips labeled for members.
 
+**User task.** Watch the free beginner tutorials. Advanced clips stay labeled for members.
+
 **Title.** `Media | Bulletproof Personal Training`
 
 **Meta description.** `Free beginner tutorials and locked advanced training videos from Bulletproof Personal Training.`
 
-**Canonical decision.** No `link rel="canonical"` in the file. The page is `media.html`. The source has no second address for it. A canonical link applies after this file is published at one address. It does not apply now.
+**Visible content.** The `h1` is `Media`. The intro says `Watch free beginner tutorials. Advanced videos stay labeled for members and are not shown as unlock buttons.` Headings under that are `Beginner tutorials`, `Advanced and locked tutorials`, `Training note`, and `Player: Squat setup`. Beginner cards: `Squat setup`, `Hinge`, `Push-up path`. Advanced cards: `Paused squat loading`, `Single-leg hinge`, `Press variations`. The description names those two groups.
 
-**Primary heading.** `Media`
-
-**User task.** Watch the free beginner tutorials. Advanced clips stay labeled for members.
+**Canonical decision.** No `link rel="canonical"`. The page is one file, `media.html`. No second address is in the source. No `og:url` is on this page. A canonical link names one address when the same page is published at more than one address. This file does not have that.
 
 ### Services (`services.html`)
 
 **Page purpose.** Show session types and prices, then take a session request.
 
+**User task.** Compare session types and prices, then request a session.
+
 **Title.** `Services | Bulletproof Personal Training`
 
 **Meta description.** `Session types, pricing, and a request form for Bulletproof Personal Training.`
 
-**Canonical decision.** No `link rel="canonical"` in the file. The page is `services.html`. The source has no second address for it. A canonical link applies after this file is published at one address. It does not apply now.
+**Visible content.** The `h1` is `Services`. The intro says `Compare session types, then request coaching.` Headings are `Session types`, `Pricing`, and `Request a session`. Session cards: `Online technique`, `In-home training`, `Advanced review`. Each price cell says `TBD after consultation`. The form fields are Name, Email, and Area of interest, with `Submit request`. The description names the session types, the pricing heading, and that form.
 
-**Primary heading.** `Services`
-
-**User task.** Compare session types and prices, then request a session.
+**Canonical decision.** No `link rel="canonical"`. The page is one file, `services.html`. No second address is in the source. No `og:url` is on this page. A canonical link names one address when the same page is published at more than one address. This file does not have that.
 
 ### About (`about.html`)
 
 **Page purpose.** Show the trainer background, the credentials list, the platform list, and the training-space photos.
 
+**User task.** Read the trainer background, the credentials, the platform list, and the training-space photos.
+
 **Title.** `About | Bulletproof Personal Training`
 
 **Meta description.** `Trainer background, credentials, and platform list for Bulletproof Personal Training.`
 
-**Canonical decision.** No `link rel="canonical"` in the file. The page is `about.html`. `og:url` is on this page. That tag is not a canonical link. A canonical link applies after this file is published at one address. It does not apply now.
+**Visible content.** The `h1` is `About the trainer`. `Coaching approach` has the paragraph that starts `Bulletproof PT teaches simple cues first, then adds load.` Under it, `Credentials` lists `Certified personal trainer`, `In-home and online coaching`, and `Beginner through advanced technique reviews`. `Other platforms` lists `YouTube technique library` as text and `Request a private session` as a link. Also on the page: `Beginner and advanced coaching` and `Training spaces` (four photos). The description names the coaching paragraph, the credentials list, and `Other platforms`. It does not name `Training spaces`.
 
-**Primary heading.** `About the trainer`
-
-**User task.** Read the trainer background, credentials, and platform list.
+**Canonical decision.** No `link rel="canonical"`. The page is one file, `about.html`. `og:url` is on this page. That tag is not a canonical link. A canonical link names one address when the same page is published at more than one address. This file does not have that.
 
 ## 2. Titles and descriptions
 
