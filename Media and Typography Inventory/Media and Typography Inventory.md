@@ -8,9 +8,9 @@ Checked `index.html`, `about.html`, `media.html`, and `services.html`, and the f
 
 ### Video poster
 
-![Solid gray rectangle, 1600 by 900](../CSS%20Architecture%20Package/images/video-placeholder.svg)
+![Solid gray rectangle, 1600 by 900](../site/images/video-placeholder.svg)
 
-`CSS Architecture Package/images/video-placeholder.svg`
+`site/images/video-placeholder.svg`
 
 **Purpose**  
 Poster for the highlight video on Home, the intro video on About, and the player on Media. All three use this file.

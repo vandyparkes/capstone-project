@@ -7,9 +7,9 @@
   <meta name="description" content="Trainer background, credentials, and platform list for Bulletproof Personal Training.">
   <meta property="og:title" content="About | Bulletproof Personal Training">
   <meta property="og:description" content="Trainer background, credentials, and platform list for Bulletproof Personal Training.">
-  <meta property="og:url" content="https://github.com/vandyparkes/capstone-project/blob/main/CSS%20Architecture%20Package/about.html">
+  <meta property="og:url" content="https://github.com/vandyparkes/capstone-project/blob/main/site/about.html">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://raw.githubusercontent.com/vandyparkes/capstone-project/main/CSS%20Architecture%20Package/images/home-gym-800.jpg">
+  <meta property="og:image" content="https://raw.githubusercontent.com/vandyparkes/capstone-project/main/site/images/home-gym-800.jpg">
   <meta property="og:image:alt" content="Trainer in a grey shirt squatting with a loaded barbell in a garage.">
   <meta property="og:image:width" content="800">
   <meta property="og:image:height" content="533">
@@ -19,7 +19,7 @@
       "@type": "AboutPage",
       "name": "About the trainer",
       "description": "Trainer background, credentials, and platform list for Bulletproof Personal Training.",
-      "url": "https://github.com/vandyparkes/capstone-project/blob/main/CSS%20Architecture%20Package/about.html"
+      "url": "https://github.com/vandyparkes/capstone-project/blob/main/site/about.html"
     }
   </script>
   <link rel="preload" href="fonts/atkinson-hyperlegible-latin-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -49,16 +49,12 @@
     <section class="section grid media-split" aria-labelledby="bio-heading">
       <figure class="media-object">
         <div class="media-object__frame">
-          <!-- Poster: images/video-placeholder.svg. 167 bytes, 1600 by 900. This file. The SVG does not name another source. License is not recorded. No video src. No audio. No embed. -->
-          <!-- No srcset and no sizes. The poster attribute takes one URL. The SVG scales in the 16:9 frame. The frame fills its column. -->
-          <!-- No picture. The file is one rectangle, the same 16:9 as the frame. object-fit is cover. The crop stays the whole rectangle at every width. -->
-          <!-- No alt on the poster. The file is one gray rectangle. It does not show the trainer. The video name is the aria-label. -->
-          <video poster="images/video-placeholder.svg" aria-label="Trainer intro video placeholder" aria-hidden="true" tabindex="-1">
-            <a href="media.html" tabindex="-1">Watch tutorials</a>
-          </video>
+          <!-- Trainer intro: https://www.youtube.com/watch?v=rWTYOwgvwt8 -->
+          <iframe src="https://www.youtube.com/embed/rWTYOwgvwt8" title="Squat video (385lbs)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
         </div>
         <figcaption>
-          <p class="text-caption text-muted">Trainer intro video placeholder</p>
+          <p class="text-caption text-muted">Squat video (385lbs). Getting back to lifting heavy. Hip flexors were tight in this clip.</p>
+          <p><a href="https://www.youtube.com/watch?v=rWTYOwgvwt8">Watch on YouTube</a></p>
           <p><a href="media.html">Watch tutorials</a></p>
         </figcaption>
       </figure>

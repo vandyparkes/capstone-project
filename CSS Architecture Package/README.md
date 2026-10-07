@@ -2,8 +2,6 @@
 
 Repository: https://github.com/vandyparkes/capstone-project
 
-Open `index.html` in a browser. All styles are in `css/`.
-
-`main.css` sets the layer order and imports the rest. Tokens are in `base.css`. Print styles are in `print.css` (Services).
+Pages, CSS, fonts, and images are in `../site/`. Open `../site/index.html`.
 
 Notes: `architecture-notes.md`, `refactoring-notes.md`, `testing-evidence.md`, `ai-disclosure.md`.
