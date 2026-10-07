@@ -115,3 +115,14 @@ Bulletproof Personal Training
 
 7. **Empty**  
    Each Services price reads “TBD after consultation.” The Media player shows the placeholder image and the squat setup note.
+
+## 5. Print needs
+
+1. **Services**  
+   Services is the page that prints. Headings, session types, and the pricing table stay. Each row stacks so Type, Access, Price, and Notes stay together. Text is black on white.
+
+2. **Hidden in print**  
+   The nav, buttons, the request form, and video frames.
+
+3. **Other pages**  
+   Home, About, and the Media player are watched in the browser. They do not get a separate print layout.
