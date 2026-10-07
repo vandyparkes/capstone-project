@@ -88,3 +88,33 @@ Section 4. No `link rel="canonical"`. No `meta name="robots"`. No `robots.txt`. 
 Section 9. The notes record no search-rank claim, no index claim, and no price-in-search claim.
 
 About `og:title` and `og:description` match the `title` and the meta description. The AboutPage `name` is `About the trainer`. The AboutPage `description` matches the meta description.
+
+## 4. Evidence still needed
+
+### Published URL
+
+No rendered address for the four pages is in the source. `Structured Data and Social Preview Check.md` records `200` for `CSS Architecture Package/about.html` and `CSS Architecture Package/images/home-gym-800.jpg`. The current About tags point at `site/about.html` and `site/images/home-gym-800.jpg`. Those two addresses have no recorded status. A rendered Home, Media, Services, and About URL has no recorded status.
+
+### Validation
+
+`Discoverability and Structured Content.md` records a Nu Html Checker upload and a Schema Markup Validator upload. Those uploads are the earlier files. Home and About are now YouTube `iframe` elements. Media is now `img` elements. No Nu result is recorded for the current four files. No Schema result is recorded for the current AboutPage `url`.
+
+### Links
+
+No link check is recorded for the current nav, the YouTube `href` on Home, the YouTube `href` on About, or `Open video` to `#player`.
+
+### Performance
+
+`CSS Architecture Package/testing-evidence.md` records no `iframe` and no YouTube host. Home and About now load a YouTube embed. No layout-shift score and no request list is recorded for those two embeds. Media now loads `images/video-placeholder.svg` on six cards and in `#player`. No request record is recorded for those `img` elements.
+
+### Compatibility
+
+`CSS Architecture Package/architecture-notes.md` says Safari and Firefox still need a pass. The recorded browser checks name Chrome.
+
+### Technical defense
+
+This project has no technical defense note for the current Home, Media, Services, and About pages.
+
+### Current media
+
+`Media Check.md` describes a `video` with `controls` and no `src`. `#player` is now an `img`. No check is recorded for that `img` `alt`, the Home iframe `title`, the About iframe `title`, or the `Watch on YouTube` links. No `track` and no transcript is in the current files, so no caption check is recorded.
