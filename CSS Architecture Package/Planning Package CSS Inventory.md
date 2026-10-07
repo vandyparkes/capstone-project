@@ -92,3 +92,26 @@ Bulletproof Personal Training
 
 8. **Wide**  
    Nav sits in one row. The About video can sit beside the bio. Session cards and tutorial cards can sit in a row. The pricing table sits full width under the session cards. The request form stays under the table.
+
+## 4. States
+
+1. **Hover**  
+   Nav links, primary and secondary buttons, links inside cards, and the About platform link.
+
+2. **Focus**  
+   The outline from part 2, on nav links, buttons, text fields, the select, and submit.
+
+3. **Active**  
+   A pressed look on buttons and nav links.
+
+4. **Current page**  
+   The nav link with `aria-current="page"` uses the accent color and an underline.
+
+5. **Required and invalid**  
+   Name, email, and area of interest are required. Each label includes “(required).” Email uses `type="email"`. An invalid field shows its error sentence with the warning border. The email error on the page reads “Enter a valid email we can reply to.”
+
+6. **Disabled**  
+   No field or button is disabled. Locked tutorials stay cards with the Advanced badge, the Members only badge, and the locked copy.
+
+7. **Empty**  
+   Each Services price reads “TBD after consultation.” The Media player shows the placeholder image and the squat setup note.
