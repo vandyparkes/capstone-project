@@ -165,7 +165,8 @@
   background: var(--color-surface);
 }
 
-.session-form + p {
+.form-result:not(:empty) {
+  display: block;
   margin-block-start: var(--space-16);
 }
 

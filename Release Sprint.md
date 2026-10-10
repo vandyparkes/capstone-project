@@ -68,7 +68,7 @@ Retest. Not run. No file was edited.
 
 Condition. Published pages at `https://vandyparkes.github.io/capstone-project/site/`: `index.html`, `media.html`, `services.html`, `about.html`. That address is the homepage field of the repository. Each page was fetched and its `title`, `meta name="description"`, `og:` tags, JSON-LD, `lang`, `viewport`, `link rel="canonical"`, and `meta name="robots"` were read.
 
-Result. Each page returned 200 and matches the file in `site/`. Titles and descriptions match the Release Plan. Each page has `lang="en"` and a `viewport`. No page has a canonical or robots tag. Home, Media, and Services have no `og:` tags and no JSON-LD. About has `og:title`, `og:description`, `og:url`, `og:type`, `og:image`, `og:image:alt`, and the AboutPage JSON-LD. `og:url` and the AboutPage `url` are `https://github.com/vandyparkes/capstone-project/blob/main/site/about.html`. That address returned 503 on three requests. `og:image` returned 200 as `image/jpeg`. The published About page returned 200. The root page redirects to `site/`.
+Result. Each page returned 200 and matches the file in `site/`. Titles and descriptions match the Release Plan. Each page has `lang="en"` and a `viewport`. No page has a canonical or robots tag. Home, Media, and Services have no `og:` tags and no JSON-LD. About has `og:title`, `og:description`, `og:url`, `og:type`, `og:image`, `og:image:alt`, and the AboutPage JSON-LD. `og:url` and the AboutPage `url` are `https://github.com/vandyparkes/capstone-project/blob/main/site/about.html`. That address returned 503 on three requests. `og:image` returned 200 as `image/jpeg`. The published About page returned 200.
 
 Issue. `og:url` and the AboutPage `url` name the source file, not the published About page.
 
@@ -98,9 +98,9 @@ Result. The form was `method="post"` with `action="#"` and the script had no `su
 
 Issue. Release Plan, section 2, item 2.
 
-Fix. A `submit` listener calls `preventDefault` and writes `Form complete. This page does not send requests yet.` into `p#form-result` with `role="status"`. `components.css` adds `.session-form + p` with a 16px top margin. The wording says nothing is sent because the page has no server.
+Fix. A `submit` listener calls `preventDefault` and writes `Form submitted.` into `output#form-result`. `components.css` adds `.form-result:not(:empty)` with `display: block` and a 16px top margin.
 
-Retest. A valid submit stays on `/services.html` and the text shows 16px under the form. The page height with the empty `p` is 1476, the same as before the edit. Nu Html Checker, 0 messages. CSS Validator on `components.css`, the same 4 errors as in section 1.
+Retest. A valid submit stays on `/services.html` and the text shows 16px under the form. An empty submit shows 3 errors and no text. The page height before submit is 1476, the same as before the edit. Nu Html Checker, 0 messages. CSS Validator on `components.css`, the same 4 errors as in section 1.
 
 ### 7.3 About share address names the source file
 

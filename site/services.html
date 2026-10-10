@@ -113,7 +113,7 @@
         </div>
         <button class="button" type="submit">Submit request</button>
       </form>
-      <p id="form-result" role="status"></p>
+      <output class="form-result" id="form-result"></output>
     </section>
   </main>
 
@@ -146,7 +146,7 @@
 
     form.addEventListener('submit', (event) => {
       event.preventDefault();
-      document.getElementById('form-result').textContent = 'Form complete. This page does not send requests yet.';
+      document.getElementById('form-result').textContent = 'Form submitted.';
     });
 
     form.querySelectorAll('input, select').forEach((input) => {
