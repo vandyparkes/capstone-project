@@ -68,9 +68,9 @@
   margin-inline-start: var(--space-8);
 }
 
-/* Default card layout before a container query. Stacked rows, padding, and a gap. */
+/* Stacked by default. In a 12rem box, the badges stack. */
 .card {
-  /* Query container. This card is measured by its own width. */
+  /* Query container. */
   container-type: inline-size;
   --card-padding: var(--space-24);
   --card-gap: var(--space-8);
@@ -104,7 +104,7 @@
   background: var(--color-border);
 }
 
-/* Fallback: the stack stays. You can still read the card without the query. */
+/* In a 28rem box, the badges share one row. Without container queries, they stay stacked. */
 @supports (container-type: inline-size) {
   @container (width > 16rem) {
     .card > .badge {
