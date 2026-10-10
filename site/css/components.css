@@ -223,6 +223,16 @@
   overflow: hidden;
 }
 
+iframe.media-object__frame,
+img.media-object__frame,
+video.media-object__frame {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  border: 0;
+  object-fit: cover;
+}
+
 .media-object__frame iframe,
 .media-object__frame img,
 .media-object__frame video {
