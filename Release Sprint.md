@@ -39,3 +39,15 @@ Issue. None.
 Fix. No edit.
 
 Retest. Not run. No file was edited.
+
+## 4. Keyboard and focus
+
+Condition. `site/services.html` at 1280. Tab order read from the DOM. Focus ring read with `:focus-visible` forced on the skip link, logo, Home, current nav link, “Request a session”, Email, and “Submit request”. A scripted Tab key did not move focus in this browser.
+
+Result. 12 stops, in order: Skip to main content, Bulletproof PT, Home, Media, Services, About, Request a session, Name, Email, Area of interest, Submit request, footer Media. No `tabindex` above 0. `main` has `tabindex="-1"`. Each forced stop showed `3px solid rgb(155, 28, 28)`, offset 3px. The current nav link also showed underline.
+
+Issue. None.
+
+Fix. No edit.
+
+Retest. Not run. No file was edited.
