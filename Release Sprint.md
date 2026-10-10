@@ -51,3 +51,15 @@ Issue. None.
 Fix. No edit.
 
 Retest. Not run. No file was edited.
+
+## 5. Performance
+
+Condition. `site/media.html` from `http://127.0.0.1:8765/`, three loads, Chrome Performance API. Lighthouse was not run. Node is not installed.
+
+Result. First contentful paint 44, 52, and 48 ms. Layout shift 1 on the first load, 0 on the next two. The first shift was `body` moving from 8,8 to 0,0 at 20 ms. The four YouTube iframes took 270 to 805 ms each across the loads. All four use `https://www.youtube.com/embed/_sKBQYCTT2s` and all four have `loading="lazy"`. The two Atkinson font files were preloaded and showed `unloaded` in `document.fonts`.
+
+Issue. The four iframes are the slowest items on the page. The layout shift of 1 did not repeat.
+
+Fix. No edit. Release Plan section 5, item 7, keeps the four embeds on that URL until real training videos are available.
+
+Retest. Not run. No file was edited.
