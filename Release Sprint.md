@@ -63,3 +63,15 @@ Issue. The four iframes are the slowest items on the page. The layout shift of 1
 Fix. No edit. Release Plan section 5, item 7, keeps the four embeds on that URL until real training videos are available.
 
 Retest. Not run. No file was edited.
+
+## 6. Metadata
+
+Condition. Published pages at `https://vandyparkes.github.io/capstone-project/site/`: `index.html`, `media.html`, `services.html`, `about.html`. That address is the homepage field of the repository. Each page was fetched and its `title`, `meta name="description"`, `og:` tags, JSON-LD, `lang`, `viewport`, `link rel="canonical"`, and `meta name="robots"` were read.
+
+Result. Each page returned 200 and matches the file in `site/`. Titles and descriptions match the Release Plan. Each page has `lang="en"` and a `viewport`. No page has a canonical or robots tag. Home, Media, and Services have no `og:` tags and no JSON-LD. About has `og:title`, `og:description`, `og:url`, `og:type`, `og:image`, `og:image:alt`, and the AboutPage JSON-LD. `og:url` and the AboutPage `url` are `https://github.com/vandyparkes/capstone-project/blob/main/site/about.html`. That address returned 503 on three requests. `og:image` returned 200 as `image/jpeg`. The published About page returned 200. The root page redirects to `site/`.
+
+Issue. `og:url` and the AboutPage `url` name the source file, not the published About page.
+
+Fix. No edit in this check.
+
+Retest. Not run. No file was edited.
