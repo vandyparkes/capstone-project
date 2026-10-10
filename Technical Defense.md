@@ -19,7 +19,7 @@ No login, payment, or live calendar. That matches the Planning Package brief.
 `Release Sprint.md`, sections 1 to 6.
 
 - Nu Html Checker on all four pages, 0 messages. CSS Validator on `main.css`.
-- Lighthouse on the four published pages. Performance, Accessibility, and SEO 100. Best Practices 93 to 96.
+- Lighthouse on the four published pages. Performance, Accessibility, and SEO 100. Best Practices 93 to 96, then 96 to 100 after the favicon.
 - Nav and content links from a local server and the published pages.
 - Services at 375, 768, 1280, and 200% zoom.
 - Keyboard order and focus ring on Services.
@@ -34,6 +34,7 @@ No login, payment, or live calendar. That matches the Planning Package brief.
 - A valid submit left the page with a 501. It now stays on Services and shows `Form submitted.`
 - About `og:url` and the AboutPage `url` named the GitHub source file. Both now name the published About page.
 - Without JavaScript, the form posted and got a 405. It now uses `get` and reloads Services.
+- No favicon. Every page logged a 404. `images/favicon.png` is now linked on all four pages.
 
 ## What remains limited
 

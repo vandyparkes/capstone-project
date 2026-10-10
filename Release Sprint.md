@@ -102,9 +102,9 @@ Result.
 
 Issue. The favicon 404 lowers Best Practices. The YouTube items come from the embed.
 
-Fix. No edit.
+Fix. Favicon added. See 7.5.
 
-Retest. Not run. No file was edited.
+Retest. See 7.5.
 
 ## 6. Metadata
 
@@ -168,6 +168,18 @@ Fix. The form is now `method="get"` with `action="services.html"`.
 
 Retest. A GET to `services.html?name=A&email=a%40b.co&interest=Online+technique` returned 200 from `http://127.0.0.1:8765/` and from GitHub Pages. The `required` fields still block an empty submit in the browser. With the script, a valid submit still calls `preventDefault` and shows `Form submitted.`
 
+### 7.5 Favicon
+
+Condition. Home, Media, Services, and About. Lighthouse 5.1.
+
+Result. Every page logged a 404 for `https://vandyparkes.github.io/favicon.ico`.
+
+Issue. Section 5.1.
+
+Fix. `site/images/favicon.png`, 64 by 64, 804 bytes. White `B` in Atkinson Hyperlegible 700 on `#9b1c1c`, the `--color-accent` value. Made for this site. Each page has `<link rel="icon" href="images/favicon.png" type="image/png">`.
+
+Retest. From `http://127.0.0.1:8766/`, `images/favicon.png` returned 200 as `image/png`. Lighthouse Best Practices, no console errors on any page. Home 96, Media 96, Services 100, About 96. The YouTube cookie issue is the remaining item on Home, Media, and About. Nu Html Checker, 0 messages on all four pages.
+
 ## 8. Compatibility
 
 Condition. Browser checks recorded in this repo. CSS features read from `site/css/`.
@@ -197,4 +209,4 @@ Retest. Not run.
 - `YouTube technique library` on About is text with no link.
 - CSS Validator reports 8 errors on `main.css` for `@import` after `@layer`. Cascade Layers allows a `@layer` statement before `@import`. The file was left as is.
 - Safari and Firefox are not tested. See section 8.
-- No favicon. Every page logs a 404 for `favicon.ico`. See 5.1.
+- The YouTube embeds on Home, Media, and About log a cookie issue in Chrome. See 7.5.
