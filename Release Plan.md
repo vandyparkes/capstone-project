@@ -19,13 +19,13 @@ The squat player is a section on `media.html` (`#player`). It is the same file. 
 
 Priority is High or Medium. Owner is this project.
 
-1. **High.** The three beginner titles play one clip. On `site/media.html`, Squat setup, Hinge, Push-up path, and `#player` each use `https://www.youtube.com/embed/_sKBQYCTT2s`. The card times are still `8:12`, `6:40`, and `5:05`. Squat setup links to `#player` with `Open video`. Hinge and Push-up path have no second clip. The comments above the Squat setup card and `#player` still name `images/video-placeholder.svg`. The three advanced cards still use that file as an `img`. Action: give Hinge and Push-up path their own clips, or name those two cards as this squat clip and drop the other titles and times. Point the two comments at the embed that is in the file.
+1. **High.** Squat setup, Hinge, Push-up path, and `#player` on `site/media.html` each use `https://www.youtube.com/embed/_sKBQYCTT2s`. The card times are `8:12`, `6:40`, and `5:05`. Squat setup links to `#player` with `Open video`. The comments above the Squat setup card and `#player` name `images/video-placeholder.svg`. The three advanced cards use that file as an `img`. Action: Hinge and Push-up path stay on this embed until each one has its own clip in the file.
 
 2. **High.** The session form opens on an error. `site/services.html` sets the email field to `not-an-email`, `aria-invalid="true"`, and `is-invalid` on its parent. `.field.is-invalid .field-error` is `display: block`, so `Enter a valid email we can reply to.` is on screen before a visitor types. Action: start that field empty, with `aria-invalid="false"` and without `is-invalid`.
 
 3. **High.** A valid submit leaves the page. The form is `method="post"` and `action="#"`. The script does not listen for `submit`. `Discoverability and Structured Content.md` records the file server response `501` and `Unsupported method ('POST')`. The page has no confirmation text. Action: keep a valid submit on `services.html` and show a result on that page.
 
-4. **Medium.** The clips have no transcript on the page. Home embeds `https://www.youtube.com/embed/4S1SCnlqKHQ` with `title` `Bulletproof PT`. About embeds `https://www.youtube.com/embed/rWTYOwgvwt8` with `title` `Squat video (385lbs)`. Media embeds `https://www.youtube.com/embed/_sKBQYCTT2s` on the three beginner cards and in `#player`. A `track` does not apply to those `iframe` elements. Action: add a transcript on each page that matches the clip on that page.
+4. **Medium.** No transcript is in Home, About, or Media. Home embeds `https://www.youtube.com/embed/4S1SCnlqKHQ`. The `title` is `Bulletproof PT`. About embeds `https://www.youtube.com/embed/rWTYOwgvwt8`. The `title` is `Squat video (385lbs)`. Media embeds `https://www.youtube.com/embed/_sKBQYCTT2s` on the three beginner cards and in `#player`. None of these files has a `track`. Action: leave Home, About, and Media without a transcript.
 
 5. **Medium.** About’s share address is the source file. `og:url` and the AboutPage `url` are `https://github.com/vandyparkes/capstone-project/blob/main/site/about.html`. No rendered address for the four pages is in the source. Action: set both to the published About URL after that address exists.
 
@@ -39,7 +39,7 @@ These checks still match the files in `site/`.
 
 `planning-brief-starter/site-map-template.md`. The map is Home, Media, Services, and About.
 
-`planning-brief-starter/acceptance-criteria-template.md`. Each page title includes `Bulletproof Personal Training`. The request form fields are name, email, and area of interest. Home and About each use a YouTube embed, which that note asks for. Media’s three beginner cards and `#player` also embed YouTube.
+`planning-brief-starter/acceptance-criteria-template.md`. Each page title includes `Bulletproof Personal Training`. The request form fields are name, email, and area of interest. Home and About each use a YouTube embed. Media’s three beginner cards and `#player` each embed `https://www.youtube.com/embed/_sKBQYCTT2s`.
 
 `planning-brief-starter/css-planning.md`. The same header and nav are on all four pages. The player stays on `media.html`.
 
@@ -61,7 +61,7 @@ These checks still match the files in `site/`.
 
 ### Module 4. Media and typography
 
-`Media and Typography Inventory/Media and Typography Inventory.md`. The four Training spaces photos, their `alt` text, figcaptions, sources, and licenses. The files `fonts/atkinson-hyperlegible-latin-400.woff2` and `fonts/atkinson-hyperlegible-latin-700.woff2` are still 11,208 bytes and 11,364 bytes, and `fonts/OFL.txt` is still in `site/fonts/`. The inventory stack line does not match `site/css/base.css`. That mismatch is must-fix item 6.
+`Media and Typography Inventory/Media and Typography Inventory.md`. The four Training spaces photos, their `alt` text, figcaptions, sources, and licenses. `fonts/OFL.txt` is in `site/fonts/`. The two Atkinson files named in that inventory are still in `site/fonts/`.
 
 `site/media.html` embeds `https://www.youtube.com/embed/_sKBQYCTT2s` on Squat setup, Hinge, Push-up path, and inside `#player`. The three advanced cards use `images/video-placeholder.svg` as an `img`. Each of those `img` elements has an `alt`. The file is 167 bytes, 1600 by 900. `services.html` still has no `img`.
 
@@ -135,7 +135,7 @@ This release stays on the four pages in `site/`. The items below stay out.
 
 6. **Prices.** Each price cell stays `TBD after consultation`. C4 says to publish rates only after they are decided. No checkout.
 
-7. **Other tutorials.** Hinge, Push-up path, Paused squat loading, Single-leg hinge, and Press variations stay cards on `media.html`. The three advanced cards stay labeled `Members only` and keep `images/video-placeholder.svg`. No member unlock and no extra tutorial page. Separate clips for Hinge and Push-up path are must-fix item 1.
+7. **Other tutorials.** Hinge, Push-up path, Paused squat loading, Single-leg hinge, and Press variations stay cards on `media.html`. The three advanced cards stay labeled `Members only` and keep `images/video-placeholder.svg`. No member unlock and no extra tutorial page.
 
 8. **Platform link.** `YouTube technique library` on About stays text. No URL for it is in `about.html`.
 
@@ -143,4 +143,4 @@ This release stays on the four pages in `site/`. The items below stay out.
 
 10. **Share tags.** Open Graph tags and the AboutPage JSON-LD stay on About. Home, Media, and Services have none.
 
-11. **Print.** `site/css/main.css` loads `print.css` on every page. That sheet hides the nav, the buttons, the request form, and `.media-object__frame`. Services keeps the price table in that sheet. Home, Media, and About do not get a separate print layout. `css-planning.md` says those pages do not need rich print.
+11. **Print.** `site/css/main.css` loads `print.css` on every page. The sheet hides `.site-header nav`, `.button`, `.session-form`, and `.media-object__frame`. The price table rules stay in that sheet. Home, Media, and About have no second print file. `css-planning.md` says those pages do not need rich print.
