@@ -165,6 +165,10 @@
   background: var(--color-surface);
 }
 
+.session-form + p {
+  margin-block-start: var(--space-16);
+}
+
 .field {
   display: grid;
   gap: var(--space-8);

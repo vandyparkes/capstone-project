@@ -75,3 +75,41 @@ Issue. `og:url` and the AboutPage `url` name the source file, not the published 
 Fix. No edit in this check.
 
 Retest. Not run. No file was edited.
+
+## 7. Fixes
+
+### 7.1 Email field opens on an error
+
+Condition. `site/services.html`, page load.
+
+Result. The email field had `value="not-an-email"`, `aria-invalid="true"`, and `is-invalid` on its parent. `Enter a valid email we can reply to.` showed before any typing.
+
+Issue. Release Plan, section 2, item 1.
+
+Fix. The field starts empty, with `aria-invalid="false"` and no `is-invalid`.
+
+Retest. On load the error is `display: none` and `aria-invalid` is `false`. An empty submit shows the name, email, and area errors.
+
+### 7.2 A valid submit leaves the page
+
+Condition. `site/services.html`, form with name, email, and area filled.
+
+Result. The form was `method="post"` with `action="#"` and the script had no `submit` listener. The earlier check recorded `501` and `Unsupported method ('POST')`.
+
+Issue. Release Plan, section 2, item 2.
+
+Fix. A `submit` listener calls `preventDefault` and writes `Form complete. This page does not send requests yet.` into `p#form-result` with `role="status"`. `components.css` adds `.session-form + p` with a 16px top margin. The wording says nothing is sent because the page has no server.
+
+Retest. A valid submit stays on `/services.html` and the text shows 16px under the form. The page height with the empty `p` is 1476, the same as before the edit. Nu Html Checker, 0 messages. CSS Validator on `components.css`, the same 4 errors as in section 1.
+
+### 7.3 About share address names the source file
+
+Condition. `site/about.html`.
+
+Result. `og:url` and the AboutPage `url` were `https://github.com/vandyparkes/capstone-project/blob/main/site/about.html`.
+
+Issue. Section 6.
+
+Fix. Both are now `https://vandyparkes.github.io/capstone-project/site/about.html`.
+
+Retest. The two values match. The published About page returned 200. Nu Html Checker, 0 messages. The JSON-LD parses.

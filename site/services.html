@@ -96,9 +96,9 @@
           <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
           <p class="field-error" id="name-error">Enter your name.</p>
         </div>
-        <div class="field is-invalid">
+        <div class="field">
           <label for="email">Email (required)</label>
-          <input id="email" name="email" type="email" autocomplete="email" required aria-invalid="true" aria-describedby="email-error" value="not-an-email">
+          <input id="email" name="email" type="email" autocomplete="email" required aria-invalid="false" aria-describedby="email-error">
           <p class="field-error" id="email-error">Enter a valid email we can reply to.</p>
         </div>
         <div class="field">
@@ -113,6 +113,7 @@
         </div>
         <button class="button" type="submit">Submit request</button>
       </form>
+      <p id="form-result" role="status"></p>
     </section>
   </main>
 
@@ -141,6 +142,11 @@
 
     interest.addEventListener('change', () => {
       if (interest.value !== '') setInvalid(interest, false);
+    });
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      document.getElementById('form-result').textContent = 'Form complete. This page does not send requests yet.';
     });
 
     form.querySelectorAll('input, select').forEach((input) => {
