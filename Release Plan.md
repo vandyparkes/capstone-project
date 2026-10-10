@@ -19,17 +19,13 @@ The squat player is a section on `media.html` (`#player`). It is the same file. 
 
 Priority is High or Medium. Owner is this project.
 
-1. **High.** Squat setup, Hinge, Push-up path, and `#player` on `site/media.html` each use `https://www.youtube.com/embed/_sKBQYCTT2s`. The card times are `8:12`, `6:40`, and `5:05`. Squat setup links to `#player` with `Open video`. The comments above the Squat setup card and `#player` name `images/video-placeholder.svg`. The three advanced cards use that file as an `img`. Action: Hinge and Push-up path stay on this embed until each one has its own clip in the file.
+1. **High.** The session form opens on an error. `site/services.html` sets the email field to `not-an-email`, `aria-invalid="true"`, and `is-invalid` on its parent. `.field.is-invalid .field-error` is `display: block`, so `Enter a valid email we can reply to.` is on screen before a visitor types. Action: start that field empty, with `aria-invalid="false"` and without `is-invalid`.
 
-2. **High.** The session form opens on an error. `site/services.html` sets the email field to `not-an-email`, `aria-invalid="true"`, and `is-invalid` on its parent. `.field.is-invalid .field-error` is `display: block`, so `Enter a valid email we can reply to.` is on screen before a visitor types. Action: start that field empty, with `aria-invalid="false"` and without `is-invalid`.
+2. **High.** A valid submit leaves the page. The form is `method="post"` and `action="#"`. The script does not listen for `submit`. `Discoverability and Structured Content.md` records the file server response `501` and `Unsupported method ('POST')`. The page has no confirmation text. Action: keep a valid submit on `services.html` and show a result on that page.
 
-3. **High.** A valid submit leaves the page. The form is `method="post"` and `action="#"`. The script does not listen for `submit`. `Discoverability and Structured Content.md` records the file server response `501` and `Unsupported method ('POST')`. The page has no confirmation text. Action: keep a valid submit on `services.html` and show a result on that page.
+3. **Medium.** About’s share address is the source file. `og:url` and the AboutPage `url` are `https://github.com/vandyparkes/capstone-project/blob/main/site/about.html`. No rendered address for the four pages is in the source. Action: set both to the published About URL after that address exists.
 
-4. **Medium.** No transcript is in Home, About, or Media. Home embeds `https://www.youtube.com/embed/4S1SCnlqKHQ`. The `title` is `Bulletproof PT`. About embeds `https://www.youtube.com/embed/rWTYOwgvwt8`. The `title` is `Squat video (385lbs)`. Media embeds `https://www.youtube.com/embed/_sKBQYCTT2s` on the three beginner cards and in `#player`. None of these files has a `track`. Action: leave Home, About, and Media without a transcript.
-
-5. **Medium.** About’s share address is the source file. `og:url` and the AboutPage `url` are `https://github.com/vandyparkes/capstone-project/blob/main/site/about.html`. No rendered address for the four pages is in the source. Action: set both to the published About URL after that address exists.
-
-6. **Medium.** Module notes still describe the old folder, the old players, and the old font stack. `Accessibility Conformance.md`, `Media Check.md`, `Metadata Inventory.md`, and `Discoverability and Structured Content.md` name `CSS Architecture Package/`. `Media and Typography Inventory/Media and Typography Inventory.md` says the four pages have no `iframe` and that the stack is `"Atkinson Hyperlegible", Arial, Helvetica, sans-serif`. Home, About, and Media in `site/` use YouTube `iframe` elements. `site/css/base.css` sets `--font-family` to `"Site Futura", Futura, "Atkinson Hyperlegible", Arial, Helvetica, sans-serif`. Action: point those notes at `site/`, at the current embeds, and at the current font stack before the package is submitted.
+4. **Medium.** Module notes still describe the old folder, the old players, and the old font stack. `Accessibility Conformance.md`, `Media Check.md`, `Metadata Inventory.md`, and `Discoverability and Structured Content.md` name `CSS Architecture Package/`. `Media and Typography Inventory/Media and Typography Inventory.md` says the four pages have no `iframe` and that the stack is `"Atkinson Hyperlegible", Arial, Helvetica, sans-serif`. Home, About, and Media in `site/` use YouTube `iframe` elements. `site/css/base.css` sets `--font-family` to `"Site Futura", Futura, "Atkinson Hyperlegible", Arial, Helvetica, sans-serif`. Action: point those notes at `site/`, at the current embeds, and at the current font stack before the package is submitted.
 
 ## 3. Evidence already complete
 
@@ -117,7 +113,7 @@ This project has no technical defense note for the current Home, Media, Services
 
 ### Current media
 
-`Media Check.md` describes a `video` with `controls` and no `src`. `#player` is now an `iframe` with `title` `Squat setup` and `src` `https://www.youtube.com/embed/_sKBQYCTT2s`. The three beginner cards use that same `src`. No check is recorded for those `title` values, the Home iframe `title` `Bulletproof PT`, the About iframe `title` `Squat video (385lbs)`, or the `Watch on YouTube` links. No transcript is in the current files, so no caption check is recorded.
+`Media Check.md` describes a `video` with `controls` and no `src`. `#player` is an `iframe` with `title` `Squat setup` and `src` `https://www.youtube.com/embed/_sKBQYCTT2s`. The three beginner cards use that same `src`. No check is recorded for those `title` values, the Home iframe `title` `Bulletproof PT`, the About iframe `title` `Squat video (385lbs)`, or the `Watch on YouTube` links.
 
 ## 5. Scope decisions
 
@@ -135,7 +131,7 @@ This release stays on the four pages in `site/`. The items below stay out.
 
 6. **Prices.** Each price cell stays `TBD after consultation`. C4 says to publish rates only after they are decided. No checkout.
 
-7. **Other tutorials.** Hinge, Push-up path, Paused squat loading, Single-leg hinge, and Press variations stay cards on `media.html`. The three advanced cards stay labeled `Members only` and keep `images/video-placeholder.svg`. No member unlock and no extra tutorial page.
+7. **Media videos.** Squat setup, Hinge, Push-up path, and `#player` stay on `https://www.youtube.com/embed/_sKBQYCTT2s` until real training instructional videos are available. The three advanced cards stay labeled `Members only` and keep `images/video-placeholder.svg`. No member unlock and no extra tutorial page.
 
 8. **Platform link.** `YouTube technique library` on About stays text. No URL for it is in `about.html`.
 
@@ -144,3 +140,15 @@ This release stays on the four pages in `site/`. The items below stay out.
 10. **Share tags.** Open Graph tags and the AboutPage JSON-LD stay on About. Home, Media, and Services have none.
 
 11. **Print.** `site/css/main.css` loads `print.css` on every page. The sheet hides `.site-header nav`, `.button`, `.session-form`, and `.media-object__frame`. The price table rules stay in that sheet. Home, Media, and About have no second print file. `css-planning.md` says those pages do not need rich print.
+
+## 6. Release plan
+
+Before submission. The four pages stay in `site/`.
+
+1. **Form.** On `site/services.html`, the email field starts empty, with `aria-invalid="false"` and without `is-invalid`. The script listens for `submit`. A valid submit stays on `services.html` and the result shows on that page.
+
+2. **Notes.** Point `Accessibility Conformance.md`, `Media Check.md`, `Metadata Inventory.md`, `Discoverability and Structured Content.md`, and `Media and Typography Inventory/Media and Typography Inventory.md` at `site/`, the current YouTube `iframe` elements, and `--font-family` in `site/css/base.css`.
+
+3. **Checks.** Nu Html Checker for the current four files. Schema Markup Validator for the current AboutPage `url`. Link check for the nav, Home `https://youtu.be/4S1SCnlqKHQ`, About `https://www.youtube.com/watch?v=rWTYOwgvwt8`, Media `https://youtu.be/_sKBQYCTT2s`, and `Open video` to `#player`. Request list for the Home embed, the About embed, the four Media embeds, and the three advanced-card `img` elements. Record the iframe `title` values and the `Watch on YouTube` links. Record Safari and Firefox for the four pages.
+
+4. **Left in place.** The Media embeds stay on `https://www.youtube.com/embed/_sKBQYCTT2s` until real training instructional videos are available. `og:url` and the AboutPage `url` stay `https://github.com/vandyparkes/capstone-project/blob/main/site/about.html` until a published About address is in the source. No status is recorded for an address that is not in the source. No technical defense note until the checks in item 3 are recorded. Section 5 stays out.
