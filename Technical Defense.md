@@ -18,7 +18,8 @@ No login, payment, or live calendar. That matches the Planning Package brief.
 
 `Release Sprint.md`, sections 1 to 6.
 
-- Nu Html Checker on Services and Media, 0 messages. CSS Validator on `main.css`.
+- Nu Html Checker on all four pages, 0 messages. CSS Validator on `main.css`.
+- Lighthouse on the four published pages. Performance, Accessibility, and SEO 100. Best Practices 93 to 96.
 - Nav and content links from a local server and the published pages.
 - Services at 375, 768, 1280, and 200% zoom.
 - Keyboard order and focus ring on Services.

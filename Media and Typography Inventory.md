@@ -178,7 +178,7 @@ No external media URL. The page does not load a third-party player.
 
 ### Tutorial cards
 
-`planning-brief-starter/content-inventory-template.md` lists C6, Video Files and Explanations. That row says the source/owner is Trainer, the status is Risky, and the note is "Copyright and hosting; some tutorials stay locked."
+`Planning Brief/content-inventory-template.md` lists C6, Video Files and Explanations. That row says the source/owner is Trainer, the status is Risky, and the note is "Copyright and hosting; some tutorials stay locked."
 
 **Caption**  
 None. Squat setup shows the text 8:12. Hinge shows 6:40. Push-up path shows 5:05. Each of those is a `text-caption` paragraph. There is no subtitle file.
@@ -200,7 +200,7 @@ The links stay on `media.html`.
 
 ### YouTube
 
-`planning-brief-starter/acceptance-criteria-template.md` says Home and About should use a YouTube embed instead of a local video file. The pages have no `iframe`. About has a link named "YouTube technique library" with `href="#"`.
+`Planning Brief/acceptance-criteria-template.md` says Home and About should use a YouTube embed instead of a local video file. The pages have no `iframe`. About has a link named "YouTube technique library" with `href="#"`.
 
 **Caption**  
 None.
@@ -276,7 +276,7 @@ Layout. Each `img` has `width="800"` and `height="533"`. CSS sets `aspect-ratio:
 
 Accessibility. Home, About, and the Media player each expose `controls`. Each one has no `src`, no `track`, and no transcript.
 
-Performance. `planning-brief-starter/acceptance-criteria-template.md` says a local video file would make the company name and navigation wait on that download. There is no video file in the project. The poster is `images/video-placeholder.svg`, 167 bytes, 1600 by 900. `testing-evidence.md` recorded the 16:9 frame before the poster and a layout shift score of 0. Home was 1120 by 630, About was 602 by 339, and Media was 864 by 486.
+Performance. `Planning Brief/acceptance-criteria-template.md` says a local video file would make the company name and navigation wait on that download. There is no video file in the project. The poster is `images/video-placeholder.svg`, 167 bytes, 1600 by 900. `testing-evidence.md` recorded the 16:9 frame before the poster and a layout shift score of 0. Home was 1120 by 630, About was 602 by 339, and Media was 864 by 486.
 
 ### YouTube embed
 

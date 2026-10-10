@@ -18,6 +18,18 @@ Fix. No edit.
 
 Retest. Not run. No file was edited.
 
+### 1.1 Nu Html Checker, all four pages
+
+Condition. Current `site/index.html`, `site/media.html`, `site/services.html`, and `site/about.html`, sent to `https://validator.w3.org/nu/` as `text/html`. Checker version 26.10.9.
+
+Result. Home, 0 messages. Media, 0 messages. Services, 0 messages. About, 0 messages.
+
+Issue. None.
+
+Fix. No edit.
+
+Retest. Not run. No file was edited.
+
 ## 2. Links
 
 Condition. Nav on each page: Home `index.html`, Media `media.html`, Services `services.html`, About `about.html`. Five content links: Media “Open video” `#player`, Services “Request a session” `#request`, Home “Watch on YouTube” `https://youtu.be/4S1SCnlqKHQ`, About “Watch on YouTube” `https://www.youtube.com/watch?v=rWTYOwgvwt8`, Media “Watch on YouTube” `https://youtu.be/_sKBQYCTT2s`.
@@ -56,13 +68,41 @@ Retest. Not run. No file was edited.
 
 ## 5. Performance
 
-Condition. `site/media.html` from `http://127.0.0.1:8765/`, three loads, Chrome Performance API. Lighthouse was not run. Node is not installed.
+Condition. `site/media.html` from `http://127.0.0.1:8765/`, three loads, Chrome Performance API. Lighthouse is in 5.1.
 
 Result. First contentful paint 44, 52, and 48 ms. Layout shift 1 on the first load, 0 on the next two. The first shift was `body` moving from 8,8 to 0,0 at 20 ms. The four YouTube iframes took 270 to 805 ms each across the loads. All four use `https://www.youtube.com/embed/_sKBQYCTT2s` and all four have `loading="lazy"`. The two Atkinson font files were preloaded and showed `unloaded` in `document.fonts`.
 
 Issue. The four iframes are the slowest items on the page. The layout shift of 1 did not repeat.
 
 Fix. No edit. Release Plan section 5, item 7, keeps the four embeds on that URL until real training videos are available.
+
+Retest. Not run. No file was edited.
+
+### 5.1 Lighthouse
+
+Condition. Lighthouse 12.8.2 CLI, headless Chrome. Published Home, Media, Services, and About at `https://vandyparkes.github.io/capstone-project/site/`. Mobile and desktop presets. Published Services was the version before 7.4.
+
+Result.
+
+| Page | Preset | Performance | Accessibility | Best Practices | SEO | FCP | LCP | TBT | CLS |
+|---|---|---|---|---|---|---|---|---|---|
+| Home | Mobile | 100 | 100 | 93 | 100 | 0.8 s | 1.1 s | 0 ms | 0 |
+| Home | Desktop | 100 | 100 | 93 | 100 | 0.2 s | 0.3 s | 0 ms | 0 |
+| Media | Mobile | 100 | 100 | 93 | 100 | 0.8 s | 0.9 s | 0 ms | 0 |
+| Media | Desktop | 100 | 100 | 93 | 100 | 0.3 s | 0.4 s | 0 ms | 0 |
+| Services | Mobile | 100 | 100 | 96 | 100 | 0.8 s | 0.9 s | 0 ms | 0 |
+| Services | Desktop | 100 | 100 | 96 | 100 | 0.2 s | 0.2 s | 0 ms | 0 |
+| About | Mobile | 100 | 100 | 93 | 100 | 0.8 s | 1.1 s | 0 ms | 0 |
+| About | Desktop | 100 | 100 | 93 | 100 | 0.2 s | 0.3 s | 0 ms | 0 |
+
+- Every page logs one console error: `https://vandyparkes.github.io/favicon.ico` returned 404.
+- Home, Media, and About log a cookie issue from the YouTube embed and list a facade for the YouTube player.
+- About lists properly sized images, 54 KiB on mobile, and next-gen formats, 89 KiB on mobile.
+- Every page lists a short cache lifetime. GitHub Pages sets the cache headers.
+
+Issue. The favicon 404 lowers Best Practices. The YouTube items come from the embed.
+
+Fix. No edit.
 
 Retest. Not run. No file was edited.
 
@@ -157,3 +197,4 @@ Retest. Not run.
 - `YouTube technique library` on About is text with no link.
 - CSS Validator reports 8 errors on `main.css` for `@import` after `@layer`. Cascade Layers allows a `@layer` statement before `@import`. The file was left as is.
 - Safari and Firefox are not tested. See section 8.
+- No favicon. Every page logs a 404 for `favicon.ico`. See 5.1.

@@ -19,10 +19,10 @@ Required parts and rubric map: `Required Parts.md`.
 
 | Part | File |
 |---|---|
-| Planning | `planning-brief-starter/Planning Package.pdf`, `planning-brief-starter/` templates, `CSS Architecture Package/Planning Package CSS Inventory.md` |
+| Planning | `Planning Brief/Planning Package.pdf`, `Planning Brief/` templates, `CSS Architecture Package/Planning Package CSS Inventory.md` |
 | CSS architecture | `CSS Architecture Package/` |
-| Layout | `Layout Risk and Breakpoint Inventory/` |
-| Media and typography | `Media and Typography Inventory/`, `Media Check.md` |
+| Layout | `Layout Risk and Breakpoint Inventory.md` |
+| Media and typography | `Media and Typography Inventory.md`, `Media Check.md` |
 | Accessibility | `Accessibility Test Plan.md`, `Accessibility Conformance.md`, `Practice: Forms, Tables, Media, and Motion Check.md` |
 | Discoverability | `Metadata Inventory.md`, `Discoverability and Structured Content.md`, `Structured Data and Social Preview Check.md` |
 | Release | `Release Plan.md`, `Release Sprint.md` |

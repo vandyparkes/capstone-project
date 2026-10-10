@@ -27,7 +27,7 @@ Priority is High or Medium. Owner is this project.
 
 3. **Medium.** About’s share address is the source file. `og:url` and the AboutPage `url` are `https://github.com/vandyparkes/capstone-project/blob/main/site/about.html`. No rendered address for the four pages is in the source. Action: set both to the published About URL after that address exists.
 
-4. **Medium.** Module notes still describe the old folder, the old players, and the old font stack. `Accessibility Conformance.md`, `Media Check.md`, `Metadata Inventory.md`, and `Discoverability and Structured Content.md` name `CSS Architecture Package/`. `Media and Typography Inventory/Media and Typography Inventory.md` says the four pages have no `iframe` and that the stack is `"Atkinson Hyperlegible", Arial, Helvetica, sans-serif`. Home, About, and Media in `site/` use YouTube `iframe` elements. `site/css/base.css` sets `--font-family` to `"Site Futura", Futura, "Atkinson Hyperlegible", Arial, Helvetica, sans-serif`. Action: point those notes at `site/`, at the current embeds, and at the current font stack before the package is submitted.
+4. **Medium.** Module notes still describe the old folder, the old players, and the old font stack. `Accessibility Conformance.md`, `Media Check.md`, `Metadata Inventory.md`, and `Discoverability and Structured Content.md` name `CSS Architecture Package/`. `Media and Typography Inventory.md` says the four pages have no `iframe` and that the stack is `"Atkinson Hyperlegible", Arial, Helvetica, sans-serif`. Home, About, and Media in `site/` use YouTube `iframe` elements. `site/css/base.css` sets `--font-family` to `"Site Futura", Futura, "Atkinson Hyperlegible", Arial, Helvetica, sans-serif`. Action: point those notes at `site/`, at the current embeds, and at the current font stack before the package is submitted.
 
 ## 3. Evidence already complete
 
@@ -35,11 +35,11 @@ These checks still match the files in `site/`.
 
 ### Module 1. Content inventory and site map
 
-`planning-brief-starter/site-map-template.md`. The map is Home, Media, Services, and About.
+`Planning Brief/site-map-template.md`. The map is Home, Media, Services, and About.
 
-`planning-brief-starter/acceptance-criteria-template.md`. Each page title includes `Bulletproof Personal Training`. The request form fields are name, email, and area of interest. Home and About each use a YouTube embed. Media’s three beginner cards and `#player` each embed `https://www.youtube.com/embed/_sKBQYCTT2s`.
+`Planning Brief/acceptance-criteria-template.md`. Each page title includes `Bulletproof Personal Training`. The request form fields are name, email, and area of interest. Home and About each use a YouTube embed. Media’s three beginner cards and `#player` each embed `https://www.youtube.com/embed/_sKBQYCTT2s`.
 
-`planning-brief-starter/css-planning.md`. The same header and nav are on all four pages. The player stays on `media.html`.
+`Planning Brief/css-planning.md`. The same header and nav are on all four pages. The player stays on `media.html`.
 
 ### Module 2. CSS architecture
 
@@ -51,7 +51,7 @@ These checks still match the files in `site/`.
 
 ### Module 3. Layout systems
 
-`Layout Risk and Breakpoint Inventory/Layout Risk and Breakpoint Inventory.md`. The pages still use the header, the Home hero, the card grids, the About video beside the bio, and the Services price table.
+`Layout Risk and Breakpoint Inventory.md`. The pages still use the header, the Home hero, the card grids, the About video beside the bio, and the Services price table.
 
 `site/css/states.css`. Under `prefers-reduced-motion: reduce`, the 1px press shift on buttons and nav is `none`.
 
@@ -59,7 +59,7 @@ These checks still match the files in `site/`.
 
 ### Module 4. Media and typography
 
-`Media and Typography Inventory/Media and Typography Inventory.md`. The four Training spaces photos, their `alt` text, figcaptions, sources, and licenses. `fonts/OFL.txt` is in `site/fonts/`. The two Atkinson files named in that inventory are still in `site/fonts/`.
+`Media and Typography Inventory.md`. The four Training spaces photos, their `alt` text, figcaptions, sources, and licenses. `fonts/OFL.txt` is in `site/fonts/`. The two Atkinson files named in that inventory are still in `site/fonts/`.
 
 `site/media.html` embeds `https://www.youtube.com/embed/_sKBQYCTT2s` on Squat setup, Hinge, Push-up path, and inside `#player`. The three advanced cards use `images/video-placeholder.svg` as an `img`. Each of those `img` elements has an `alt`. The file is 167 bytes, 1600 by 900. `services.html` still has no `img`.
 
@@ -123,9 +123,9 @@ This release stays on the four pages in `site/`. The items below stay out.
 
 1. **Pages.** No fifth content page. `#player` stays a section on `media.html`. The root `index.html` only sends the browser to `site/`.
 
-2. **Booking.** The request form on `services.html` is the booking path. No Calendly link, no Google Meet link, and no calendar page. `planning-brief-starter/site-map-template.md` lists those as an open risk. `planning-brief-starter/css-planning.md` says there is no live-calendar state.
+2. **Booking.** The request form on `services.html` is the booking path. No Calendly link, no Google Meet link, and no calendar page. `Planning Brief/site-map-template.md` lists those as an open risk. `Planning Brief/css-planning.md` says there is no live-calendar state.
 
-3. **Accounts and payment.** No login and no payment. `planning-brief-starter/content-inventory-template.md` row C9 says no live payment or account login. The form fields stay name, email, and area of interest.
+3. **Accounts and payment.** No login and no payment. `Planning Brief/content-inventory-template.md` row C9 says no live payment or account login. The form fields stay name, email, and area of interest.
 
 4. **Waiver.** C11 stays off the site until that legal text is reviewed. `css-planning.md` says no waiver until legal review.
 
@@ -149,7 +149,7 @@ Before submission. The four pages stay in `site/`.
 
 1. **Form.** On `site/services.html`, the email field starts empty, with `aria-invalid="false"` and without `is-invalid`. The script listens for `submit`. A valid submit stays on `services.html` and the result shows on that page.
 
-2. **Notes.** Point `Accessibility Conformance.md`, `Media Check.md`, `Metadata Inventory.md`, `Discoverability and Structured Content.md`, and `Media and Typography Inventory/Media and Typography Inventory.md` at `site/`, the current YouTube `iframe` elements, and `--font-family` in `site/css/base.css`.
+2. **Notes.** Point `Accessibility Conformance.md`, `Media Check.md`, `Metadata Inventory.md`, `Discoverability and Structured Content.md`, and `Media and Typography Inventory.md` at `site/`, the current YouTube `iframe` elements, and `--font-family` in `site/css/base.css`.
 
 3. **Checks.** Nu Html Checker for the current four files. Schema Markup Validator for the current AboutPage `url`. Link check for the nav, Home `https://youtu.be/4S1SCnlqKHQ`, About `https://www.youtube.com/watch?v=rWTYOwgvwt8`, Media `https://youtu.be/_sKBQYCTT2s`, and `Open video` to `#player`. Request list for the Home embed, the About embed, the four Media embeds, and the three advanced-card `img` elements. Record the iframe `title` values and the `Watch on YouTube` links. Record Safari and Firefox for the four pages.
 
