@@ -4,6 +4,8 @@ Site files: `site/`.
 
 Repository: https://github.com/vandyparkes/capstone-project
 
+Published pages: https://vandyparkes.github.io/capstone-project/site/. `index.html`, `media.html`, `services.html`, and `about.html` each returned 200.
+
 ## 1. Validation
 
 Condition. Nu Html Checker upload of `site/services.html` and `site/media.html`. CSS Validator upload of `site/css/main.css`, CSS level 3.
