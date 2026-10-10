@@ -27,3 +27,15 @@ Issue. None.
 Fix. No edit.
 
 Retest. Not run. No file was edited.
+
+## 3. Width and zoom
+
+Condition. `site/services.html` at 375, 768, 1280, and 640. 640 is a 1280 window at 200%.
+
+Result. No sideways scroll at those four widths. At 375 the header wraps and the three cards are one column. At 768 and 640 the header is one row and the cards sit on two rows. At 1280 the header is one row, the cards are one row, and the price table is a table. At 375, 768, and 640 the price rows are stacked. The name label and the email error stay on one line.
+
+Issue. None.
+
+Fix. No edit.
+
+Retest. Not run. No file was edited.
