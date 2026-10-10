@@ -1,5 +1,7 @@
 # Metadata inventory
 
+Recorded before the pages moved to `site/`, the YouTube embeds, and the Futura font stack. Current results are in `Release Sprint.md`.
+
 Site files: `CSS Architecture Package/`.
 
 ## 1. Page list

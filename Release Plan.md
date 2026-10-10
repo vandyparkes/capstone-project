@@ -1,5 +1,7 @@
 # Release plan
 
+Written before the release sprint. Results and fixes are in `Release Sprint.md`. The technical defense is `Technical Defense.md`.
+
 Site files: `site/`.
 
 ## 1. Final page list

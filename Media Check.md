@@ -1,5 +1,7 @@
 # Media check
 
+Recorded before the pages moved to `site/`, the YouTube embeds, and the Futura font stack. Current results are in `Release Sprint.md`.
+
 ## The media I checked
 
 The Squat setup player on `CSS Architecture Package/media.html`.

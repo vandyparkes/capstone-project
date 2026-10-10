@@ -1,5 +1,7 @@
 # Media and Typography Inventory
 
+Recorded before the pages moved to `site/`, the YouTube embeds, and the Futura font stack. Current results are in `Release Sprint.md`.
+
 Bulletproof Personal Training
 
 ## Images

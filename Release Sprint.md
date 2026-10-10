@@ -115,3 +115,45 @@ Issue. Section 6.
 Fix. Both are now `https://vandyparkes.github.io/capstone-project/site/about.html`.
 
 Retest. The two values match. The published About page returned 200. Nu Html Checker, 0 messages. The JSON-LD parses.
+
+### 7.4 Form without JavaScript
+
+Condition. `site/services.html`, form sent without the script.
+
+Result. The form was `method="post"` with `action="#"`. A POST to `services.html` returned 501 from `http://127.0.0.1:8765/` and 405 from GitHub Pages.
+
+Issue. Required part 3. The request task depended on JavaScript.
+
+Fix. The form is now `method="get"` with `action="services.html"`.
+
+Retest. A GET to `services.html?name=A&email=a%40b.co&interest=Online+technique` returned 200 from `http://127.0.0.1:8765/` and from GitHub Pages. The `required` fields still block an empty submit in the browser. With the script, a valid submit still calls `preventDefault` and shows `Form submitted.`
+
+## 8. Compatibility
+
+Condition. Browser checks recorded in this repo. CSS features read from `site/css/`.
+
+Result. Chrome is the only browser recorded. Safari and Firefox were not run.
+
+- `@layer` with layered `@import` in `main.css`. A browser without cascade layers drops those imports and shows unstyled HTML.
+- Card container query in `components.css` is inside `@supports (container-type: inline-size)`. Without it the badges stay stacked.
+- Subgrid in `layout.css` is inside `@supports (grid-template-rows: subgrid)`. Without it the gallery stays in the auto-fill grid.
+- Price table `@container (width < 48rem)` has no `@supports`. Without container queries the table stays a table at every width.
+- About `@container (width > 64rem)` has no `@supports`. Without container queries the video stays above the bio.
+- `aspect-ratio` holds the 16:9 frames and the 3:2 gallery tiles.
+
+Issue. Safari and Firefox have no recorded result.
+
+Fix. No edit.
+
+Retest. Not run.
+
+## 9. Known limitations
+
+- The request form has no backend. With JavaScript, a valid submit shows `Form submitted.` and nothing is sent. Without JavaScript, the browser reloads `services.html` with the fields in the address and shows no confirmation.
+- Squat setup, Hinge, Push-up path, and `#player` all embed `https://www.youtube.com/embed/_sKBQYCTT2s` until real training videos exist.
+- No `track` and no transcript on any page. Captions depend on the YouTube player.
+- The three advanced cards are placeholders. There is no member access.
+- Every price is `TBD after consultation`.
+- `YouTube technique library` on About is text with no link.
+- CSS Validator reports 8 errors on `main.css` for `@import` after `@layer`. Cascade Layers allows a `@layer` statement before `@import`. The file was left as is.
+- Safari and Firefox are not tested. See section 8.

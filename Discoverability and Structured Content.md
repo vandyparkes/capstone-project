@@ -1,5 +1,7 @@
 # Discoverability and structured content
 
+Recorded before the pages moved to `site/`, the YouTube embeds, and the Futura font stack. Current results are in `Release Sprint.md`.
+
 Site files: `CSS Architecture Package/`. Headings and links below match `Accessibility Conformance.md`.
 
 ## 1. Metadata inventory

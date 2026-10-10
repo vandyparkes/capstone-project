@@ -1,5 +1,7 @@
 # Accessibility conformance
 
+Recorded before the pages moved to `site/`, the YouTube embeds, and the Futura font stack. Current results are in `Release Sprint.md`.
+
 Site files: `CSS Architecture Package/`. Open each page in a browser from that folder.
 
 ## Test scope
